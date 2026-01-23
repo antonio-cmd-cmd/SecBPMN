@@ -1,0 +1,15 @@
+# macOS
+__MACOSX/
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log

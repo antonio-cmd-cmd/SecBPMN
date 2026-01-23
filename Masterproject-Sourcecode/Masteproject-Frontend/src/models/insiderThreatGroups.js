@@ -1,0 +1,20 @@
+export const InsiderThreatGroups = {
+    confidentialDataAcquisition: "Confidential data acquisition",
+    confidentialDataView: "Confidential data view",
+    confidentialDataTransfer: "Confidential data transfer",
+    unauthorizedAccessToCredentials: "Unauthorized access to credentials",
+    dataCorruption: "Data corruption",
+    maliciousCodeModification: "Malicious code modification",
+    malwareInstallation: "Malware installation",
+    systemControlManipulation: "System control manipulation",
+    hardwareAttack: "Hardware attack",
+    resourceExhaustionAttack: "Resource exhaustion attack",
+    networkExhaustionAttack: "Network exhaustion attack",
+    dataDeletion: "Data deletion",
+    systemControlCircumvention: "System control circumvention",
+    unauthorizedPrivilegeElevation: "Unauthorized privilege elevation",
+    misuseOfPrivileges: "Misuse of privileges",
+    socialEngineeringAttack: "Social engineering attack",
+    impersonationAttack: "Impersonation attack",
+    manInTheMiddleAttack: "Man-in-the-middle attack"
+}

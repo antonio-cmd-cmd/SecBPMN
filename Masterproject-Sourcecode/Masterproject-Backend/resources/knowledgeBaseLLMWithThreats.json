@@ -1,0 +1,235 @@
+[
+    {
+
+    "principle": "Confidentiality",
+        "threats": [
+            {
+                "threatGroup": "Confidential Data Acquisition",
+                "description": "Data that is being stolen or used inappropriately its in this category. The attack can target not only a computer system but also a web service when for instance a session is being hijacked.",
+                "exampleThreats": [
+                    "inappropriate acquisition of data",  
+                    "inappropriate use of confidential data in computer system",  
+                    "information theft",  
+                    "session hijacking: no method for users to log out of an application / logging out does not clear session states / residual cookies",
+                    "exploitation of web services where identities are being hijacked & data is being stolen",  
+                    "attacks on session-dependent information",  
+                    "tampering with URL query strings (modify URL in browser's address bar to expose information to attacker"  
+                ]
+            },
+            {
+                "threatGroup": "Confidential Data View",
+                "description": "If sensitive data is being inspected apart from the normal usage, the attack belongs to confidential data view.",
+                "exampleThreats":[
+                    "inappropriate viewing of data outside the normal usage",
+                    "view confidential data"  
+                ]
+            },
+            {
+                "threatGroup": "Confidential Data Transfer",
+                "description": "The illegal distribution of confidential files such as password lists, financial information, and other sensitive material is a part of confidential data transfer.",
+                "exampleThreats":[
+                    "transfer confidential files",  
+                    "National security leaks and other disclosures",  
+                    "illegal distribution & transmission of acquired financial information to outsiders",  
+                    "suspicious attachments (e.g. password files)",  
+                    "mail to suspicious addresses (e.g. large number of recipients)",  
+                    "illegal data transaction"  
+                ]
+            },
+            {
+                "threatGroup": "Unauthorized Access To Credentials",
+                "description": "Attacks in this category happen when an insider gets access to crypto keys and other credentials without authorization.",
+                "exampleThreats": [
+                    "accesss to crypto keys",  
+                    "access to crypto keys",  
+                    "access to live master file",  
+                    "ease of access to a computer system/application entry due to security weaknesses of an older version of an application"  
+                ]
+            }
+
+        ]
+    },
+    {
+        "principle": "Integrity",
+        "threats": [
+            {
+                "threatGroup": "Data Corruption",
+                "description": "With data corruption, the fraudulent modification of data can be understood. It happens when information is manipulated within either an application or also a system. Incidents in the past have shown that tampering with cookies is a widely used technique to corrupt data in an unauthorized manner.",
+                "exampleThreats":[
+                    "input manipulation (bypass normal data input controls)", 
+                    "fudging control totals",  
+                    "computer data manipulation within an application or system",  
+                    "command execution attacks (SQL database calls to change database)",  
+                    "corrupt data",  
+                    "breakage (siphoning off small sums from numerous sources)",  
+                    "fraudulent modification of vital information",  
+                    "Cookie tampering",  
+                    "attempt to manipulate cookies to 'spoof' server-side authentication mechanism",  
+                    "cookie content manipulation due to absence of an encryption of the cookie"
+                ]
+            },
+            {
+                "threatGroup": "Malicious Code Modification",
+                "description": "In software code programming small modifications can have a huge impact. Logic bombs, trojan horses, and other malicious code injections are examples of this attack group.",
+                "exampleThreats":[
+                    "software code modification: 'Logic Bomb' was built into a system to terminate users' sessions and cause a loss of data",  
+                    "software code modification; 'Trojan Horse'  built into a system to terminate user's session & cause loss of data",  
+                    "malcode software injection",  
+                    "self-dealing transaction to capitalize on the destruction created by the software code modification",  
+                    "bufferoverflow: attacker can cause web application to execute malicious code that is designed to take over a system",  
+                    "malicious content: spread viruses / Trojan horse programs within valid XML messages",  
+                    "HTML injection (cross-site scripting: use of website to send malicious code"  
+                ]
+            },
+            {
+                "threatGroup": "Malware Installation",
+                "description": "The installation of malware can originate from various sources. The use or download of illegal software or offensive material has a higher chance of containing trojan horses or trapdoors in order to compromise a computer system.",
+                "exampleThreats":[
+                    "Use of unauthorized programs",  
+                    "Trojan horse",  
+                    "putting Trojan horses",  
+                    "download illegal software",  
+                    "download offensive material",  
+                    "possibility of downloading trojan horse",  
+                    "install vulnerable supporting software",  
+                    "inserting trojan horses or trapdoors in trusted (and untrusted) components",  
+                    "exploitation of operating system vulnerabilities"  
+                ]
+            },
+            {
+                "threatGroup": "System Control Manipulation",
+                "description": "When default configurations are being modified or the protection of components gets disabled attackers manipulate system controls.",
+                "exampleThreats":[
+                    "altering audit logs",  
+                    "altering audit trails and logs",  
+                    "inadequate network journaling for forensic purposes",  
+                    "compromising misuse detection",  
+                    "deliberate misreporting",  
+                    "disabling protection of components",  
+                    "disabling of protected components",  
+                    "modification of default configuration",  
+                    "altering configurations, schedules and priorities"
+                ]
+            }
+        ]
+    },
+    {
+        "principle": "Availability",
+        "threats": [
+            {
+                "threatGroup": "Hardware Attack",
+                "description": "All attacks that include hardware are aggregated in this group. Especially when hardware is defective it can get vulnerable to insider attacks. However, an insider is also capable of adding or removing components of hardware to harm a computer system.",
+                "exampleThreats":[
+                    "hardware destruction",
+                    "use of defective hardware",  
+                    "hardware malfunction", 
+                    "removal / addition of of hardware components",  
+                    "resource theft"
+                ]
+            },
+            {
+                "threatGroup": "Resource Exhaustion Attack",
+                "description": "In resource exhaustion attacks, the availability of the system is being compromised. Examples that belong to this category are DoS, buffer overflow, and replay attacks.",
+                "exampleThreats":[
+                    "damage to system availability (i.e. DDos attack)", 
+                    "DoS",  
+                    "DDoS",  
+                    "Buffer overflow attack",  
+                    "coercive parsing: parse a Simple Access Object Protocol message to extract parameters & determine what method to invoke, insert content into database, ... DoS attack.",  
+                    "replay attack: 'ping of death' where repetitive SOAP messages are made to overload web service",  
+                    "exhaustion of protected resources",  
+                    "denial of service: lack of use of any load testing tools to generate web traffic"  
+                ]
+            },
+            {
+                "threatGroup": "Network Exhaustion Attack",
+                "description": "Unlike resource exhaustion attacks, not the system but the network is not available because of an overload. This can happen when a large amount of data is being downloaded in a small time frame such that the network is not able to process other packets.",
+                "exampleThreats":[
+                    "downloading large amount of data in small time period",  
+                    "using over a certain number of network endpoints", 
+                    "using a large network burst (throughput) rate", 
+                    "oversize payloads: transmit a large XML file to deplete CPU resources as a result of parsing & validating each entry."  
+                ]
+            },
+            {
+                "threatGroup": "Data Deletion",
+                "description": "The loss of data because of its destruction by an insider is labeled as data deletion.",
+                "exampleThreats":[
+                    "terminate user session in a seemingly random way, causing loss of data", 
+                    "computer data destruction within an application or system"  
+                ]
+            }
+        ]
+    },
+    {
+        "principle": "Accountability",
+        "threats": [
+            {
+                "threatGroup": "System Control Circumvention",
+                "description": "There are various ways in which system controls can be circumvented. In the sources, the altering or disabling of audit logs has been mentioned most frequently.",
+                "exampleThreats":[
+                    "disable system logs",  
+                    "circumvention of security controls",  
+                    "hacking beneath the audit trail", 
+                    "undocumented transaction codes" 
+                ]
+            },
+            {
+                "threatGroup": "Unauthorized Privilege Elevation",
+                "description": "In case of the modification of user access rights, privileges in a system can be elevated. This gives the user the capability to get unauthorized access to information or systems.",
+                "exampleThreats":[
+                    "inappropriate account provisioning",  
+                    "improper user management",
+                    "computer access level modification", 
+                    "elevate user privileges"
+                ]
+            },
+            {
+                "threatGroup": "Misuse Of Privileges",
+                "description": " Even if users are allowed to access certain data or systems, they can still misuse their privileges to attack an organization. They could for instance abuse an adjustment transaction or error-correction procedures to hide their intrigues.",
+                "exampleThreats":[
+                    "misuse of adjustment transaction",  
+                    "misuse of intended authority by over-authorized user",  
+                    "Running a covert business",  
+                    "extraneous transactions",  
+                    "insider trading",  
+                    "misuse of error-correction procedures",  
+                    "usurpation of superuser access and root keys",  
+                    "Privileged manipulation of access controls" 
+                ]
+            }
+        ]
+    },
+    {
+        "principle": "Authenticity",
+        "threats": [
+            {
+                "threatGroup": "Social Engineering Attack",
+                "description": "Attack vectors in social engineering that were found in the context of insider threats are tailgaiting, ingratiation, phishing, pretexting, and baiting. These techniques are applied to deceive an employee in order to gain unauthorized access.",
+                "exampleThreats":[
+                    "tailgating",  
+                    "ingratiation",  
+                    "Phishing",  
+                    "pretexting",  
+                    "baiting"
+                ]
+            },
+            {
+                "threatGroup": "Impersonation Attack",
+                "description": "Masquerading as an employee of an enterprise is a typical impersonation attack in insider threats.",
+                "exampleThreats":[
+                    "masquerading as an employee",  
+                    "employee impersonation & transmission of unauthorized e-mails to corporate clients",  
+                    "misuse of system's capabilities (impersonation of another insider to send threatening emails to another insider"
+                ]
+            },
+            {
+                "threatGroup": "Man In The Middle Attack",
+                "description": "When attackers place themselves in between a client and a server and intercept all the messages that are sent between those two parties, they are called man in the middle.",
+                "exampleThreats":[
+                    "man-in-the middle attacks: attacker between client & server, acting as a sever for the client. No SSL used for sites"
+                ]
+            }
+        ]
+    }
+]
