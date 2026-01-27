@@ -69,7 +69,7 @@ prompt = PromptTemplate(
     - **Threat Description**: [Short description of identified threat]
     - **Principle**: [Name of the principle from {principles}, e.g., "Integrity"]
     - **Potential Impact**: Concisely describe the business process disruption or risks posed by this threat.
-    - **Mitigation Strategies**: Provide at least one practical recommendation per threat. Clearly link each mitigation to the specific threat identified.
+    - **Mitigation Strategies**: Provide at least one practical recommendation per identified threat. Clearly link each mitigation to the specific threat identified.
 
     ## Example Output:
     Verify Customer Data
@@ -80,9 +80,6 @@ prompt = PromptTemplate(
     - **Potential Impact**:
         Data corruption while verifying customer data can lead directly to processing errors such as incorrect billing, delays in customer transactions, compromised data accuracy, loss of customer trust, and potential regulatory non-compliance issues. Such disruptions significantly impact operational reliability and may result in financial penalties.
     - **Mitigation Strategies**:
-        - Implement real-time data validation and error-checking protocols at each identified vulnerable step.
-        - Conduct regular backups and schedule periodic data integrity audits to ensure data accuracy.
-        - Introduce mandatory multi-factor authentication (MFA) for all critical data-access points to prevent unauthorized manipulation.
     
     <!---- STYLE RULES END -->
     

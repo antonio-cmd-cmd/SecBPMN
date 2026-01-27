@@ -11,6 +11,71 @@ import re
 from app.llm.query_builder import clean_up_bpmn_xml
 
 
+def extract_mitigations_only(threat_analysis: str) -> str:
+    """
+    Extract only the mitigation strategies from the complete threat analysis.
+    This reduces the prompt size and focuses the LLM on what to implement.
+    
+    Args:
+        threat_analysis: Complete threat analysis markdown from LLM
+        
+    Returns:
+        Formatted string containing only mitigations organized by element
+    """
+    lines = threat_analysis.split('\n')
+    mitigations = []
+    current_element = None
+    current_element_id = None
+    in_mitigation_section = False
+    mitigation_bullets = []
+    
+    for line in lines:
+        # Check if it's an element heading (## Element Name)
+        if line.startswith('## ') and not line.startswith('###'):
+            # Save previous element's mitigations if any
+            if current_element and mitigation_bullets:
+                mitigations.append(f"## {current_element}")
+                if current_element_id:
+                    mitigations.append(f"- **BPMN Element ID**: {current_element_id}")
+                mitigations.append("- **Mitigation Strategies**:")
+                mitigations.extend(mitigation_bullets)
+                mitigations.append("")  # Empty line for readability
+            
+            # Start new element
+            current_element = line[3:].strip()
+            current_element_id = None
+            in_mitigation_section = False
+            mitigation_bullets = []
+        
+        # Check for BPMN Element ID
+        elif '**BPMN Element ID**:' in line:
+            # Extract the ID
+            current_element_id = line.split('**BPMN Element ID**:')[1].strip()
+        
+        # Check if we're entering the mitigation section
+        elif '**Mitigation Strategies**:' in line:
+            in_mitigation_section = True
+        
+        # Check if we're leaving the mitigation section (new field starts)
+        elif in_mitigation_section and line.strip().startswith('- **') and 'Mitigation' not in line:
+            in_mitigation_section = False
+        
+        # Collect mitigation bullets
+        elif in_mitigation_section and line.strip().startswith('-') and '**Mitigation' not in line:
+            # This is a mitigation bullet point
+            mitigation_bullets.append(line)
+    
+    # Don't forget the last element
+    if current_element and mitigation_bullets:
+        mitigations.append(f"## {current_element}")
+        if current_element_id:
+            mitigations.append(f"- **BPMN Element ID**: {current_element_id}")
+        mitigations.append("- **Mitigation Strategies**:")
+        mitigations.extend(mitigation_bullets)
+    
+    return '\n'.join(mitigations)
+
+
 def create_mitigation_prompt(original_bpmn_xml: str, threat_analysis: str, context: dict, principles: list) -> str:
     """
     Create a prompt for the LLM to generate a mitigated BPMN.
@@ -33,6 +98,11 @@ def create_mitigation_prompt(original_bpmn_xml: str, threat_analysis: str, conte
 
     principles_str = ", ".join(principles) if principles else "N/A"
     
+    # Extract only mitigations from the complete threat analysis
+    print("Extracting mitigations from threat analysis...")
+    mitigations_only = extract_mitigations_only(threat_analysis)
+    print(f"Original threat analysis length: {len(threat_analysis)}, Mitigations only length: {len(mitigations_only)}")
+    
     # Clean the BPMN XML to remove diagram elements before sending to LLM
     print("Cleaning BPMN XML (removing diagram elements)...")
     clean_bpmn_xml = clean_up_bpmn_xml(original_bpmn_xml)
@@ -42,7 +112,7 @@ def create_mitigation_prompt(original_bpmn_xml: str, threat_analysis: str, conte
     namespace_match = re.search(r'xmlns:bpmn="([^"]+)"', original_bpmn_xml)
     correct_namespace = namespace_match.group(1) if namespace_match else "http://www.omg.org/spec/BPMN/20100524/MODEL"
     
-    prompt = f"""You are a BPMN security expert. Your task is to modify a BPMN process model to include security mitigations based on identified threats.
+    prompt = f"""You are a process security expert. Your task is to modify a BPMN process model to include the security mitigation identified rendering the process secure respect to the internal threat and respect to the chosen security principle, start from the provided BPMN securing it.
 
 ## Context
 {context_str}
@@ -55,8 +125,11 @@ def create_mitigation_prompt(original_bpmn_xml: str, threat_analysis: str, conte
 {clean_bpmn_xml}
 ```
 
-## Identified Threats and Mitigations
-{threat_analysis}
+## Mitigation Strategies to Implement
+Below are the security mitigations identified for each vulnerable element in the process.
+Your task is to implement the appropriate mitigations by modifying the BPMN elements. The overall BPMN process flow must remain unchanged and don't introduce too much complexity.
+
+{mitigations_only}
 
 ## Task
 Based on the identified threats and their mitigations, modify the BPMN XML to include security controls. You should:
@@ -65,7 +138,6 @@ Based on the identified threats and their mitigations, modify the BPMN XML to in
 2. **Add gateways** where security decisions are needed (e.g., "Access Granted?", "Data Valid?")
 3. **Modify sequence flows** to route through security checks
 4. **Preserve all original element IDs** from the original BPMN
-5. **Keep the EXACT same namespace declarations** as the original BPMN
 
 ## CRITICAL Requirements:
 - Use the EXACT namespace: xmlns:bpmn="{correct_namespace}"
@@ -74,8 +146,7 @@ Based on the identified threats and their mitigations, modify the BPMN XML to in
 - Every new sequence flow MUST have a unique ID in format: `Flow_[7-character-alphanumeric]` (e.g., `Flow_9g0h1i2`)
 - All new elements MUST have a `name` attribute with clear description
 - DO NOT include any `<bpmndi:BPMNDiagram>` sections (visual layout)
-- Insert security tasks BEFORE risky operations
-- Use gateways to create conditional security flows
+- Use gateways to create conditional security flows if needed
 - Keep ALL original tasks, gateways, and flows from the original BPMN
 
 ## Output Format
