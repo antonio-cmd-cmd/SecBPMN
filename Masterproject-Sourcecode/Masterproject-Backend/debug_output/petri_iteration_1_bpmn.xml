@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+  <bpmn:process id="Process_1" name="Process">
+    <bpmn:startEvent id="StartEvent_1"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_VerificaDisponibilita"/>
+    <bpmn:task id="Task_VerificaDisponibilita" name="Check Availability">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_Disponibilita" name="Availability Check">
+      <bpmn:incoming>Flow_Main</bpmn:incoming>
+      <bpmn:outgoing>Flow_No</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Si</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_No" sourceRef="Gateway_Disponibilita" targetRef="Task_NotificaAnnullamento"/>
+    <bpmn:task id="Task_NotificaAnnullamento" name="Notify Cancellation">
+      <bpmn:incoming>Flow_No</bpmn:incoming>
+      <bpmn:outgoing>Flow_End_Cancel</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_Cancel" name="End (Cancelled)"/>
+    <bpmn:sequenceFlow id="Flow_End_Cancel" sourceRef="Task_NotificaAnnullamento" targetRef="EndEvent_Cancel"/>
+    <bpmn:sequenceFlow id="Flow_Si" sourceRef="Gateway_Disponibilita" targetRef="Task_AddebitoCarta"/>
+    <bpmn:task id="Task_AddebitoCarta" name="Charge Card">
+      <bpmn:incoming>Flow_Si</bpmn:incoming>
+      <bpmn:outgoing>Flow_VerificaAccessi</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_VerificaAccessi" sourceRef="Task_AddebitoCarta" targetRef="Task_VerificaAccessi"/>
+    <bpmn:task id="Task_VerificaAccessi" name="Verify Access">
+      <bpmn:incoming>Flow_VerificaAccessi</bpmn:incoming>
+      <bpmn:outgoing>Flow_Security2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_Split" name="Split">
+      <bpmn:incoming>Flow_Security2</bpmn:incoming>
+      <bpmn:outgoing>Flow_Imballaggio</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Fattura</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_Imballaggio" sourceRef="Gateway_Split" targetRef="Task_Imballaggio"/>
+    <bpmn:task id="Task_Imballaggio" name="Packaging">
+      <bpmn:incoming>Flow_Imballaggio</bpmn:incoming>
+      <bpmn:outgoing>Flow_Join</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_Fattura" sourceRef="Gateway_Split" targetRef="Task_Fattura"/>
+    <bpmn:task id="Task_Fattura" name="Invoice">
+      <bpmn:incoming>Flow_Fattura</bpmn:incoming>
+      <bpmn:outgoing>Flow_Audit</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_Audit" sourceRef="Task_Fattura" targetRef="Task_AuditFattura"/>
+    <bpmn:task id="Task_AuditFattura" name="Invoice Audit">
+      <bpmn:incoming>Flow_Audit</bpmn:incoming>
+      <bpmn:outgoing>Flow_Join</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_Join" name="Join">
+      <bpmn:incoming>Flow_Join</bpmn:incoming>
+      <bpmn:incoming>Flow_Join</bpmn:incoming>
+      <bpmn:outgoing>Flow_Spedizione</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_Spedizione" sourceRef="Gateway_Join" targetRef="Task_Spedizione"/>
+    <bpmn:task id="Task_Spedizione" name="Shipping">
+      <bpmn:incoming>Flow_Spedizione</bpmn:incoming>
+      <bpmn:outgoing>Flow_Monitoraggio</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_Monitoraggio" sourceRef="Task_Spedizione" targetRef="Task_MonitoraggioSpedizione"/>
+    <bpmn:task id="Task_MonitoraggioSpedizione" name="Monitor Shipment">
+      <bpmn:incoming>Flow_Monitoraggio</bpmn:incoming>
+      <bpmn:outgoing>Flow_End</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_Success" name="End (Success)"/>
+    <bpmn:sequenceFlow id="Flow_End" sourceRef="Task_MonitoraggioSpedizione" targetRef="EndEvent_Success"/>
+    <bpmn:parallelGateway id="Gateway_Split_Log" name="Split">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_Main</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Log</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_Log" sourceRef="Gateway_Split_Log" targetRef="Task_Log"/>
+    <bpmn:task id="Task_Log" name="Log Availability">
+      <bpmn:incoming>Flow_Log</bpmn:incoming>
+      <bpmn:outgoing>Flow_Join_Log</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_Join_Log" name="Join">
+      <bpmn:incoming>Flow_Main</bpmn:incoming>
+      <bpmn:incoming>Flow_Join_Log</bpmn:incoming>
+      <bpmn:outgoing>Flow_Disponibilita</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_Disponibilita" sourceRef="Gateway_Join_Log" targetRef="Gateway_Disponibilita"/>
+  </bpmn:process>
+</bpmn:definitions>

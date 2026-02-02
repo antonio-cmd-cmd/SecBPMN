@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+  <bpmn:process id="Process_1" name="Process">
+    <bpmn:startEvent id="StartEvent_1"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_VerificaDisponibilita"/>
+    <bpmn:task id="Task_VerificaDisponibilita" name="Verifica Disponibilità">
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_VerificaDisponibilita" targetRef="Gateway_Split_Log"/>
+    <bpmn:parallelGateway id="Gateway_Split_Log" name="Split Log">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_Main</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Log</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_Main" sourceRef="Gateway_Split_Log" targetRef="Task_Addebito"/>
+    <bpmn:task id="Task_Addebito" name="Addebito">
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Addebito" targetRef="Gateway_Disponibilita"/>
+    <bpmn:exclusiveGateway id="Gateway_Disponibilita" name="Disponibilità">
+      <bpmn:incoming>Flow_Main</bpmn:incoming>
+      <bpmn:incoming>Flow_Log_Join</bpmn:incoming>
+      <bpmn:outgoing>Flow_No</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Si</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_No" sourceRef="Gateway_Disponibilita" targetRef="EndEvent_Cancel"/>
+    <bpmn:endEvent id="EndEvent_Cancel" name="Cancel"/>
+    <bpmn:sequenceFlow id="Flow_Si" sourceRef="Gateway_Disponibilita" targetRef="Task_Imballaggio"/>
+    <bpmn:task id="Task_Imballaggio" name="Imballaggio">
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Imballaggio" targetRef="Gateway_Join"/>
+    <bpmn:parallelGateway id="Gateway_Join" name="Join">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:incoming>Flow_Log_Join</bpmn:incoming>
+      <bpmn:outgoing>Flow_Final</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_Log" sourceRef="Gateway_Split_Log" targetRef="Task_Log"/>
+    <bpmn:task id="Task_Log" name="Log">
+      <bpmn:outgoing>Flow_Log_Join</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_Log_Join" sourceRef="Task_Log" targetRef="Gateway_Disponibilita"/>
+    <bpmn:sequenceFlow id="Flow_Final" sourceRef="Gateway_Join" targetRef="EndEvent_Success"/>
+    <bpmn:endEvent id="EndEvent_Success" name="Success"/>
+  </bpmn:process>
+</bpmn:definitions>

@@ -14,6 +14,8 @@ from app.llm.response_processor import strip_bpmn_id_blocks
 from app.llm.response_processor import extract_bpmn_id_suffixes
 from app.utils.bpmn_validator import validate_bpmn
 from app.llm.bpmn_mitigation_generator import generate_mitigated_bpmn
+from app.llm.dual_llm_generator import generate_mitigated_bpmn_dual_llm
+from app.config import USE_DUAL_LLM
 
 qa_chain = None  # Global variable for the QA chain
 
@@ -150,31 +152,55 @@ async def generate_mitigated_bpmn_endpoint(
         print("Generating mitigated BPMN...")
         print("Principles:", principles_list)
         print("Context:", context_data)
+        print(f"Using dual-LLM system: {USE_DUAL_LLM}")
         
-        if qa_chain is None:
-            raise RuntimeError("QA Chain is not initialized yet!")
-        
-        # Generate mitigated BPMN
-        result = generate_mitigated_bpmn(
-            original_bpmn,
-            threat_analysis,
-            context_data,
-            principles_list,
-            qa_chain
-        )
+        # Choose generation method based on configuration
+        if USE_DUAL_LLM:
+            print("=== Using DUAL-LLM Generation System ===")
+            # Use dual-LLM system (generator + validator)
+            result = generate_mitigated_bpmn_dual_llm(
+                original_bpmn,
+                threat_analysis,
+                context_data,
+                principles_list
+            )
+        else:
+            print("=== Using SINGLE-LLM Generation System (Legacy) ===")
+            # Use legacy single-LLM system
+            if qa_chain is None:
+                raise RuntimeError("QA Chain is not initialized yet!")
+            
+            result = generate_mitigated_bpmn(
+                original_bpmn,
+                threat_analysis,
+                context_data,
+                principles_list,
+                qa_chain
+            )
         
         if result['success']:
-            return JSONResponse(content={
+            response_data = {
                 "success": True,
                 "message": result['message'],
                 "mitigated_bpmn": result['mitigated_bpmn'],
                 "element_count": result.get('element_count', 0)
-            })
+            }
+            
+            # Add dual-LLM specific information if available
+            if USE_DUAL_LLM and 'iterations' in result:
+                response_data['dual_llm_info'] = {
+                    'iterations_count': result.get('final_iteration', 0),
+                    'iterations_history': result.get('iterations', []),
+                    'warning': result.get('warning')
+                }
+            
+            return JSONResponse(content=response_data)
         else:
             return JSONResponse(
                 content={
                     "success": False,
-                    "message": result['message']
+                    "message": result['message'],
+                    "iterations": result.get('iterations', []) if USE_DUAL_LLM else None
                 },
                 status_code=400
             )

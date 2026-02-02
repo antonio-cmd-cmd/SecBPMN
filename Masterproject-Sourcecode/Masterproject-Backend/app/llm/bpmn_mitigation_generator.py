@@ -112,49 +112,104 @@ def create_mitigation_prompt(original_bpmn_xml: str, threat_analysis: str, conte
     namespace_match = re.search(r'xmlns:bpmn="([^"]+)"', original_bpmn_xml)
     correct_namespace = namespace_match.group(1) if namespace_match else "http://www.omg.org/spec/BPMN/20100524/MODEL"
     
-    prompt = f"""You are a process security expert. Your task is to modify a BPMN process model to include the security mitigation identified rendering the process secure respect to the internal threat and respect to the chosen security principle, start from the provided BPMN securing it.
+    prompt = f"""You are a security expert. Your task: START with the existing BPMN below and add ONLY essential security controls.
 
-## Context
+## Process Context
 {context_str}
 
-## Security Principles
+## Security Focus
 {principles_str}
 
-## Original BPMN XML (Structural Elements Only - No Diagram Layout)
+## EXISTING BPMN TO MODIFY (Keep this structure!)
 ```xml
 {clean_bpmn_xml}
 ```
 
-## Mitigation Strategies to Implement
-Below are the security mitigations identified for each vulnerable element in the process.
-Your task is to implement the appropriate mitigations by modifying the BPMN elements. The overall BPMN process flow must remain unchanged and don't introduce too much complexity.
-
+## Security Mitigations (Add only the most critical ones)
 {mitigations_only}
 
-## Task
-Based on the identified threats and their mitigations, modify the BPMN XML to include security controls. You should:
+## YOUR TASK: Modify the Existing BPMN with security controls
 
-1. **Add new tasks** for security controls (e.g., "Verify User Identity", "Encrypt Data", "Log Activity", "Validate Input")
-2. **Add gateways** where security decisions are needed (e.g., "Access Granted?", "Data Valid?")
-3. **Modify sequence flows** to route through security checks
-4. **Preserve all original element IDs** from the original BPMN
+### Step 1: Copy the Existing BPMN
+START with the exact XML provided above. Do NOT create a new BPMN from scratch.
 
-## CRITICAL Requirements:
-- Use the EXACT namespace: xmlns:bpmn="{correct_namespace}"
-- Every new task MUST have a unique ID in format: `Activity_[7-character-alphanumeric]` (e.g., `Activity_1a2b3c4`)
-- Every new gateway MUST have a unique ID in format: `Gateway_[7-character-alphanumeric]` (e.g., `Gateway_5d6e7f8`)
-- Every new sequence flow MUST have a unique ID in format: `Flow_[7-character-alphanumeric]` (e.g., `Flow_9g0h1i2`)
-- All new elements MUST have a `name` attribute with clear description
-- DO NOT include any `<bpmndi:BPMNDiagram>` sections (visual layout)
-- Use gateways to create conditional security flows if needed
-- Keep ALL original tasks, gateways, and flows from the original BPMN
+### Step 2: Identify Critical Security Points
+Look at the existing process and identify ONLY the most critical mitigation from {mitigations_only}
 
-## Output Format
-Return ONLY the complete modified BPMN XML, wrapped in ```xml``` code blocks.
-Do NOT include explanations, comments, or any other text outside the XML.
-The XML MUST be complete and valid BPMN 2.0.
+### Step 3: Add ONLY Essential Security Tasks
+Add ONLY from realistic security controls
 
-Begin generating the mitigated BPMN XML now:
+### Step 4: Insert Security Tasks into Existing Flow
+For each security task you add:
+1. Find where it should go in the EXISTING flow
+2. Create the new task element with ID format: Activity_[7 random chars] (e.g., Activity_9k3m2x1)
+3. Update the sequenceFlow elements to include the new task
+4. Give each new flow ID format: Flow_[7 random chars] (e.g., Flow_7p2n5t8)
+5. If you add a lane, add flowNodeRef ONLY ONCE for each element
+
+## CRITICAL RULES FOR VALID BPMN:
+
+### Basic Rules:
+2. **DO NOT change original element IDs** - keep all existing IDs exactly as they are
+3. **Use correct namespace**: xmlns:bpmn="{correct_namespace}"
+4. **Every new element needs a "name" attribute**
+5. **NO bpmndi:BPMNDiagram sections** (no visual layout)
+6. don't add security everywhere
+
+### Structural Rules (MUST FOLLOW for executable BPMN):
+
+**1. Lane Rules:**
+- Each task/event can be in ONLY ONE lane
+- Never duplicate flowNodeRef in multiple lanes
+- If you add a security task, put it in the appropriate lane (one lane only)
+
+**2. Gateway Rules (CRITICAL - Most Common Error):**
+- **Exclusive Gateway** (XOR): MUST have at least 2 outgoing flows
+  - Example: "Access Granted?" → YES flow + NO flow
+  - If you add a security check gateway, ALWAYS add both paths
+  - The NO path should go to an end event or error handler
+- **Parallel Gateway**: Use ONLY if you have real parallel work
+  - Opening: Must have multiple outgoing flows
+  - Closing (Join): Must have same number of incoming flows
+  - Don't use parallel gateways for simple sequential security checks
+
+**3. Flow Rules:**
+- Every task MUST have at least one incoming and one outgoing flow
+- No "orphan" tasks without connections
+- If you add a security task, connect it properly: incoming flow → security task → outgoing flow
+
+**4. Process Execution Rules:**
+- Process must have ONE clear start event
+- Process must have at least ONE end event
+- Every element must be reachable from start
+- No deadlocks: every path must lead to an end event
+
+### Example of CORRECT Security Gateway:
+
+```xml
+<!-- CORRECT: Exclusive gateway with BOTH paths -->
+<bpmn:exclusiveGateway id="Gateway_Security" name="Access Granted?"/>
+<bpmn:sequenceFlow id="Flow_yes" sourceRef="Gateway_Security" targetRef="Task_Next" name="Yes"/>
+<bpmn:sequenceFlow id="Flow_no" sourceRef="Gateway_Security" targetRef="Event_AccessDenied" name="No"/>
+<bpmn:endEvent id="Event_AccessDenied" name="Access Denied"/>
+```
+
+## What NOT to Do:
+✗ Don't create a new BPMN from scratch
+✗ Don't add gateway with only ONE outgoing flow
+✗ Don't duplicate task references in multiple lanes
+✗ Don't create orphan tasks without connections
+✗ Don't add parallel gateways unless you have real parallel work
+✗ Don't create deadlocks (paths that don't reach an end event)
+✗ Don't add unrealistic security measures
+✗ Don't modify or remove existing tasks
+
+## Output Format:
+Return the COMPLETE modified BPMN XML in ```xml``` blocks.
+NO explanations. NO comments outside the XML.
+Start with the existing BPMN and add ONLY minimal essential security modifications.
+
+Begin now - copy the existing BPMN above and modify it:
 """
     
     return prompt
@@ -227,7 +282,7 @@ def fix_bpmn_namespace(xml_content: str, correct_namespace: str = "http://www.om
 
 def validate_mitigated_bpmn(xml_content: str) -> Dict[str, any]:
     """
-    Validate the generated mitigated BPMN XML.
+    Validate the generated mitigated BPMN XML with structural checks.
     
     Args:
         xml_content: BPMN XML string
@@ -277,17 +332,57 @@ def validate_mitigated_bpmn(xml_content: str) -> Dict[str, any]:
                 'message': f'Invalid BPMN XML: no process found. Root tag: {root.tag}'
             }
         
+        # Structural validation
+        warnings = []
+        
+        # Check for duplicate flowNodeRef in lanes
+        lane_refs = {}
+        for lane in root.findall('.//{*}lane'):
+            lane_id = lane.get('id', 'unknown')
+            for ref in lane.findall('.//{*}flowNodeRef'):
+                node_id = ref.text
+                if node_id in lane_refs:
+                    warnings.append(f"Duplicate flowNodeRef '{node_id}' in lanes: {lane_refs[node_id]} and {lane_id}")
+                else:
+                    lane_refs[node_id] = lane_id
+        
+        # Check for exclusive gateways with only one outgoing flow
+        for gateway in root.findall('.//{*}exclusiveGateway'):
+            gw_id = gateway.get('id', 'unknown')
+            outgoing_flows = [flow for flow in root.findall('.//{*}sequenceFlow') if flow.get('sourceRef') == gw_id]
+            if len(outgoing_flows) < 2:
+                warnings.append(f"Exclusive gateway '{gw_id}' has only {len(outgoing_flows)} outgoing flow(s) - should have at least 2")
+        
+        # Check for orphan tasks (tasks without incoming or outgoing flows)
+        all_tasks = root.findall('.//{*}task')
+        for task in all_tasks:
+            task_id = task.get('id', 'unknown')
+            incoming = [f for f in root.findall('.//{*}sequenceFlow') if f.get('targetRef') == task_id]
+            outgoing = [f for f in root.findall('.//{*}sequenceFlow') if f.get('sourceRef') == task_id]
+            if not incoming:
+                warnings.append(f"Task '{task_id}' has no incoming flows (orphan)")
+            if not outgoing:
+                warnings.append(f"Task '{task_id}' has no outgoing flows (dead end)")
+        
         # Count all elements in the process
         element_count = 0
         for process in processes:
             element_count += len(list(process.iter()))
         
-        return {
+        result = {
             'valid': True,
-            'message': 'Mitigated BPMN is valid',
+            'message': 'Mitigated BPMN is valid' if not warnings else 'Mitigated BPMN has structural warnings',
             'element_count': element_count,
             'process_count': len(processes)
         }
+        
+        if warnings:
+            result['warnings'] = warnings
+            print("⚠️ BPMN Structural Warnings:")
+            for w in warnings:
+                print(f"  - {w}")
+        
+        return result
         
     except ET.ParseError as e:
         return {

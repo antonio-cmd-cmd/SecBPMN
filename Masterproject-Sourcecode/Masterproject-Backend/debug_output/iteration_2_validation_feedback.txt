@@ -1,0 +1,37 @@
+Validation Result: FAIL
+Issues Count: 1
+
+============================================================
+FULL VALIDATOR RESPONSE:
+============================================================
+**VALIDATION_RESULT: FAIL**
+
+**ISSUES_FOUND:**
+- **Lane Assignment Error – Task_NotificaAnnullamento**  
+  *Description:* The task is not referenced in any lane (`flowNodeRef`).  
+  *Fix:* Add `<bpmn:flowNodeRef>Task_NotificaAnnullamento</bpmn:flowNodeRef>` to an appropriate lane (e.g., `Lane_Finanza` or a new lane).
+
+- **Lane Assignment Error – EndEvent_Annullato**  
+  *Description:* The end event is not referenced in any lane.  
+  *Fix:* Add `<bpmn:flowNodeRef>EndEvent_Annullato</bpmn:flowNodeRef>` to the same lane as its preceding task.
+
+- **Lane Assignment Error – Gateway_Split**  
+  *Description:* The parallel split gateway is not referenced in any lane.  
+  *Fix:* Add `<bpmn:flowNodeRef>Gateway_Split</bpmn:flowNodeRef>` to the lane that contains the related tasks (e.g., `Lane_Finanza`).
+
+- **ID Change – Lane_Finanza**  
+  *Description:* The original lane ID `Lane_Amministrazione` was changed to `Lane_Finanza`.  
+  *Fix:* Restore the original ID (`Lane_Amministrazione`) or update all references consistently if a rename is intentional.
+
+- **Security Implementation – Missing Security Tasks**  
+  *Description:* The BPMN does not contain any tasks or annotations that represent the security mitigations outlined in the expected security plan (e.g., logging, role‑based access controls).  
+  *Fix:* Add dedicated security tasks or BPMN extensions (e.g., `<bpmn:task id="Task_LogAvailabilityChange" name="Log Availability Change"/>`) and link them appropriately in the flow, or include security annotations on existing elements.
+
+**SECURITY_IMPLEMENTATION:**  
+Security mitigations are not represented in the current BPMN model. No security‑related tasks, events, or annotations have been added, so the model does not satisfy the expected security enhancements.
+
+**RECOMMENDATIONS:**
+1. **Restore Lane Integrity** – Ensure every element is referenced by exactly one lane. Add missing `flowNodeRef` entries for the orphan elements and verify that no duplicates exist.
+2. **Preserve Original IDs** – Keep the original lane ID (`Lane_Amministrazione`) unless a rename is explicitly required and all references are updated accordingly.
+3. **Integrate Security Tasks** – Introduce explicit security tasks (e.g., logging, audit, access‑control checks) and place them in appropriate lanes. Use BPMN extensions or annotations to capture security policies.
+4. **Validate After Changes** – Run a BPMN validator again after making the above corrections to confirm that all structural and security requirements are met.
