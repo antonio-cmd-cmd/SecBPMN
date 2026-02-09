@@ -100,3 +100,25 @@ def build_qa_chain(vectorstore):
         return_source_documents=True
     )
 
+
+def build_mitigation_qa_chain(mitigation_vectorstore):
+    """
+    Build a QA chain specifically for retrieving mitigation strategies.
+    
+    Args:
+        mitigation_vectorstore: Vectorstore containing mitigation best practices
+        
+    Returns:
+        RetrievalQA chain for mitigation queries
+    """
+    retriever = mitigation_vectorstore.as_retriever(search_type="similarity", k=10)
+    
+    llm = get_llm()
+
+    return RetrievalQA.from_chain_type(
+        llm=llm,
+        retriever=retriever,
+        chain_type="stuff",
+        return_source_documents=True
+    )
+

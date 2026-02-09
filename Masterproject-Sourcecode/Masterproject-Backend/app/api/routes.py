@@ -1,12 +1,14 @@
 import json
 from fastapi import FastAPI, Form, UploadFile, File
 from fastapi.responses import JSONResponse, Response
-from app.llm.qa_chain import build_qa_chain
+from app.llm.qa_chain import build_qa_chain, build_mitigation_qa_chain
 from app.llm.query_builder import build_analysis_query
 from app.utils.file_loader import load_knowledge_base
 from app.utils.document_utils import extract_threat_docs
-from app.llm.vectorstore import setup_vectorstore_lance
+from app.llm.vectorstore import setup_vectorstore_lance, setup_mitigation_vectorstore
+from app.utils.mitigation_loader import load_mitigation_practices
 from app.config import KNOWLEDGE_BASE_PATH
+import os
 import uvicorn
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,11 +20,12 @@ from app.llm.dual_llm_generator import generate_mitigated_bpmn_dual_llm
 from app.config import USE_DUAL_LLM
 
 qa_chain = None  # Global variable for the QA chain
+mitigation_chain = None  # Global variable for mitigation QA chain
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global qa_chain
+    global qa_chain, mitigation_chain
     # Load knowledge base and setup vectorstore
     kb_data = load_knowledge_base(KNOWLEDGE_BASE_PATH)
     docs = extract_threat_docs(kb_data)
@@ -30,6 +33,16 @@ async def lifespan(app: FastAPI):
     # Build the QA chain
     qa_chain = build_qa_chain(vs)
     print("QA chain setup complete.")
+    
+    # Load mitigation practices and setup mitigation vectorstore
+    mitigation_path = os.path.join("resources", "mitigation.json")
+    if os.path.exists(mitigation_path):
+        mitigation_docs = load_mitigation_practices(mitigation_path)
+        mitigation_vs = setup_mitigation_vectorstore(mitigation_docs)
+        mitigation_chain = build_mitigation_qa_chain(mitigation_vs)
+        print("Mitigation chain setup complete.")
+    else:
+        print(f"Warning: Mitigation file not found at {mitigation_path}")
 
     # Test the setup with a file
     """ print("Testing setup with file...")
@@ -100,7 +113,12 @@ async def analyze_xml(
     print("Principles:", principles_list)
     print("Context:", context_data)
 
-    prompt = build_analysis_query(xml_content.decode("utf-8"), context_data, principles_list)
+    prompt = build_analysis_query(
+        xml_content.decode("utf-8"), 
+        context_data, 
+        principles_list,
+        mitigation_chain
+    )
 
     print("DEBUG analyze_xml prompt:", prompt)
 

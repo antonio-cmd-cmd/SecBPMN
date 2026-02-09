@@ -1,0 +1,3630 @@
+{
+  "source_document": "5692_CSG_Book_20-optimized.pdf",
+  "total_practices": 604,
+  "best_practices": [
+    {
+      "title": "Know and Protect Your Critical Assets",
+      "description": "Identify and safeguard critical assets to reduce insider threat risks.",
+      "category": "security",
+      "page": 3
+    },
+    {
+      "title": "Develop a Formalized Insider Risk Management Program",
+      "description": "Create and implement a structured program to manage insider risk effectively.",
+      "category": "risk management",
+      "page": 3
+    },
+    {
+      "title": "Clearly Document and Consistently Enforce Administrative Controls",
+      "description": "Ensure that administrative controls are well-documented and consistently applied.",
+      "category": "access control",
+      "page": 3
+    },
+    {
+      "title": "Monitor and Respond to Suspicious or Disruptive Behavior Starting from the Hiring Process",
+      "description": "Begin monitoring for insider risks during hiring and respond promptly to suspicious behavior.",
+      "category": "monitoring",
+      "page": 3
+    },
+    {
+      "title": "Anticipate and Manage Negative Issues in the Work Environment",
+      "description": "Proactively address negative work environment factors that may lead to insider threats.",
+      "category": "risk management",
+      "page": 3
+    },
+    {
+      "title": "Consider Insider Threats in Enterprise-Wide Risk Assessments",
+      "description": "Include insider threats from both insiders and trusted external entities in risk assessments.",
+      "category": "risk assessment",
+      "page": 3
+    },
+    {
+      "title": "Be Vigilant Regarding Social Media",
+      "description": "Exercise caution with social media activities to prevent potential insider threats.",
+      "category": "monitoring",
+      "page": 3
+    },
+    {
+      "title": "Structure Management and Tasks to Minimize Insider Stress and Mistakes",
+      "description": "Organize management practices and tasks to reduce stress and human errors among insiders.",
+      "category": "risk management",
+      "page": 3
+    },
+    {
+      "title": "Incorporate Insider Threat Awareness into Security Training",
+      "description": "Include insider threat awareness in regular security training for all workforce members.",
+      "category": "training",
+      "page": 3
+    },
+    {
+      "title": "Implement Strict Password and Account Management Policies",
+      "description": "Enforce strong password policies and account management practices to enhance security.",
+      "category": "security",
+      "page": 3
+    },
+    {
+      "title": "Institute Stringent Access Controls on Privileged Users",
+      "description": "Apply strict access controls and monitoring policies for privileged users.",
+      "category": "access control",
+      "page": 3
+    },
+    {
+      "title": "Deploy Solutions for Monitoring Workforce Actions",
+      "description": "Use solutions to monitor workforce member actions and correlate data from multiple sources.",
+      "category": "monitoring",
+      "page": 3
+    },
+    {
+      "title": "Monitor Remote Access from All Endpoints, Including Mobile Devices",
+      "description": "Ensure monitoring and control of remote access from all devices, including mobile ones.",
+      "category": "monitoring",
+      "page": 3
+    },
+    {
+      "title": "Establish a Baseline of Normal Behavior for Networks and Workforce Members",
+      "description": "Create a baseline to detect anomalies in network and workforce member behavior.",
+      "category": "monitoring",
+      "page": 3
+    },
+    {
+      "title": "Enforce Separation of Duties and Least Privilege",
+      "description": "Apply the principles of separation of duties and least privilege to minimize risks.",
+      "category": "security",
+      "page": 3
+    },
+    {
+      "title": "Define Explicit Security Agreements for Cloud Services",
+      "description": "Ensure clear security agreements, especially regarding access restrictions and monitoring capabilities for cloud services.",
+      "category": "security",
+      "page": 4
+    },
+    {
+      "title": "Institutionalize System Change Controls",
+      "description": "Formalize controls to manage changes in systems effectively.",
+      "category": "configuration",
+      "page": 4
+    },
+    {
+      "title": "Implement Secure Backup and Recovery Processes",
+      "description": "Develop secure methods for backing up and recovering data.",
+      "category": "security",
+      "page": 4
+    },
+    {
+      "title": "Mitigate Unauthorized Data Exfiltration",
+      "description": "Take measures to prevent unauthorized transfer of data from an organization.",
+      "category": "security",
+      "page": 4
+    },
+    {
+      "title": "Develop a Comprehensive Termination Procedure",
+      "description": "Create detailed procedures for the termination of workforce members to ensure security and compliance.",
+      "category": "human resources",
+      "page": 4
+    },
+    {
+      "title": "Adopt Positive Incentives for Workforce Alignment",
+      "description": "Use positive incentives to align the workforce's interests with the organization’s goals.",
+      "category": "organizational management",
+      "page": 4
+    },
+    {
+      "title": "Learn From Past Insider Threat Incidents",
+      "description": "Analyze previous incidents to improve future prevention and response strategies.",
+      "category": "risk management",
+      "page": 4
+    },
+    {
+      "title": "Implement Insider Risk Management Programs",
+      "description": "Organizations should implement Insider Risk Management Programs (IRMPs) by collaborating with key stakeholders across various groups including Management, Human Resources, Legal Counsel, Physical Security, Information Technology, Information Security, Data Owners, and Software Engineers to mitigate insider threats effectively.",
+      "category": "security",
+      "page": 6
+    },
+    {
+      "title": "Learn From Past Insider Incidents",
+      "description": "Best Practice 22: Learn From Past Insider Incidents.",
+      "category": "security",
+      "page": 8
+    },
+    {
+      "title": "Interactive Strategy Implementation",
+      "description": "An organization must implement a multi-pronged approach with continuous feedback from stakeholders to ensure alignment with IRMP goals.",
+      "category": "configuration",
+      "page": 13
+    },
+    {
+      "title": "Balancing Act in Insider Risk Management",
+      "description": "Effective risk management balances people, management, and organizational dimensions to reduce insider threats to acceptable levels.",
+      "category": "security",
+      "page": 13
+    },
+    {
+      "title": "Aligning IRMP with Organizational Culture",
+      "description": "IRMPs must align strategies with business policies, culture, and technical environment for effective risk management.",
+      "category": "configuration",
+      "page": 13
+    },
+    {
+      "title": "Organizational Culture Impact",
+      "description": "Understanding how organizational culture influences risk management efforts is crucial for success.",
+      "category": "management",
+      "page": 13
+    },
+    {
+      "title": "Considering Internal and External Factors",
+      "description": "Effective risk management requires considering both internal (policies, processes) and external factors to balance risks.",
+      "category": "organization",
+      "page": 13
+    },
+    {
+      "title": "Coordinate with Legal and Privacy Offices",
+      "description": "IRMPs should work closely with legal and privacy offices to define requirements for activities using personal data.",
+      "category": "privacy",
+      "page": 14
+    },
+    {
+      "title": "Location-Specific Privacy Rights",
+      "description": "Design IRMP operations scoped to specific jurisdictions to manage privacy requirements, especially for multinational organizations.",
+      "category": "configuration",
+      "page": 14
+    },
+    {
+      "title": "Collaborate with U.S. Counsel and Privacy Office",
+      "description": "IRMPs in the U.S. should engage with general counsel and privacy office to define requirements.",
+      "category": "privacy",
+      "page": 14
+    },
+    {
+      "title": "Answer Key Questions About Systems",
+      "description": "IRMPs must address questions on systems using personal data, controls, recurring activities, triggers, and budgeting.",
+      "category": "data management",
+      "page": 14
+    },
+    {
+      "title": "Address GDPR Challenges",
+      "description": "Multinational organizations interacting with EU citizens must comply with GDPR for personal data processing.",
+      "category": "security",
+      "page": 14
+    },
+    {
+      "title": "Understand GDPR Principles",
+      "description": "IRMPs should align operations with GDPR Article 5 principles to ensure compliance and protect privacy.",
+      "category": "data protection",
+      "page": 14
+    },
+    {
+      "title": "Rispettare i principi GDPR",
+      "description": "Esegui un'analisi approfondita del GDPR e di altre leggi simili per garantire la conformità con le diverse legislazioni.",
+      "category": "compliance",
+      "page": 15
+    },
+    {
+      "title": "Limitazione del processo a fini specificati",
+      "description": "Assicurarsi che i dati siano raccolti solo per fini specificati, espliciti e legittimi.",
+      "category": "data",
+      "page": 15
+    },
+    {
+      "title": "Minimizzazione dei dati",
+      "description": "Raccogli soltanto i dati essenziali per gli scopi previsti, evitando di accumulare informazioni inutilizzate.",
+      "category": "data",
+      "page": 15
+    },
+    {
+      "title": "Accuratezza e aggiornamento dei dati",
+      "description": "Sicurarsi che i dati siano corretti e aggiornati, rimuovendo o rettificando quelli inesatti.",
+      "category": "data",
+      "page": 15
+    },
+    {
+      "title": "Limitazione del periodo di conservazione",
+      "description": "Mantieni i dati solo per il tempo necessario agli scopi specificati.",
+      "category": "configuration",
+      "page": 15
+    },
+    {
+      "title": "Sicurezza e confidenzialità",
+      "description": "Implementa misure tecniche e organizzative per proteggere i dati da accessi non autorizzati.",
+      "category": "security",
+      "page": 15
+    },
+    {
+      "title": "Risposta dinamica a nuove regolamentazioni",
+      "description": "Resta aggiornato sulle novità legali e regolamentari, in particolare per organizzazioni statunitensi.",
+      "category": "compliance",
+      "page": 15
+    },
+    {
+      "title": "Know and Protect Your Critical Assets",
+      "description": "Identify and protect critical assets that provide the organization with a competitive advantage. Critical assets include tangible and intangible elements such as people, information, technology, facilities, critical services, and processes. These assets are crucial for maintaining confidentiality, integrity, and availability, impacting the organization's ability to support essential missions and business functions. Monitor where data is stored and transmitted to prevent unauthorized access or removal.",
+      "category": "security",
+      "page": 18
+    },
+    {
+      "title": "Inventario esauriente degli asset critici",
+      "description": "Creare un inventario dettagliato degli asset critici rispondendo a una serie di domande specifiche, inclusi servizi, processi, accessi autorizzati e valutazioni di costo in caso di perdita.",
+      "category": "security",
+      "page": 19
+    },
+    {
+      "title": "Ruolo del IRMP nel gestire i rischi interni",
+      "description": "IlIRMP collabora con gli asset owner per identificare, prioritizzare e proteggere gli asset critici attraverso un processo strutturato di valutazione e monitoraggio.",
+      "category": "security",
+      "page": 19
+    },
+    {
+      "title": "Valutazione del rischio secondo NIST",
+      "description": "Eseguire una valutazione del rischio che include la categoriazione dei sistemi, la scelta di controlli di sicurezza e l'implementazione di misure protettive, seguendo i 6 step del framework di gestione del rischio di NIST.",
+      "category": "security",
+      "page": 19
+    },
+    {
+      "title": "Assess Security Controls",
+      "description": "Ensure security controls are implemented correctly, operate as intended, and meet system security requirements.",
+      "category": "security",
+      "page": 20
+    },
+    {
+      "title": "Authorize System Operation Based on Risk",
+      "description": "Authorize information system operation after assessing risk to organizational assets and determining its acceptability.",
+      "category": "security",
+      "page": 20
+    },
+    {
+      "title": "Monitor Security Controls Continuously",
+      "description": "Continuously monitor and assess security controls, document changes, conduct impact analyses, and report system state.",
+      "category": "security",
+      "page": 20
+    },
+    {
+      "title": "Inventory Organizational Assets",
+      "description": "Answer key questions about data types, devices, and locations to understand assets needing protection.",
+      "category": "asset management",
+      "page": 20
+    },
+    {
+      "title": "Refer to NIST and FIPS Guidelines",
+      "description": "Use NIST SP 800-60 Vol2 and FIPS PUB 199 for categorizing information based on security objectives.",
+      "category": "configuration",
+      "page": 20
+    },
+    {
+      "title": "Use Metrics to Rank Assets",
+      "description": "Consider metrics like restoration time, loss impact, mission effect, failure probability, and asset popularity.",
+      "category": "asset management",
+      "page": 20
+    },
+    {
+      "title": "Apply Pairwise Ranking Method",
+      "description": "Rank assets by comparing two at a time using numerical ratings for prioritization.",
+      "category": "asset management",
+      "page": 20
+    },
+    {
+      "title": "Create a Service-Based Inventory",
+      "description": "Identify critical services required for the organization's mission. Establish a hierarchy of assets starting with top-level services and branch into supporting information, hardware, and software assets.",
+      "category": "configuration",
+      "page": 21
+    },
+    {
+      "title": "Perform a Hardware-Based Inventory",
+      "description": "Use hardware-based assets managed by IT to start the asset inventory. Collect details on supported software, applications running on servers, and contacts for each item.",
+      "category": "configuration",
+      "page": 21
+    },
+    {
+      "title": "Update Asset Information",
+      "description": "After identifying assets, ask IT to add any unidentified assets and their business owners' contact information. Business owners should identify authorized access, granting/revoking processes, emergency contacts, asset value, and regulatory requirements.",
+      "category": "configuration",
+      "page": 21
+    },
+    {
+      "title": "Assign Asset Attributes",
+      "description": "Once the inventory is complete, assign a set of attributes to each asset to determine its priority.",
+      "category": "configuration",
+      "page": 21
+    },
+    {
+      "title": "Classificazione degli asset",
+      "description": "L'organizzazione deve definire attributi come ambiente (es. produzione, sviluppo), categorizzazione sicurezza (confidenzialità, integrità, disponibilità) e criticità.",
+      "category": "configuration",
+      "page": 22
+    },
+    {
+      "title": "Condurre un Privacy Impact Assessment (PIA)",
+      "description": "È raccomandato condurre una PIA o DPIA in conformità al GDPR, inclusi descrittivi del processing, valutazione della necessità e proporzionalità, rischi per i diritti dei soggetti e misure di protezione.",
+      "category": "privacy",
+      "page": 22
+    },
+    {
+      "title": "Ruolo dell'impiegatore nel PIA",
+      "description": "Nel rapporto impiegatore/impiegato, l'impiegatore deve condurre il PIA come controller del processing dei dati personali.",
+      "category": "compliance",
+      "page": 22
+    },
+    {
+      "title": "Riconoscimento di indirizzi IP dinamici come dati personali",
+      "description": "Gli indirizzi IP dinamici possono essere considerati dati personali se possono identificare un individuo in combinazione con altre informazioni, conformemente al GDPR.",
+      "category": "privacy",
+      "page": 22
+    },
+    {
+      "title": "Ottieni l'approvazione del leadership",
+      "description": "È necessario ottenere il supporto dal leadership per dedicare tempo, denaro e risorse alle attività di identificazione e priorizzazione degli asset critici dell'organizzazione.",
+      "category": "risk management",
+      "page": 23
+    },
+    {
+      "title": "Utilizza metriche appropriate per identificare gli asset critici",
+      "description": "Determinare cosa costituisca un asset critico richiede l'uso di metriche specifiche e non solo la semplice dichiarazione da parte degli stakeholder.",
+      "category": "risk management",
+      "page": 23
+    },
+    {
+      "title": "Definisci chiaramente lo scope degli asset critici",
+      "description": "Capire e contenere l'ambito degli asset critici, specialmente in contesti cloud, remote o virtualizzati.",
+      "category": "risk management",
+      "page": 23
+    },
+    {
+      "title": "Ottieni tempo e funding sufficienti",
+      "description": "Sicurarsi di avere i mezzi necessari per condurre un'inventario completo degli asset, giustificando il costo con l'importanza dellaattività e i rischi associati al suo non completamento.",
+      "category": "risk management",
+      "page": 23
+    },
+    {
+      "title": "Mantieni un'inventario preciso e aggiornato",
+      "description": "Effettuare controlli periodici (semestrali o annuali) e auditor di routine per assicurarsi che l'inventario degli asset rimanga accurato.",
+      "category": "risk management",
+      "page": 23
+    },
+    {
+      "title": "Identify Critical Assets",
+      "description": "Identify critical business services, supporting processes, and assets.",
+      "category": "asset management",
+      "page": 24
+    },
+    {
+      "title": "Describe Organization's Information",
+      "description": "Describe the nature of information by consulting data owners and users across the organization.",
+      "category": "data governance",
+      "page": 24
+    },
+    {
+      "title": "Identify Legal Requirements",
+      "description": "Determine legal and regulatory requirements for protecting critical assets.",
+      "category": "compliance",
+      "page": 24
+    },
+    {
+      "title": "Emergency Contacts for Assets",
+      "description": "Identify emergency points of contact for all critical assets.",
+      "category": "incident response",
+      "page": 24
+    },
+    {
+      "title": "Calculate Asset Loss Value",
+      "description": "Calculate the present value for the loss or replacement of each asset.",
+      "category": "risk assessment",
+      "page": 24
+    },
+    {
+      "title": "Track Access Permissions",
+      "description": "Track who has what kind of access for each asset.",
+      "category": "access control",
+      "page": 24
+    },
+    {
+      "title": "Maintain Access Guidance",
+      "description": "Maintain guidance for granting and revoking access for each critical asset.",
+      "category": "access control",
+      "page": 24
+    },
+    {
+      "title": "Monitor Assets",
+      "description": "Identify types of monitoring capabilities that allow each critical asset to be controlled and audited.",
+      "category": "monitoring",
+      "page": 24
+    },
+    {
+      "title": "Prioritize Assets",
+      "description": "Prioritize assets and data to determine high-value targets.",
+      "category": "risk assessment",
+      "page": 24
+    },
+    {
+      "title": "Develop a Formalized Insider Risk Management Program (IRMP)",
+      "description": "An IRMP is an organization’s designated resource for mitigating insider threats. It uses a risk management approach and requires proactive measures, including role-based training, defined roles, and criteria for identifying risks and recommending mitigations.",
+      "category": "security",
+      "page": 26
+    },
+    {
+      "title": "Formalized and Defined IRMP",
+      "description": "The program should include elements such as directives, authorities, a mission statement, leadership intent, governance, and a budget.",
+      "category": "security",
+      "page": 27
+    },
+    {
+      "title": "Organization-Wide Participation",
+      "description": "The program should have active participation from all organizational components that use data access and sharing. Senior leadership should provide visible support for the program.",
+      "category": "security",
+      "page": 27
+    },
+    {
+      "title": "Oversight of Program Compliance and Effectiveness",
+      "description": "A governance structure, such as an IRMP working group or change control board, should help formulate standards and operating procedures for the IRMP and recommend changes to existing practices and procedures.",
+      "category": "security",
+      "page": 27
+    },
+    {
+      "title": "Confidential Reporting Procedures and Mechanisms",
+      "description": "These mechanisms enable reporting of suspicious activity while ensuring legitimate whistleblowers are not inhibited or inappropriately monitored.",
+      "category": "security",
+      "page": 27
+    },
+    {
+      "title": "Insider Threat Incident Response Plan",
+      "description": "This plan must detail more than just a referral process to outside investigators. It should provide comprehensive details for responding to incidents.",
+      "category": "security",
+      "page": 27
+    },
+    {
+      "title": "Comunicazione degli eventi di minaccia interna",
+      "description": "Le informazioni sugli eventi dovrebbero essere condivise in modo appropriato con le componenti organizzative corrette, mantenendo la confidenzialità e la privacy del personale fino a quando le accuse non siano pienamente sostenute. Questo include tendenze, modelli e eventi futuri probabili per modificare politiche, procedure, formazione ecc.",
+      "category": "communication and information sharing",
+      "page": 28
+    },
+    {
+      "title": "Protezione delle libertà civili e diritti alla privacy del personale",
+      "description": "Il Consiglio Legale deve esaminare le decisioni e azioni del programma IRMP a tutti i livelli di sviluppo, implementazione e operazione.",
+      "category": "security and privacy",
+      "page": 28
+    },
+    {
+      "title": "Integrazione con la gestione del rischio aziendale",
+      "description": "L'IRMP deve assicurarsi che tutti gli aspetti della gestione del rischio aziendale includano considerazioni sulla minaccia interna (non solo attacchi esterni) e l'organizzazione dovrebbe considerare l'establishment di un componente standalone per la gestione del rischio interno.",
+      "category": "risk management",
+      "page": 28
+    },
+    {
+      "title": "Pratiche relative alla gestione delle entità esterne affidabili (TEE)",
+      "description": "Queste pratiche includono accordi, contratti e processi revisionati per la prevenzione, rilevamento e risposta alle minacce interne.",
+      "category": "external partner management",
+      "page": 28
+    },
+    {
+      "title": "Infrastruttura per prevenzione, rilevamento e risposta",
+      "description": "Questa infrastruttura include componenti come difese di rete, host, fisiche, strumenti e processi.",
+      "category": "secure infrastructure",
+      "page": 28
+    },
+    {
+      "title": "Formazione e coscienza sulla minaccia interna",
+      "description": "La formazione comprende tre aspetti: (1) formazione di consapevolezza per tutto il personale, (2) formazione per i membri del programma IRMP, e (3) formazione basata sul ruolo per specialisti che potrebbero osservare aspetti specifici degli eventi di minaccia interna.",
+      "category": "training and awareness",
+      "page": 28
+    },
+    {
+      "title": "Strumenti, tecniche e pratiche per la raccolta e analisi dei dati",
+      "description": "Questi strumenti includono il monitoraggio delle attività degli utenti, la raccolta e l'analisi dei dati. È richiesta documentazione dettagliata per garantire il conformarsi alla privacy del personale.",
+      "category": "data management",
+      "page": 28
+    },
+    {
+      "title": "Politiche, procedure e pratiche di IRMP",
+      "description": "L'IRMP deve avere documenti formali che dettagliano tutti gli aspetti del programma, inclusa la sua missione, minacce, direttive e procedure standard.",
+      "category": "program management",
+      "page": 28
+    },
+    {
+      "title": "Incentivi positivi",
+      "description": "Le organizzazioni dovrebbero attirare il comportamento desiderabile mediante incentivi basati su motivazioni positive, concentrandosi sull'engagement del lavoro, supporto organizzativo e connessione al lavoro.",
+      "category": "personnel management",
+      "page": 28
+    },
+    {
+      "title": "Establish Insider Risk Management Program (IRMP)",
+      "description": "An IRMP helps detect, prevent, and respond to insider incidents. It involves cross-functional teams from different areas of the organization to handle sensitive information with discretion.",
+      "category": "security",
+      "page": 29
+    },
+    {
+      "title": "Prepare for Insider Incidents Consistently and Timely",
+      "description": "IRMP members must understand roles, authority, coordination, reporting, actions to take, and improvements to ensure effective response.",
+      "category": "security",
+      "page": 29
+    },
+    {
+      "title": "Handle Sensitive Information Discreetly",
+      "description": "IRMP teams must treat cases with discretion due to potential career impacts and protect privacy and confidentiality.",
+      "category": "privacy",
+      "page": 29
+    },
+    {
+      "title": "Balance Information Sharing and Privacy",
+      "description": "Ask all involved organizational groups to contribute their threat detection data and ideas, but have only a small, core IRMP team receive and analyze that information.",
+      "category": "security",
+      "page": 30
+    },
+    {
+      "title": "Align IRMP Directly with Senior Leadership",
+      "description": "The IRMP is most effective when it directly reports to the President/CEO/Director/Secretary or their Principal Deputy, ensuring commitment from senior leadership and unfettered access to needed data sources.",
+      "category": "risk management",
+      "page": 30
+    },
+    {
+      "title": "Identify Trusted Agents for Data Feeds",
+      "description": "Each business unit should have a trusted agent who can provide data feeds or additional information. Trusted agents must undergo a background check and sign an IRMP nondisclosure agreement (NDA) before assuming this role.",
+      "category": "insider threat management",
+      "page": 31
+    },
+    {
+      "title": "IRMP Requests Data and Conducts Own Analysis",
+      "description": "The IRMP should request data from other departments (e.g., facility access logs from Physical Security team) but perform its own analysis to encourage cooperation.",
+      "category": "insider threat management",
+      "page": 31
+    },
+    {
+      "title": "Involve Team Members Based on Threat Type",
+      "description": "The organization should determine which IRMP team members must be involved for each type of prevention, detection, or response effort. Inclusion in a response may vary based on the escalation level.",
+      "category": "insider threat management",
+      "page": 31
+    },
+    {
+      "title": "Regular Team Meetings for Proactive and Reactive Responses",
+      "description": "The IRMP team should meet regularly to discuss detected anomalies (proactive response) and allegations of potential insider activity (reactive response). Meetings can be conducted in person or virtually.",
+      "category": "insider threat management",
+      "page": 31
+    },
+    {
+      "title": "Use Secure Communication Methods",
+      "description": "The IRMP team should use secure communication methods, such as videoconferencing or encrypted emails, to collaborate across locations. Security procedures include encryption using public key infrastructure.",
+      "category": "security",
+      "page": 31
+    },
+    {
+      "title": "Procedimenti di crittografia per email",
+      "description": "Utilizzare procedure che specificano l'uso di crittografia robusta, come PGP. Le email devono essere decrittografate solo brevemente, lette offline, archiviate in forma crittografata e la versione decrittografata eliminata in modo sicuro.",
+      "category": "security",
+      "page": 32
+    },
+    {
+      "title": "Piani alternativi per riunioni elettroniche",
+      "description": "Prevedere piani alternativi per riunioni elettroniche nel caso di attacchi o monitoraggio interno.",
+      "category": "security",
+      "page": 32
+    },
+    {
+      "title": "Confidenzialità durante le indagini",
+      "description": "Maintenere la confidenzialità delle informazioni relative a indagini IRMP per proteggere la privacy e nascondere l'indagine dal dipendente sospettato.",
+      "category": "confidentiality",
+      "page": 32
+    },
+    {
+      "title": "Reticenza delle accuse",
+      "description": "Tenere confidenziali le indagini e discuterle solo con chi ha un bisogno legittimo di sapere, poiché le accuse non possono essere completamente ritrattate.",
+      "category": "confidentiality",
+      "page": 32
+    },
+    {
+      "title": "Richiesta di dati durante indagini",
+      "description": " richiedere dati da un insieme più grande per evitare di allertare il sospetto o il proprietario dei dati.",
+      "category": "investigations",
+      "page": 32
+    },
+    {
+      "title": "Audi casuale come pratica standard",
+      "description": "Includere audi casuali nelle politiche e procedure operativi standard per rilevare minacce non identificate e fornire copertura non allertante per le richieste di dati.",
+      "category": "threat detection",
+      "page": 32
+    },
+    {
+      "title": "Engagement del personale per prevenire insiders",
+      "description": "Pratiche per migliorare l'engagement del personale, come la gestione basata sulle competenze, possono ridurre il rischio di comportamenti dannosi.",
+      "category": "personnel management",
+      "page": 32
+    },
+    {
+      "title": "Screening and Privacy in HR Inquiries",
+      "description": "HR must carefully screen information involved in inquiries and release only the minimum amount of information necessary on a need-to-know basis to ensure workforce member privacy.",
+      "category": "security",
+      "page": 33
+    },
+    {
+      "title": "Behavioral Science SME Embedded in HR",
+      "description": "The HR team can include a behavioral science subject matter expert (SME) who is embedded or works closely with the Insider Risk Management Program (IRMP).",
+      "category": "security",
+      "page": 33
+    },
+    {
+      "title": "HR Watch List for Personnel",
+      "description": "The HR team can use internal findings to develop a watch list of personnel and release it to certain members of the IA and IRMP teams so they know which logs to review.",
+      "category": "security",
+      "page": 33
+    },
+    {
+      "title": "Behavioral Indicators for Insider Threats",
+      "description": "Behavioral indicators identified by CERT researchers, such as repeated policy violations, disruptive behavior, financial difficulty, and job performance problems, can be used to signal potential malicious insider activities.",
+      "category": "security",
+      "page": 33
+    },
+    {
+      "title": "HR Notification for Exiting Employees",
+      "description": "When a workforce member resigns or leaves the organization, HR must notify members of the IT team so they can perform enhanced monitoring on the exiting individual.",
+      "category": "security",
+      "page": 33
+    },
+    {
+      "title": "IRMP Inquiry for Insider Resignation",
+      "description": "HR notifies the CSIRT and IRMP, who conduct an inquiry of past and present online activity and project future online activity, with a particular focus on logs of activity for 30 days before and after the insider resigned.",
+      "category": "security",
+      "page": 33
+    },
+    {
+      "title": "Increased Monitoring for Financial Difficulty",
+      "description": "The IRMP increases monitoring of financial transactions and data, such as personally identifiable information (PII), that could be sold when a workforce member is experiencing extreme financial difficulty or has a sudden, unexplained change in financial status.",
+      "category": "security",
+      "page": 33
+    },
+    {
+      "title": "Monitoraggio di insider a alto rischio",
+      "description": "Le squadre IT e IA devono collaborare per individuare un piano di monitoraggio degli insider a alto rischio, identificando tutti i sistemi e le informazioni accessibili da tali dipendenti. È essenziale che i log di controllo registri siano sufficientemente dettagliati per rilevare le seguenti informazioni: chi ha eseguito l'azione, cosa è stato fatto, quando è avvenuto l'evento e dove.",
+      "category": "security",
+      "page": 34
+    },
+    {
+      "title": "Utilizzo di soluzioni SIEM per il monitoraggio",
+      "description": "Le squadre IT e IA dovrebbero implementare una soluzione SIEM (Security Information and Event Management) per raccogliere e correlare tutti gli eventi di sicurezza. Questo sistema può essere personalizzato per identificare pattern specifici o estrazione di eventi in base a criteri definiti.",
+      "category": "security",
+      "page": 34
+    },
+    {
+      "title": "Correlazione di log fisici e IT",
+      "description": "La squadra di Sicurezza Fisica deve collaborare con la squadra IA per raccogliere log di accesso fisico. Quando possibile, le registrazioni video e altri tipi di log devono essere correlati per aiutare a identificare minacce.",
+      "category": "security",
+      "page": 34
+    },
+    {
+      "title": "Funzionamento dell'IRMP con politiche definite",
+      "description": "L'IRMP (Incident Response Management Program) deve operare in base a politiche ben definite e applicate in modo costante. Riunioni regolari consentono di garantire il compliance con le politiche e migliorano la situazione d'impresa grazie alla collaborazione interdipartimentale.",
+      "category": "incident management",
+      "page": 34
+    },
+    {
+      "title": "Programmi di prevenzione della violenza nel luogo di lavoro",
+      "description": "I programmi di prevenzione della violenza nel luogo di lavoro, come quello del USDA, richiedono un team di valutazione delle minacce composto da membri di vari dipartimenti che lavorano attivamente per identificare e mitigare potenziali rischi.",
+      "category": "safety",
+      "page": 34
+    },
+    {
+      "title": "Management Support for IRMP",
+      "description": "Continuous support from all levels of management is essential for the success of the Insider Risk Management Program (IRMP). Financial backing and genuine commitment are necessary to avoid situations where support wanes, either due to perceived ineffectiveness or higher priorities.",
+      "category": "security",
+      "page": 35
+    },
+    {
+      "title": "Avoiding IRMP Misuse",
+      "description": "Prevent both intentional and unintentional misuse of the IRMP. Ensure that program functions are not subverted for personal goals or accidentally leading to privacy breaches, especially concerning GDPR regulations.",
+      "category": "security",
+      "page": 35
+    },
+    {
+      "title": "Finding Team Participants",
+      "description": "Even small organizations without dedicated workforce members can establish an IRMP by designating contacts and ensuring they know their roles.",
+      "category": "governance",
+      "page": 36
+    },
+    {
+      "title": "Avoiding Negative Unintended Consequences",
+      "description": "IRMP planners must anticipate negative impacts, monitor for them, and mitigate as needed during change management.",
+      "category": "risk mitigation",
+      "page": 36
+    },
+    {
+      "title": "Recognizing the Right to Rectification",
+      "description": "Under GDPR, workforce members can request data corrections; IRMP should handle these requests while managing associated risks.",
+      "category": "compliance",
+      "page": 36
+    },
+    {
+      "title": "Governance Structure for IRMP",
+      "description": "A mature governance structure maintains knowledge, supports stakeholders, monitors practices, communicates successes, performs budget reviews, updates procedures, and improves continuously.",
+      "category": "governance",
+      "page": 36
+    },
+    {
+      "title": "Implementare un Programma di Gestione del Rischio Interno (IRMP)",
+      "description": "Un team dedicato al rischio interno dovrebbe creare politiche e procedure per controlli di ammissione, monitoraggio di comportamenti anomali e processi di detenzione.",
+      "category": "security",
+      "page": 37
+    },
+    {
+      "title": "Utilizzare soluzioni SIEM con regole personalizzate",
+      "description": "Le regole personalizzate nelle soluzioni SIEM aiutano a rilevare attività sospette, come accessi extra-giornata o l'uso remoto di account amministrativi.",
+      "category": "monitoring",
+      "page": 37
+    },
+    {
+      "title": "Monitoraggio attento dell'accesso remoto",
+      "description": "È consigliabile monitorare con attenzione l'accesso remoto, come descritto nella Best Practice 13, per prevenire potenziali minacce interne.",
+      "category": "security",
+      "page": 37
+    },
+    {
+      "title": "Effettuare controlli di background approfonditi",
+      "description": "I controlli di background possono prevenire la Selezione di dipendenti con precedenti condanne per frode o attività dannose.",
+      "category": "admission",
+      "page": 37
+    },
+    {
+      "title": "Monitoraggio costante del comportamento anomalo",
+      "description": "Monitorareattività sospette, come download eccessivi di file confidenziali, per rilevare potenziali minacce interne.",
+      "category": "monitoring",
+      "page": 37
+    },
+    {
+      "title": "Ottieni approvazione legale iniziale",
+      "description": "Ottieni l'approvazione legale iniziale per tutte le politiche e pratiche previste. Richiedi al legal counsel di identificare i requisiti legali per operare un IRMP, specificamente ciò che è consentito o meno.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Estabilisci protocolli di revisione legale",
+      "description": "Stabilisci protocolli periodici e basati su eventi per la revisione e l'approvazione legali, ad esempio revisioni semestrali o richieste di assistenza legale basate su eventi specifici.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Documenta la definizione di incidente minaccia interna",
+      "description": "Documentare la definizione dell'organizzazione di un incidente di minaccia interna e identificare i triggers necessari che possano classificare l'evento come una violazione dei dati, ad esempio se riguarda l'esfiltrazione di PII.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Definisci un piano di risposta cross-functionale",
+      "description": "Definire un piano di risposta a incidenti di minaccia interna che descrive chi è responsabile di cosa e in quale periodo durante la risposta a un evento di minaccia interna.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Considera opzioni per il trasferimento del rischio",
+      "description": "Considerare opzioni per il trasferimento del rischio, come provider di assicurazioni o servizi di cibersegurança che possano essere contrattualmente impegnati a gestire e rimediare a un incidente.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Formalizza il programma IRMP",
+      "description": "Formalizzare il programma IRMP nominando un funzionario senior come gestore del programma, che possa monitorare e rispondere ai rischi interni.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Definisci indicatori di minaccia interna",
+      "description": "Definire e_deploy indicatori di minaccia interna in un hub analitico che possa rilevare potenziali precursori di attività di minaccia interna, mantenendo il monitoraggio in tempo reale e assicurandosi che le liste degli indicatori siano contestualizzate ai gruppi utenti e agli asset critici.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Definisci metriche di rischio interno",
+      "description": "Definire e_deploy metriche di rischio interno in un hub analitico che possano aggregare e contestualizzare indicatori di minaccia interna per identificare pattern di comportamento associati a minacce interne.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Mantieni contatti frequenti tra stakeholder IRMP",
+      "description": "Mantenere contatti frequenti e stretti tra i stakeholders del programma IRMP per preservare uno stato di pronto.",
+      "category": "security",
+      "page": 38
+    },
+    {
+      "title": "Ensure Policies Are Fair and Consistently Enforced",
+      "description": "Organizations must ensure their policies and controls are fair, communicated to the entire workforce, and consistently enforced. This reduces the chance of inadvertent damage or resentment leading to harmful actions.",
+      "category": "security",
+      "page": 41
+    },
+    {
+      "title": "Provide Clear Documentation and Training",
+      "description": "Administrative controls should include concise and coherent documentation, including justification for policies. Regular workforce training on policies, their implementation, and enforcement is essential.",
+      "category": "documentation",
+      "page": 41
+    },
+    {
+      "title": "Clarify Administrative Controls on Sensitive Topics",
+      "description": "Organizations should be particularly clear about administrative controls regarding the use of systems, privileged accounts, ownership of information, performance evaluations, grievance processes, and acceptable workplace behavior.",
+      "category": "configuration",
+      "page": 41
+    },
+    {
+      "title": "Fornitura di copie delle politiche agli nuovi membri del personale",
+      "description": "Gli individui che entrano nell'organizzazione dovrebbero ricevere una copia delle politiche dell'organizzazione, che definiscano (1) ciò che si aspetta da loro come membri del personale e (2) le conseguenze previste in caso di violazione delle politiche. L'organizzazione deve raccogliere e conservare la prova che ogni individuo abbia letto ed accettato le politiche dell'organizzazione.",
+      "category": "configuration",
+      "page": 42
+    },
+    {
+      "title": "Politiche speciali per utenti privilegiati",
+      "description": "Gli amministratori di sistemi e chiunque altro con accesso non limitato ai sistemi informativi (utenti privilegiati) presentano un rischio unico. L'organizzazione dovrebbe considerare la creazione di una politica specifica per utenti privilegiati riguardante l'utilizzo accettabile o le regole di comportamento. La politica deve essere ribadita annualmente con gli utenti privilegiati e si dovrebbe implementare una soluzione per gestire i relativi account privilegiati.",
+      "category": "security",
+      "page": 42
+    },
+    {
+      "title": "Prevenzione di insoddisfazioni del personale",
+      "description": "La documentazione chiara delle politiche e controlli può prevenire i malintesi che possono portare a aspettative non soddisfatte. L'adeguata enforceability delle politiche garantisce che i membri del personale non percepire che vengano trattati in modo diverso o peggiore degli altri. La gestione deve essere esempio, altrimenti si creerà l'impressione che (1) non tutti siano sottoposti alle stesse norme e (2) la gestione non supporti pienamente le politiche o procedure.",
+      "category": "cultural",
+      "page": 42
+    },
+    {
+      "title": "Gestione del cambiamento organizzativo",
+      "description": "L'organizzazione deve riconoscere che il cambiamento è particolarmente stressante per i membri del personale, ammettere il rischio associato e mitigare tale rischio comunicando chiaramente ciò che si aspetta dal personale in futuro.",
+      "category": "management",
+      "page": 42
+    },
+    {
+      "title": "Implementazione di Procedure Chiare per lo Sviluppo del Software",
+      "description": "Le organizzazioni dovrebbero creare, distribuire e far rispettare linee guida ben definite per lo sviluppo del software.",
+      "category": "configuration",
+      "page": 43
+    },
+    {
+      "title": "Programma di Gestione dei Cambiamenti",
+      "description": "Per i sistemi mission-critical, è consigliabile avere un programma di gestione dei cambiamenti che richieda la sottomissione del codice sorgente.",
+      "category": "security",
+      "page": 43
+    },
+    {
+      "title": "Prevenzione della Concentrazione del Conoscimento",
+      "description": "Evitare che una singola persona detenga il monopolio delle informazioni cruciali sulle infrastrutture di rete.",
+      "category": "security",
+      "page": 43
+    },
+    {
+      "title": "Documentazione e Condivisione di Accessi Critici",
+      "description": "Tutti i punti di accesso e le autorizzazioni devono essere documentati e condivisi tra più persone.",
+      "category": "configuration",
+      "page": 43
+    },
+    {
+      "title": "Management Advocacy for Policies",
+      "description": "Ensure senior management advocates, enforces, and complies with all organizational policies to ensure effectiveness.",
+      "category": "governance",
+      "page": 44
+    },
+    {
+      "title": "Uniform Management Compliance",
+      "description": "All levels of management must comply with policies; noncompliance can undermine policy adherence among subordinates.",
+      "category": "governance",
+      "page": 44
+    },
+    {
+      "title": "Clear Communication of Policy Exceptions",
+      "description": "Communicate exceptions to policies clearly to the entire workforce to maintain transparency and consistency.",
+      "category": "communication",
+      "page": 44
+    },
+    {
+      "title": "Policy Briefings for Workforce",
+      "description": "Management should brief the workforce on all policies, requiring employees, contractors, and TEEs to sign acceptable-use and behavior policies annually or upon significant changes.",
+      "category": "compliance",
+      "page": 44
+    },
+    {
+      "title": "Reaffirming Nondisclosure Agreements",
+      "description": "Use policy signings as an opportunity to reaffirm nondisclosure agreements with employees, contractors, and TEEs.",
+      "category": "compliance",
+      "page": 44
+    },
+    {
+      "title": "Easy Access to Policies",
+      "description": "Ensure policies are easily accessible, such as by posting them on the organization’s internal website.",
+      "category": "communication",
+      "page": 44
+    },
+    {
+      "title": "Annual Refresher Training",
+      "description": "Mandate annual refresher training covering various areas including HR, legal, physical security, and policy changes to keep employees informed.",
+      "category": "employee training",
+      "page": 44
+    },
+    {
+      "title": "Consistent Policy Enforcement",
+      "description": "Enforce policies consistently across the workforce to prevent perceptions of favoritism. HR should establish consequences for violations.",
+      "category": "compliance",
+      "page": 44
+    },
+    {
+      "title": "Monitoraggio del comportamento sospetto durante il processo di assunzione",
+      "description": "Gli organismi devono identificare proattivamente e gestire immediatamente comportamenti sospetti o disturbanti per ridurre il rischio di minacce interne.",
+      "category": "security",
+      "page": 46
+    },
+    {
+      "title": "Indagini approfondite durante l'assunzione",
+      "description": "Effetuare controlli approfonditi sul passato penale, controlli del credito, verifica delle credenziali e colloqui con i precedenti datori di lavoro per valutare la capacità del candidato.",
+      "category": "security",
+      "page": 46
+    },
+    {
+      "title": "Considerazioni legali durante le indagini",
+      "description": "Prendere in considerazione le esigenze legali, includendo l'obbligo di notificare il candidato e ottenere il consenso, conformemente alle migliori prassi dell'EEOC e alle regolamentazioni statali e locali.",
+      "category": "legal",
+      "page": 46
+    },
+    {
+      "title": "Protezione delle informazioni durante le indagini",
+      "description": "Sicureizzare le informazioni ottenute attraverso i controlli di background in conformità al GDPR e alle direttive dell'Unione Europea.",
+      "category": "privacy",
+      "page": 46
+    },
+    {
+      "title": "Assegnazione di livelli di rischio ai ruoli",
+      "description": "Valutare i ruoli per livello di rischio e indagare approfonditamente i candidati per i ruoli con un livello di rischio elevato o che richiedono una maggiore fiducia.",
+      "category": "security",
+      "page": 46
+    },
+    {
+      "title": "Ricontrolli periodici",
+      "description": "Effettuare ricontrolli quando i dipendenti accedono a ruoli con un livello di rischio maggiore, assicurandosi il rispetto delle esigenze legali.",
+      "category": "security",
+      "page": 46
+    },
+    {
+      "title": "Formazione dei supervisori",
+      "description": "Investire in formazioni per i supervisori affinché siano in grado di riconoscere e gestire comportamenti inappropriati o preoccupanti.",
+      "category": "training",
+      "page": 46
+    },
+    {
+      "title": "Consistent Policy Enforcement",
+      "description": "Organizations must consistently enforce policies and procedures for all workforce members to prevent rule violations from escalating.",
+      "category": "security",
+      "page": 47
+    },
+    {
+      "title": "Monitor Financial Situations",
+      "description": "Be alert to financial problems or unexplained gains among employees as they may indicate potential insider threats.",
+      "category": "security",
+      "page": 47
+    },
+    {
+      "title": "Enable Reporting Mechanisms",
+      "description": "Create policies allowing employees to report concerning behavior and ensure consistent monitoring without bias.",
+      "category": "employee relations, security",
+      "page": 47
+    },
+    {
+      "title": "Thorough Investigation of Reports",
+      "description": "Investigate all reports of concerning behavior until an appropriate response is determined.",
+      "category": "security",
+      "page": 47
+    },
+    {
+      "title": "Prevent Employee Migration Without Documentation",
+      "description": "Disruptive employees should not evade documentation by moving within the organization.",
+      "category": "configuration, procedural guidelines",
+      "page": 47
+    },
+    {
+      "title": "Treat Threats as Concerning Behavior",
+      "description": "Consider any threats or negative sentiments as concerning and address them promptly.",
+      "category": "security",
+      "page": 47
+    },
+    {
+      "title": "Evaluate Access and Offer Support",
+      "description": "When an employee exhibits concerning behavior, evaluate their access to assets and offer support options like EAP.",
+      "category": "access management, employee support",
+      "page": 47
+    },
+    {
+      "title": "Legal Compliance in Monitoring",
+      "description": "Ensure all monitoring activities are legal by consulting counsel and respecting privacy laws.",
+      "category": "legal compliance, security",
+      "page": 47
+    },
+    {
+      "title": "Maintaining Workforce Morale",
+      "description": "Ensure monitoring activities do not lead to a 'big brother' perception that can reduce morale and productivity.",
+      "category": "personnel morale",
+      "page": 48
+    },
+    {
+      "title": "Using Arrest Records in Employment Decisions",
+      "description": "Avoid using arrest records instead of convictions for employment decisions, as it is legally questionable. Consult legal counsel before using or disclosing arrest record information.",
+      "category": "hiring practices",
+      "page": 48
+    },
+    {
+      "title": "Monitoring Communications Legally",
+      "description": "Monitor only legally allowable communications, especially avoiding private communications with doctors and lawyers. In the EU, provide additional notices for monitoring email or electronic correspondence.",
+      "category": "compliance and privacy",
+      "page": 48
+    },
+    {
+      "title": "Contractor Background Checks",
+      "description": "Require contractors to perform background checks on their employees as part of the contractual agreement.",
+      "category": "external control",
+      "page": 48
+    },
+    {
+      "title": "Thorough Vetting of Executives",
+      "description": "Ensure thorough vetting of all executives, including checking for any prior convictions or fraudulent activities.",
+      "category": "internal surveillance",
+      "page": 48
+    },
+    {
+      "title": "Verify Employee Credentials Before Hiring",
+      "description": "Organizations must verify any claims of certifications or credentials made by candidates during the hiring process to ensure they are legitimate.",
+      "category": "security",
+      "page": 49
+    },
+    {
+      "title": "Conduct Thorough Background Checks",
+      "description": "Organizations should perform comprehensive background checks on potential employees, including criminal history and verifying claims, before extending job offers.",
+      "category": "security",
+      "page": 49
+    },
+    {
+      "title": "Implement Proper Account Management Policies",
+      "description": "Organizations must establish and enforce strict account management policies to prevent unauthorized access and ensure accountability for all user accounts.",
+      "category": "configuration",
+      "page": 49
+    },
+    {
+      "title": "Anonymous Reporting System",
+      "description": "Implement an anonymous reporting system to encourage employees to report concerns without fear of reprisal.",
+      "category": "security",
+      "page": 50
+    },
+    {
+      "title": "Thorough Background Checks",
+      "description": "Ensure potential workforce members undergo a thorough background check, including criminal and credit checks.",
+      "category": "security",
+      "page": 50
+    },
+    {
+      "title": "Encourage Reporting of Suspicious Behavior",
+      "description": "Encourage workforce members to report suspicious behavior to appropriate personnel for further investigation.",
+      "category": "security",
+      "page": 50
+    },
+    {
+      "title": "Confidential Reporting Method",
+      "description": "Provide a confidential method for reporting suspicious behavior without repercussions.",
+      "category": "security",
+      "page": 50
+    },
+    {
+      "title": "Investigate and Document Behavior",
+      "description": "Investigate and document all suspicious or disruptive behavior to ensure proper handling of potential threats.",
+      "category": "security",
+      "page": 50
+    },
+    {
+      "title": "Consistent Enforcement of Policies",
+      "description": "Enforce policies and procedures consistently for all workforce members to maintain a secure environment.",
+      "category": "security",
+      "page": 50
+    },
+    {
+      "title": "Offer Employee Assistance Programs (EAP)",
+      "description": "Consider offering an EAP to help workforce members deal with personal issues confidentially, which can prevent potential insider threats.",
+      "category": "security",
+      "page": 50
+    },
+    {
+      "title": "Definire e Comunicare Politiche Chiare",
+      "description": "Definire politiche chiare riguardo al comportamento, codice di vestiario, uso degli asset IT, orari di lavoro, sviluppo professionale e risoluzione dei conflitti. Queste devono essere comunicate ai nuovi dipendenti il primo giorno.",
+      "category": "personnel management",
+      "page": 52
+    },
+    {
+      "title": "Conoscenza delle Politiche da Tutti i Dipendenti",
+      "description": "Assicurarsi che tutti i dipendenti, nuovi e veterani, siano a conoscenza delle politiche e delle conseguenze di eventuali violazioni.",
+      "category": "personnel management",
+      "page": 52
+    },
+    {
+      "title": "Applicazione Equa e Consistente delle Politiche",
+      "description": "Applicare le politiche in modo equo e consistente per mantenere un ambiente di lavoro armonioso e prevenire sentimenti di ingiustizia.",
+      "category": "personnel management",
+      "page": 52
+    },
+    {
+      "title": "Gestione Transparent delle Raising e Promozioni",
+      "description": "Informare i dipendenti in anticipo se non saranno concessi rialzi o promozioni come previsto, offrendo una spiegazione. Mantenere trasparenza riguardo alle aspettative contrattuali.",
+      "category": "personnel management",
+      "page": 52
+    },
+    {
+      "title": "Sicurezza durante Periodi di Incertezza Finanziaria",
+      "description": "Durante periodi come la fine di un periodo di valutazione o il termine di un contratto, incrementare le misure di sicurezza per prevenire comportamenti anomali.",
+      "category": "security",
+      "page": 52
+    },
+    {
+      "title": "Surveillance durante Riduzioni del Personale",
+      "description": "Deployare misure di sicurezza avanzate quando i dipendenti sono a conoscenza di una riduzione del personale ma non sanno chi sarà licenziato.",
+      "category": "security",
+      "page": 52
+    },
+    {
+      "title": "Implementare programmi di assistenza agli impiegati",
+      "description": "Gli organizzazioni dovrebbero offrire servizi come i Programmi di Assistenza agli Impiegati (EAP) per aiutare i dipendenti a gestire stress finanziari o personali, riducendo il rischio di minacce interne.",
+      "category": "security",
+      "page": 53
+    },
+    {
+      "title": "Monitorare i dipendenti infelici",
+      "description": "Dopo avvertimenti o sanzioni, gli organizzazioni dovrebbero includere i dipendenti infelici in una 'watch list' per prevenire potenziali furti di dati.",
+      "category": "security",
+      "page": 53
+    },
+    {
+      "title": "Adottare accordi di non divulgazione e non concorrenza",
+      "description": "Gli organizzazioni dovrebbero richiedere ai dipendenti di firmare NDA (Non-Disclosure Agreements) e altri accordi legali per prevenire la fuga di informazioni.",
+      "category": "security",
+      "page": 53
+    },
+    {
+      "title": "Enhance Monitoring for Personnel Issues",
+      "description": "Monitor workforce members with pending personnel issues in accordance with organizational policies and laws.",
+      "category": "monitoring, security",
+      "page": 54
+    },
+    {
+      "title": "Additional Auditing Controls",
+      "description": "Enable additional auditing and monitoring controls as outlined in policies and procedures to detect unauthorized activities.",
+      "category": "auditing, security",
+      "page": 54
+    },
+    {
+      "title": "Regular Audit Log Reviews",
+      "description": "Frequently review audit logs to identify activities outside the normal scope of work for early detection of potential threats.",
+      "category": "control, monitoring",
+      "page": 54
+    },
+    {
+      "title": "Limit Access to Logs",
+      "description": "Restrict access to log files only to individuals who require knowledge of such information.",
+      "category": "secure access, control",
+      "page": 54
+    },
+    {
+      "title": "Transparent Communication from Management",
+      "description": "All levels of management must regularly communicate organizational changes to maintain transparency and allow workforce members to plan effectively.",
+      "category": "communication, management",
+      "page": 54
+    },
+    {
+      "title": "Considerare le minacce provenienti da dipendenti e entità esterne affidabili negli accertamenti del rischio a livello aziendale",
+      "description": "Le organizzazioni devono sviluppare una strategia di sicurezza basata sul rischio per proteggere i propri asset critici da minacce interne ed esterne, incluse entità esterne affidabili (TEE), come servizi outsource e provider cloud. Tutti i risorse dell'organizzazione devono comprendere le implicazioni di una compromissione del sistema o della perdita di dati critici.",
+      "category": "security",
+      "page": 56
+    },
+    {
+      "title": "Valutare rischi legati agli insider e fornitori esterni",
+      "description": "Organizzazioni devono riconoscere il rischio rappresentato dagli insiders, inclusi contractor, consulenti e provider di servizi cloud. Gli insider hanno accesso privilegiato a asset critici e devono essere considerati come minacce interne. Contratti con fornitori devono prevedere livelli commisurati di controllo sul recruiting, protezione dati e policy di sicurezza. Organizzazioni possono influenzare provider IT controllando le loro pratiche, analizzando indicazioni governative, comprendendo rischi, scegliendo di accettare o cambiare fornitori, testando patch e mantenendo controllo su installazioni.",
+      "category": "security",
+      "page": 57
+    },
+    {
+      "title": "Strategia e piano base per EDM",
+      "description": "Organizzazioni dovrebbero stabilire una strategia e un piano base per la gestione delle dipendenze esterne (EDM).",
+      "category": "security",
+      "page": 58
+    },
+    {
+      "title": "Processi chiave per identificare, priorizzare, monitorare e tracciare dipendenze esterne",
+      "description": "Organizzazioni dovrebbero implementare processi chiave per gestire le dipendenze esterne.",
+      "category": "security",
+      "page": 58
+    },
+    {
+      "title": "Indirizzi e procedure per la formazione di relazioni con entità esterne",
+      "description": "Organizzazioni dovrebbero avere indirizzi e procedure chiari per la formazione di relazioni con entità esterne.",
+      "category": "security",
+      "page": 58
+    },
+    {
+      "title": "Approccio per gestire e governare le relazioni esistenti con entità esterne",
+      "description": "Organizzazioni dovrebbero adottare un approccio strutturato per la gestione e il governo delle relazioni con entità esterne.",
+      "category": "security",
+      "page": 58
+    },
+    {
+      "title": "Supervisione, reporting e correzione del rendimento delle entità esterne",
+      "description": "Organizzazioni dovrebbero eseguire una supervisione continua,_reporting e correzione del rendimento delle entità esterne.",
+      "category": "security",
+      "page": 58
+    },
+    {
+      "title": "Approccio per migliorare i processi e il programma di EDM",
+      "description": "Organizzazioni dovrebbero avere un approccio per la continua miglioramento dei loro processi e programmi di EDM.",
+      "category": "security",
+      "page": 58
+    },
+    {
+      "title": "Verifiche di background durante fusione/acquisizione",
+      "description": "Organizzazioni acquirenti dovrebbero eseguire verifiche di background sui membri del personale dell'organizzazione acquisita prima delle decisioni di impiego.",
+      "category": "security",
+      "page": 58
+    },
+    {
+      "title": "Lock accounts immediately upon employment change notification",
+      "description": "Organizations should lock accounts before notifying employees or contractors of changes in their employment terms to prevent potential malicious activities.",
+      "category": "security",
+      "page": 59
+    },
+    {
+      "title": "Separation of duties for backup processes",
+      "description": "Implement a clear separation between regular administrators and those responsible for system backups. Regular admins should not have access to backup media or processes.",
+      "category": "security",
+      "page": 59
+    },
+    {
+      "title": "Sign Nondisclosure Agreements",
+      "description": "All workforce members and third-party entities (TEEs) should sign NDAs upon hiring and termination.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Workplace Violence Prevention Documentation",
+      "description": "Ensure all employees and TEEs sign workplace violence prevention or appropriate behavior documentation upon hire.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Routine Re-acknowledgment of Policies",
+      "description": "All workforce members and TEEs should regularly re-acknowledge agreements and policies such as AUP, social media policy, mobile device policy, and intellectual property (IP) policy.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Background Checks on TEEs' Workforce",
+      "description": "Ensure each TEE performs background checks on all workforce members who will have access to your organization’s systems or information. These background checks should be commensurate with your organization’s own policies and required as a contractual obligation.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Background Checks During Mergers/Acquisitions",
+      "description": "Perform background checks on all workforce members to be acquired during mergers or acquisitions, at a level commensurate with your organization’s policies.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Prevent Unnecessary Printing of Sensitive Documents",
+      "description": "Avoid printing sensitive documents unless required for business purposes. Electronic documents are easier to track and secure.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Limit Connections with TEEs' Systems",
+      "description": "Avoid direct connections with the information systems of TEEs if possible. Provide task-related data without granting access to your organization’s internal network.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Restrict Backup Access",
+      "description": "Restrict access to the system backup process to only administrators, controlling privileged access effectively.",
+      "category": "security",
+      "page": 60
+    },
+    {
+      "title": "Prohibit Personal Items in Secure Areas",
+      "description": "Prohibit personal items in secure areas because they can be used to conceal company property or to copy and store the organization’s data.",
+      "category": "security",
+      "page": 61
+    },
+    {
+      "title": "Conduct Risk Assessment for Critical Systems",
+      "description": "Conduct a risk assessment of all systems to identify critical data, business processes, and mission-critical systems. Include insiders and TEEs as part of the assessment. See NIST SP 800-30 for guidance.",
+      "category": "risk management",
+      "page": 61
+    },
+    {
+      "title": "Implement Data Encryption Solutions",
+      "description": "Implement data encryption solutions that encrypt data seamlessly, restrict encryption tools to authorized users, and restrict decryption of organization-encrypted data to authorized users.",
+      "category": "data protection",
+      "page": 61
+    },
+    {
+      "title": "Separation of Duties for Administrators",
+      "description": "Implement a clear separation of duties between regular administrators and those responsible for backup and restoration.",
+      "category": "access control",
+      "page": 61
+    },
+    {
+      "title": "Restrict Administrator Access to Backup Processes",
+      "description": "Forbid regular administrators from having access to system backup media or electronic backup processes.",
+      "category": "security",
+      "page": 61
+    },
+    {
+      "title": "Be Especially Vigilant Regarding Social Media",
+      "description": "Organizations should provide training, policies, and procedures about how workforce members should use social media to mitigate risks of social engineering and insider threats.",
+      "category": "security",
+      "page": 63
+    },
+    {
+      "title": "Prohibit Posting of Sensitive Information",
+      "description": "Organizations should have policies that prohibit workforce members from posting about organizational projects or other sensitive information, even if it seems harmless.",
+      "category": "security",
+      "page": 64
+    },
+    {
+      "title": "Establish Social Media Policies and Procedures",
+      "description": "Organizations must establish policies and procedures to protect against insider threats related to social media usage. These should define acceptable and unacceptable participation in social media by workforce members.",
+      "category": "security",
+      "page": 64
+    },
+    {
+      "title": "Use Bogus Password Recovery Information",
+      "description": "To mitigate risks from password recovery, users can use bogus information for password recovery that is unique to each site. This reduces the vulnerability of having a single set of recovery information used across multiple sites.",
+      "category": "security",
+      "page": 64
+    },
+    {
+      "title": "Include Social Engineering Training",
+      "description": "Organizations should include social engineering training in their security awareness programs. This training should explain how information from social media can be used to harm individuals or organizations, and could include live demonstrations of data collection without embarrassing workforce members.",
+      "category": "training",
+      "page": 64
+    },
+    {
+      "title": "Ensure Legal Compliance in Social Media Policies",
+      "description": "Social media policies must be legal. Organizations should avoid language that prohibits posts about nonpublic or confidential information without clarification, restricts harmful statements about the organization, or threatens discipline for policy violations.",
+      "category": "legality",
+      "page": 64
+    },
+    {
+      "title": "Monitoraggio cauteloso di social media",
+      "description": "Organizzazioni che monitorano social media devono fare attenzione a non punire o licenziare dipendenti per discorsi online su condizioni di lavoro, come stipendi o lamentele contro superiori. Usare social media potrebbe rivelare informazioni su classi protette (es. razza, disabilità, genere), esponendo all'accusa di discriminazione.",
+      "category": "security",
+      "page": 65
+    },
+    {
+      "title": "Etablimento e monitoraggio di policy",
+      "description": "Organizzazioni devono stabilire, monitorare e applicare policy per il contenuto online. È difficile controllare ciò che dipendenti pubblicano su social media, quindi è necessario allenamento con approcci personalizzati e addestramento sulle politiche.",
+      "category": "configuration",
+      "page": 65
+    },
+    {
+      "title": "Classificazione dei dati",
+      "description": "Organizzazioni devono avere una policy di classificazione che stabilisce protezioni per differenti livelli di sensibilità. Richiede un'analisi degli informazioni e addestramento su tutti i livelli.",
+      "category": "security",
+      "page": 65
+    },
+    {
+      "title": "Monitoraggio legale di social media",
+      "description": "Monitoraggio deve essere effettuato con consulenza legale, dato che il paesaggio giuridico evolve e le politiche devono essere aggiornate in base alle modifiche.",
+      "category": "compliance",
+      "page": 65
+    },
+    {
+      "title": "Limitazione della dipendenza da social media",
+      "description": "Organizzazioni con dipendenti EU o TEE devono limitare l'uso di social media come fonte dati. GDPR concede il diritto alla cancellazione, quindi individui potrebbero rimuovere contenuti che danneggiano la reputazione.",
+      "category": "configuration",
+      "page": 65
+    },
+    {
+      "title": "Verifica di credenziali online",
+      "description": "Individui tendono a fidarsi troppo di informazioni trovate online. È cruciale verificare le credenziali di chi si presenta come esperto, per evitare truffe o violazioni di sicurezza.",
+      "category": "data validation",
+      "page": 65
+    },
+    {
+      "title": "Protezione informazioni sensibili online",
+      "description": "Dati personali e informazioni sensitive pubblicate su social media possono essere compromessi. È essenziale proteggere password, geolocalizzazione e informazioni personali per prevenire attacchi.",
+      "category": "security",
+      "page": 65
+    },
+    {
+      "title": "Train workforce on information disclosure risks",
+      "description": "Organizations should train their employees about the dangers of sharing personal or organizational information online, as it can lead to account compromises.",
+      "category": "training",
+      "page": 66
+    },
+    {
+      "title": "Establish social media policy",
+      "description": "Create a policy that defines acceptable uses of social media and prohibits discussing sensitive information online.",
+      "category": "policy",
+      "page": 66
+    },
+    {
+      "title": "Include social media awareness training",
+      "description": "Integrate social media awareness into the organization's security training programs to educate employees on safe practices.",
+      "category": "training",
+      "page": 66
+    },
+    {
+      "title": "Encourage reporting suspicious activities",
+      "description": "Promote the reporting of suspicious emails or calls to the security team, who can monitor patterns and issue alerts.",
+      "category": "security",
+      "page": 66
+    },
+    {
+      "title": "Monitor social media use",
+      "description": "Consider monitoring social media activity but ensure it is done in accordance with legal guidelines.",
+      "category": "monitoring",
+      "page": 66
+    },
+    {
+      "title": "Struttura gestionale per ridurre lo stress",
+      "description": "Organizzare la gestione in modo da minimizzare lo stress e i errori del personale, comprendendo la psicologia del lavoro e creando un ambiente positivo.",
+      "category": "management",
+      "page": 68
+    },
+    {
+      "title": "Focus sulle esiti produttivi",
+      "description": "Concentrarsi su risultati produttivi piuttosto che solo sulla quantità di lavoro, riducendo lo stress.",
+      "category": "management",
+      "page": 68
+    },
+    {
+      "title": "Politiche flessibili per il personale",
+      "description": "Adottare politiche che danno più tempo al personale per raggiungere obiettivi missionari.",
+      "category": "management",
+      "page": 68
+    },
+    {
+      "title": "Gestione umanizzata",
+      "description": "Adottare una gestione responsiva e orientata alle persone, piuttosto che solo ai progetti.",
+      "category": "management",
+      "page": 68
+    },
+    {
+      "title": "Pianificazione preventiva",
+      "description": "Programmare tempo per pianificare attività e generare nuove idee Beneficio dell'organizzazione.",
+      "category": "management",
+      "page": 68
+    },
+    {
+      "title": "Manage Employee Stress Levels",
+      "description": "Organizations should address workforce stress to mitigate insider threats. High stress can lead to mistakes or malicious actions that damage the organization. Reducing stress, lowering workload, and encouraging quality outcomes can prevent such incidents.",
+      "category": "security",
+      "page": 69
+    },
+    {
+      "title": "Etablire une culture de travail basée sur des indicateurs adaptés",
+      "description": "Établir une culture de travail qui évalue le succès en fonction d'indicateurs appropriés pour l'environnement de travail. Par exemple, les travailleurs spécialisés peuvent mesurer leur succès en fonction des résultats et de l'efficacité plutôt que d'indicateurs mieux adaptés à une ligne de production.",
+      "category": "work/culture",
+      "page": 70
+    },
+    {
+      "title": "Encourager les travailleurs à réfléchir avant d'agir",
+      "description": "Encourager les membres du personnel à réfléchir à travers des projets, des actions et des déclarations avant de s'y engager.",
+      "category": "work/action",
+      "page": 70
+    },
+    {
+      "title": "Créer un environnement sans多任务处理",
+      "description": "Créer un environnement qui encourage les membres du personnel à se concentrer sur une chose à la fois, plutôt que de faire plusieurs tâches en même temps.",
+      "category": "efficiency/work",
+      "page": 70
+    },
+    {
+      "title": "Offrir des moyens de se détendre aux travailleurs stressés",
+      "description": "Fournir des méthodes pour soulager le stress, comme les massages, les jours de congé, les jeux ou les activités sociales.",
+      "category": "wellness/psychological",
+      "page": 70
+    },
+    {
+      "title": "Surveiller régulièrement les charges de travail des salariés",
+      "description": "Surveiller régulièrement les charges de travail des salariés pour s'assurer qu'elles sont proportionnées à leurs compétences et aux ressources disponibles.",
+      "category": "efficiency/monitoring",
+      "page": 70
+    },
+    {
+      "title": "Incorporate Insider Threat Awareness into Periodic Security Training",
+      "description": "Conduct periodic security training for all workforce members to promote awareness of insider risks, including understanding that insiders do not fit a single profile and can exhibit various behavioral characteristics associated with high risk.",
+      "category": "security",
+      "page": 73
+    },
+    {
+      "title": "Awareness Training for Negligent Behavior",
+      "description": "Organizations should train their workforce to recognize characteristics such as high risk tolerance, multitasking leading to mistakes, excessive sharing of personal or proprietary information on social media, and lack of attention to detail.",
+      "category": "security",
+      "page": 74
+    },
+    {
+      "title": "Recognizing Social Engineering Tactics",
+      "description": "The entire workforce should be trained to identify malicious use of social engineering tactics aimed at financial gain, including attempts to gain unauthorized access via accounts and passwords.",
+      "category": "security",
+      "page": 74
+    },
+    {
+      "title": "Annual Security Training Program",
+      "description": "Security training should be conducted annually, with additional focus during National Insider Threat Awareness Month in September, including activities like quizzes and presentations.",
+      "category": "training",
+      "page": 74
+    },
+    {
+      "title": "Comprehensive Insider Risk Topics in Training",
+      "description": "Training programs should cover topics such as HR policies, legal issues, physical security procedures, data protection, IT security measures, and software engineering best practices.",
+      "category": "training",
+      "page": 74
+    },
+    {
+      "title": "Training Focus on Critical Assets",
+      "description": "Train workforce to protect customer information and processes by securing accounts, auditing access, enforcing policies, safeguarding servers, and ensuring data availability.",
+      "category": "security training",
+      "page": 75
+    },
+    {
+      "title": "Detect Disruptive Behavior",
+      "description": "Encourage workforce to detect and report disruptive behavior by colleagues.",
+      "category": "employee monitoring",
+      "page": 75
+    },
+    {
+      "title": "Monitor Policy Adherence",
+      "description": "Ensure workforce follows organizational policies and controls.",
+      "category": "policy enforcement",
+      "page": 75
+    },
+    {
+      "title": "Control System Changes",
+      "description": "Monitor and control changes to prevent malicious code installation.",
+      "category": "access control",
+      "page": 75
+    },
+    {
+      "title": "Separate Duties",
+      "description": "Require separation of duties between those modifying accounts and approving modifications.",
+      "category": "access control",
+      "page": 75
+    },
+    {
+      "title": "Report Security Violations",
+      "description": "Train workforce to report security violations related to facilities and assets.",
+      "category": "security awareness",
+      "page": 75
+    },
+    {
+      "title": "Proactive Incident Planning",
+      "description": "Plan for potential incident response proactively.",
+      "category": "incident management",
+      "page": 75
+    },
+    {
+      "title": "Confidential Reporting Mechanism",
+      "description": "Provide a confidential way for employees to report security issues without fear of repercussions.",
+      "category": "employee support",
+      "page": 75
+    },
+    {
+      "title": "Acknowledge Acceptable Use Policies",
+      "description": "Require yearly acknowledgment of AUPs at training events.",
+      "category": "policy enforcement",
+      "page": 75
+    },
+    {
+      "title": "Protect Information and Assets",
+      "description": "Teach workforce to protect information and assets, including procedures for anonymous reporting.",
+      "category": "asset protection",
+      "page": 75
+    },
+    {
+      "title": "Inform on Confidentiality of IP",
+      "description": "Educate employees about the confidentiality and integrity of IP and consequences of compromise.",
+      "category": "intellectual property",
+      "page": 75
+    },
+    {
+      "title": "Implementare un sistema di classificazione delle informazioni",
+      "description": "L'organizzazione dovrebbe considerare l'adozione di un sistema di classificazione che definisce categorie di informazioni e il modo in cui ciascuna categoria deve essere protetta. Ad esempio, il Governo degli Stati Uniti utilizza un sistema che includeategorie come Non Classificato, Confidenziale, Segreto e Top Secret.",
+      "category": "security",
+      "page": 76
+    },
+    {
+      "title": "Educazione sui salari e miglioramento carriera",
+      "description": "Utilizzare la formazione per stabilire aspettative chiare riguardo ai salari e all'enhancemeneto della carriera, al fine di ridurre il discontento.",
+      "category": "human resources management",
+      "page": 76
+    },
+    {
+      "title": "Formazione regolare del personale",
+      "description": "L'organizzazione deve determinare con quale frequenza effettuare la formazione e come misurare la sua efficacia, tenendo conto delle difficoltà nel discutere di incidenti precedenti senza rivelare informazioni sensibili.",
+      "category": "training",
+      "page": 76
+    },
+    {
+      "title": "Melioramento della cultura organizzativa",
+      "description": "Se l'organizzazione ha una cultura che non valuta la sicurezza delle informazioni, il personale potrebbe resistere all'implementazione di concetti presentati durante la formazione. Per superare questa sfida, è possibile ottenere l'approvazione del personale e utilizzare casi studiosi per dimostrare la possibilità di attacchi.",
+      "category": "organizational culture",
+      "page": 76
+    },
+    {
+      "title": "Develop and Implement Enterprise-wide Training Program",
+      "description": "Create a comprehensive training program that covers insider risk topics with senior management support and participation.",
+      "category": "training",
+      "page": 77
+    },
+    {
+      "title": "Security Awareness for New Employees",
+      "description": "Require all new employees to complete security awareness and insider threat training before system access.",
+      "category": "onboarding",
+      "page": 77
+    },
+    {
+      "title": "Inclusive Training for Non-Technical Roles",
+      "description": "Provide specialized training for roles like janitorial staff, covering scenarios such as social engineering and document security.",
+      "category": "training",
+      "page": 77
+    },
+    {
+      "title": "Annual Training and Awareness Campaigns",
+      "description": "Conduct annual training sessions and use campaigns like quizzes or posters to maintain awareness.",
+      "category": "awareness",
+      "page": 77
+    },
+    {
+      "title": "Anonymous Reporting Mechanism with Incentives",
+      "description": "Set up anonymous reporting for security incidents and reward those who contribute positively.",
+      "category": "reporting",
+      "page": 77
+    },
+    {
+      "title": "Periodic Security Inspections",
+      "description": "Infosec teams should conduct regular inspections, addressing issues privately to encourage a positive security culture.",
+      "category": "security",
+      "page": 77
+    },
+    {
+      "title": "Rewarding Good Security Practices",
+      "description": "Acknowledge and reward employees who demonstrate good security practices with certificates or small incentives.",
+      "category": "morale",
+      "page": 77
+    },
+    {
+      "title": "Best Practice 9",
+      "description": "Mapping to Standards",
+      "category": "security",
+      "page": 78
+    },
+    {
+      "title": "Implement Strict Password Policies",
+      "description": "Ensure all passwords are strong and do not share them with anyone.",
+      "category": "security",
+      "page": 80
+    },
+    {
+      "title": "Lock Workstation Before Stepping Away",
+      "description": "Workforce members should lock their workstations before leaving them unattended.",
+      "category": "security",
+      "page": 80
+    },
+    {
+      "title": "Block Visual Access to Passwords",
+      "description": "Ensure that screens are not visible when typing passwords to prevent shoulder surfing.",
+      "category": "security",
+      "page": 80
+    },
+    {
+      "title": "Limitazione degli account condivisi",
+      "description": "Gli account condivisi devono essere utilizzati solo quando realmente necessari, poiché ostacolano la tracciabilità e l'attribuzione delle attività individuali.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Utilizzo di strumenti SAPM",
+      "description": "Quando necessari, utilizzare strumenti di gestione delle password per account condivisi (SAPM) che automatizzano i processi e impongono controlli.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Segnalazione degli accessi non autorizzati",
+      "description": "I membri del personale devono segnalare tutti i tentativi o sospetti di accesso non autorizzato agli account.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Revoca immediata degli accessi",
+      "description": "Revocare immediatamente gli accessi al termine del rapporto di lavoro per ridurre il rischio di accessi non autorizzati.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Isolamento dei sistemi di accesso guest",
+      "description": "I sistemi utilizzati da membri esterni devono essere isolati dal resto degli account dell'organizzazione.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Audi periodiche degli account",
+      "description": "Eseguire audit periodici per identificare account sospetti, come quelli di backdoor o condivisi.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Documentazione delle privilegi",
+      "description": "Documento rigoroso di tutti i privilegi degli utenti per facilitare il processo di revoca degli accessi al momento del termine.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Uso di sistemi centralizzati di gestione degli account",
+      "description": "Utilizzare sistemi centralizzati come LDAP per ridurre il rischio di dimenticanza o mancato controllo degli account.",
+      "category": "configuration",
+      "page": 81
+    },
+    {
+      "title": "Applicazione delle politiche ai TEE",
+      "description": "Le stesse politiche di sicurezza devono applicarsi agli account dei fornitori e degli esterni.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Attribuzione univoca degli account",
+      "description": "Ogni account deve essere attribuibile a un singolo individuo, evitando account condivisi e gestendo correttamente i contratti con gli esterni.",
+      "category": "security",
+      "page": 81
+    },
+    {
+      "title": "Change Passwords Upon Departure",
+      "description": "Organizations should change passwords on accounts accessible by departing employees to prevent unauthorized access.",
+      "category": "security",
+      "page": 82
+    },
+    {
+      "title": "Password Policy Against Sharing",
+      "description": "Establish a policy prohibiting password sharing with outsiders and outline consequences for violations.",
+      "category": "security",
+      "page": 82
+    },
+    {
+      "title": "Stabilire politiche di gestione degli account",
+      "description": "Definire delle policy per la creazione, revisione e chiusura degli account su tutti i sistemi informativi. Le policy dovrebbero specificare chi autorizza l'account e quali dati possono accedere.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Eseguire audits delle modifiche agli account e alle password",
+      "description": "Effettuare controlli sugli account creati e sulle modifiche di password effettuate dagli amministratori di sistema.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Richiesta di nuovi account tramite ticket help desk",
+      "description": "I utenti devono richiedere nuovi account attraverso un ticket del help desk. I membri del help desk non dovrebbero poter creare account direttamente.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Confermare la legittimità delle richieste di password e account",
+      "description": "Verificare che le richieste di reimpostazione della password o creazione di nuovi account siano legittime, correlando con i log del help desk.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Definire requisiti per le password e addestrare gli utenti",
+      "description": "Impostare requisiti per le password e allenare gli utenti a creare password forti, incoraggiando l'uso di punteggiatura e capitalizzazione.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Addestramento sulla sicurezza delle password",
+      "description": "I corsi di addestramento sulla sicurezza dovrebbero includere istruzioni su come bloccare l'accesso visivo alle password mentre si digita.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Gestire conti condivisi",
+      "description": "Assicurarsi che tutti i conti condivisi siano assolutamente necessari e siano oggetto di una decisione di gestione del rischio.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Utilizzare una soluzione IAM centralmente governata",
+      "description": "Usare un sistema centrale per la gestione dell'identità e degli accessi (IAM) per i conti dei membri del personale.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Gestione centralizzata di account contractor",
+      "description": "Se si utilizza un sistema di gestione degli account centrale, aggiungere i contractor a gruppi legati a progetti o organizzazioni. Includere indicatori come 'CONT' nel nome o nella descrizione dell'account.",
+      "category": "security",
+      "page": 83
+    },
+    {
+      "title": "Institute Stringent Access Controls and Monitoring Policies on Privileged Users",
+      "description": "Implement strict access controls and monitoring policies for privileged users to detect or prevent malicious activities. These users have elevated access and can conceal their actions, making oversight crucial.",
+      "category": "security",
+      "page": 85
+    },
+    {
+      "title": "Configure systems for non-repudiation",
+      "description": "Use policies, practices, and technologies to attribute online activities to specific users, with multiple privileged users involved in creating and enforcing security measures.",
+      "category": "security",
+      "page": 86
+    },
+    {
+      "title": "Privileged user agreements",
+      "description": "Require privileged users to sign agreements outlining their responsibilities and permissible actions.",
+      "category": "security",
+      "page": 86
+    },
+    {
+      "title": "Monitor suspicious activity",
+      "description": "Implement additional measures beyond detection to prevent malicious actions, especially considering advanced UAM tools' limitations.",
+      "category": "monitoring",
+      "page": 86
+    },
+    {
+      "title": "Evaluate encryption solutions",
+      "description": "Assess how encryption impacts UAM and ensure it doesn't enable malicious insiders to withhold decryption keys.",
+      "category": "security",
+      "page": 86
+    },
+    {
+      "title": "Separation of duties for critical systems",
+      "description": "Require multiple users to approve changes to critical systems, networks, applications, and data to prevent single-point failures.",
+      "category": "security",
+      "page": 86
+    },
+    {
+      "title": "Employ multiple system administrators",
+      "description": "Use at least two system administrators; smaller organizations should implement alternative methods to separate auditing roles from the administrator's control.",
+      "category": "system administration",
+      "page": 86
+    },
+    {
+      "title": "Disable access for former privileged users",
+      "description": "Immediately disable system access for former system administrators and technical/privileged users to prevent insider threats post-employment.",
+      "category": "security",
+      "page": 86
+    },
+    {
+      "title": "Monitoraggio degli utenti privilegiati",
+      "description": "Implementare controlli di monitoraggio per attività sospette o non autorizzate da parte di utenti privilegiati come amministratori di sistema.",
+      "category": "security",
+      "page": 87
+    },
+    {
+      "title": "Controllo degli accessi",
+      "description": "Applicare controlli di accesso appropriati per prevenire l'accesso non autorizzato o la creazione di account backdoor.",
+      "category": "security",
+      "page": 87
+    },
+    {
+      "title": "Giustificazione delle spese del personale",
+      "description": "Garantire che le spese per il personale coinvolto nella separazione dei compiti e nei controlli di accesso siano giustificate per prevenire potenziali minacce interne.",
+      "category": "configuration",
+      "page": 87
+    },
+    {
+      "title": "Costruzione della fiducia",
+      "description": "Assicurarsi che i dipendenti con accessi privilegiati si sentano fidati dall'organizzazione per prevenire comportamenti dannosi.",
+      "category": "risk management",
+      "page": 87
+    },
+    {
+      "title": "Verifica delle modifiche al sistema",
+      "description": "Implementare procedure di verifica per le modifiche al codice o alle configurazioni del sistema per prevenire l'inserimento di logica dannosa.",
+      "category": "security",
+      "page": 87
+    },
+    {
+      "title": "Gestione degli accessi durante il licenziamento",
+      "description": "Revocare immediatamente gli accessi agli ex dipendenti e controllare che non siano stati creati account backdoor.",
+      "category": "security",
+      "page": 87
+    },
+    {
+      "title": "Protezione di sistemi critici",
+      "description": "Sicurizzare i database e le applicazioni critiche per prevenire danni significativi da insider.",
+      "category": "security",
+      "page": 87
+    },
+    {
+      "title": "Conduct Periodic Account Reviews",
+      "description": "Regularly review accounts to prevent privilege creep and ensure workforce members have appropriate access rights, especially when roles change.",
+      "category": "access control",
+      "page": 88
+    },
+    {
+      "title": "Implement Separation of Duties",
+      "description": "Require at least two people to perform actions affecting production systems to prevent insider threats.",
+      "category": "security",
+      "page": 88
+    },
+    {
+      "title": "Use Multifactor Authentication (MFA)",
+      "description": "Mandate MFA for privileged accounts to reduce risk and enhance accountability, especially after role changes or departures.",
+      "category": "authentication",
+      "page": 88
+    },
+    {
+      "title": "Deploy Solutions for Monitoring Workforce Actions",
+      "description": "Implement monitoring solutions using a risk-based approach focused on critical assets to identify potential insider activities.",
+      "category": "security",
+      "page": 90
+    },
+    {
+      "title": "Monitor Network-Level Activity",
+      "description": "Use network-based analysis to track workforce actions such as authentication, file access, and web browsing for effective monitoring with lower data volume.",
+      "category": "security",
+      "page": 90
+    },
+    {
+      "title": "Implement Host-Based Monitoring",
+      "description": "Monitor host-based logs to detect local actions like file copying to removable media or privilege escalation that don't leave network traces.",
+      "category": "security",
+      "page": 90
+    },
+    {
+      "title": "Utilize SIEM for Event Correlation",
+      "description": "Employ Security Information and Event Management (SIEM) systems to correlate data from various sources, enhancing incident detection effectiveness.",
+      "category": "security",
+      "page": 90
+    },
+    {
+      "title": "Monitoraggio continuo degli utenti con SIEM",
+      "description": "SIEM consente l'monitoraggio continuo delle attività degli utenti e l'establishment di un baseline di attività normale per rilevare eventi anomali.",
+      "category": "security",
+      "page": 91
+    },
+    {
+      "title": "Aumento del livello di auditing",
+      "description": "Si consiglia di aumentare il livello di auditing per determinati eventi, creando registri che devono essere esaminati.",
+      "category": "security",
+      "page": 91
+    },
+    {
+      "title": "Comunicazione tra HR, IA e IRMP",
+      "description": "HR deve avvisare IA in caso di dimissioni o violazioni di policy, con il supporto del team IRMP per analizzare le attività degli utenti.",
+      "category": "collaboration",
+      "page": 91
+    },
+    {
+      "title": "Integrazione di eventi fisici nel SIEM",
+      "description": "SIEM può integrare eventi di sicurezza fisica e intelligence per una analisi più completa delle attività interne.",
+      "category": "security",
+      "page": 91
+    },
+    {
+      "title": "Utilizzo di fonti dati specifiche",
+      "description": "Fonti come i log di creazione account, accessi fisici e ticket help desk sono rilevanti per l'analisi del rischio interno.",
+      "category": "data",
+      "page": 91
+    },
+    {
+      "title": "Utilizzo di Antivirus Logs",
+      "description": "I log antivirus host-based possono rilevare software non autorizzato o dannoso sulle postazioni degli utenti e tentativi di aggirare i controlli host.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Analisi di Application Logs",
+      "description": "I log delle applicazioni possono fornire indizi sul comportamento degli utenti e l'accesso alle informazioni.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Utilizzo di Authentication Logs",
+      "description": "I log di accesso/logout possono fornire informazioni sull'attività degli utenti e i tentativi non validi di accedere a informazioni al di fuori dello scope del ruolo lavorativo.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Analisi di Chat Logs",
+      "description": "L'analisi delle comunicazioni tra colleghi può aiutare a identificare attività potenzialmente malvagie e fornire indizi sulle caratteristiche personali problematiche dei membri del personale.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Monitoraggio di Configuration Change Logs",
+      "description": "I log delle modifiche alle configurazioni possono essere analizzati per identificare cambiamenti non autorizzati alle risorse della rete.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Uso di Data Loss Prevention Logs",
+      "description": "I log del sistema DLP possono identificare quando informazioni critiche attraversano la rete.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Analisi di Domain Name System Logs",
+      "description": "Gli logs DNS possono essere utilizzati per analizzare quali servizi e siti web accedono i membri del personale.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Monitoraggio di Email Logs",
+      "description": "Gli email logs possono identificare comunicazioni preoccupanti, in particolare con i competitor, e rilevare l'esfiltrazione di dati.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Utilizzo di File Access Logs",
+      "description": "I log di accesso ai file possono identificare accessi insoliti o preoccupanti a informazioni critiche.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Analisi di Firewall Logs",
+      "description": "I log del firewall possono analizzare il traffico di rete e identificare accessi a risorse non autorizzate.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Monitoraggio di Help Desk Ticket System Logs",
+      "description": "Gli logs del sistema help desk possono essere utilizzati per identificare attività non autorizzate eseguite da amministratori di sistema.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Uso di HTTP/SSL Proxy Logs",
+      "description": "L'analisi delle attività web può identificare utenti che visitano siti preoccupanti e aiutare a rilevare l'esfiltrazione di dati tramite servizi web.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Analisi di Intrusion Detection/Prevention System Logs",
+      "description": "Gli logs IDS/IPS possono rilevare attività maliziose interne, poiché molte delle azioni tecniche sono simili a quelle esterne che questi sistemi sono progettati per rilevare.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Monitoraggio di Mobile Device Manager Logs",
+      "description": "I log del gestore dispositivi mobili possono identificare utenti che tentano di aggirare i controlli di sicurezza e utilizzare i loro dispositivi per esfiltrare dati.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Analisi di Network Monitoring Logs",
+      "description": "L'attività malvagia interna può spesso essere osservabile in traffico di rete anomalo, come picchi abnormali o altro traffico anolmo della rete.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Tagging di Network Packet Tags",
+      "description": "Il tagging dei pacchetti di rete può permettere agli analisti di identificare rapidamente informazioni importanti sulla sorgente del traffico.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Monitoraggio di Permission Change Monitor Logs",
+      "description": "I cambiamenti non spiegati delle autorizzazioni degli account possono indicare che un insider sta tentando di accedere a informazioni o risorse.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Monitoraggio di Log di Media Rimovibili",
+      "description": "I log di media rimovibili sono un metodo comune per l'estrazione illegale di informazioni e dovrebbero essere monitorati per rilevare violazioni di policy quando vengono copiate informazioni sensibili.",
+      "category": "security",
+      "page": 93
+    },
+    {
+      "title": "Monitoraggio di Log Telefonici",
+      "description": "I log telefonici possono essere utilizzati per identificare comunicazioni sospette con parti estere o competitor.",
+      "category": "security",
+      "page": 93
+    },
+    {
+      "title": "Monitoraggio di Attività Utente",
+      "description": "Gli allarmi provenienti da strumenti di monitoraggio delle attività utente (UAM) possono essere integrati con informazioni contestuali da altri fonti di dati per identificare false positive e migliorare l'analisi.",
+      "category": "security",
+      "page": 93
+    },
+    {
+      "title": "Monitoraggio di Log di Reti Private Virtuali",
+      "description": "I log di reti private virtuali (VPN) possono essere analizzati per identificare accessi anomali e correlati con altri fonti, come i log di accesso fisico, per rilevare attività sospette.",
+      "category": "security",
+      "page": 93
+    },
+    {
+      "title": "Monitoraggio dello Spettro Wireless",
+      "description": "Punti di accesso wireless non autorizzati sono un metodo comune per aggirare i controlli normali della rete e possono essere rilevati attraverso il monitoraggio regolare dello spettro wireless.",
+      "category": "security",
+      "page": 93
+    },
+    {
+      "title": "Segnalazioni Anonime",
+      "description": "Le segnalazioni anonime dovrebbero essere considerate perché sono una strada utile per identificare insiders potenzialmente maliziosi basandosi su comportamenti osservati sospetti.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Violazioni della Politica di Utilizzo Accettabile",
+      "description": "Le violazioni delle politiche di utilizzo accettabile (AUPs) possono essere parte dell'identificazione di attività maliziose o individuare chi potrebbe commettere azioni malevoli.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Monitoraggio del Movimento di Asset Critici",
+      "description": "Il movimento di asset critici dovrebbe essere revisionato e analizzato per attività sospette.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Indagini sul背景",
+      "description": "Un'indagine sul background può fornire contesto utile su un membro del personale per aiutare il processo di gestione dei rischi interni.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Segnalazioni di Conflict of Interest",
+      "description": "I report di conflict of interest possono essere correlati con attività di comunicazione e accesso ai risorse per identificare conflitti non dichiarati.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Record delle Carte di Credito Corporative",
+      "description": "I record delle carte di credito corporate sono utili per rilevare anomalie e risolvere accuse, inclusi viaggi non dichiarati o non autorizzati.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Record Disciplinari",
+      "description": "I record disciplinari possono aiutare a identificare membri del personale problematici che potrebbero richiedere una sorveglianza maggiore.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Elenco di Contatti Esteri",
+      "description": "Gli elenchi di contatti esteri possono essere correlati con attività di comunicazione per identificare contatti esteri potenzialmente non dichiarati.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Violazioni della Politica sui Diritti di Proprietà Intellettuale",
+      "description": "Le violazioni delle politiche sui diritti di proprietà intellettuale possono essere parte di attività maliziose o identificare chi potrebbe commettere azioni malevoli.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Valutazioni di Performanza",
+      "description": "Le valutazioni di performanza possono fornire contesto utile su un membro del personale e identificare cambiamenti significativi nella performance.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Record Personali",
+      "description": "I record personali forniscono informazioni su titoli di lavoro, supervisor, promozioni e storia disciplinare dei membri del personale.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Record di Accesso Fisico",
+      "description": "I record di accesso fisico possono essere correlati con altre fonti per la detezione di anomalie e identificare accessi anomali.",
+      "category": "non-technical",
+      "page": 93
+    },
+    {
+      "title": "Utilizzo di Record di Certificazione Sicurezza",
+      "description": "I record di certificazione sicurezza forniscono contesto sul personale per aiutare l'IRMP a ottenere una visione 'whole-person'.",
+      "category": "security",
+      "page": 94
+    },
+    {
+      "title": "Rapporti di Viaggio",
+      "description": "I rapporti di viaggio possono essere correlati con altri dati per identificare comportamenti anomali o sospetti.",
+      "category": "security",
+      "page": 94
+    },
+    {
+      "title": "Capacità Analitica Integrata per la Rilevanza delle Minacce Interne",
+      "description": "Includere fonti di dati tecniche e non tecniche come registri di Active Directory, email, registrazione attività utente, controlli di background e registri fisici per prevenire, rilevare e rispondere alle minacce interne.",
+      "category": "monitoring",
+      "page": 94
+    },
+    {
+      "title": "Creazione di Polítiche e Procedure di Monitoraggio",
+      "description": "Le organizzazioni dovrebbero creare politiche e procedure di monitoraggio e informare i membri del personale che l'uso di qualsiasi sistema informativo è monitorato.",
+      "category": "monitoring",
+      "page": 94
+    },
+    {
+      "title": "Annual Refresher Training",
+      "description": "Conduct annual refresher training and consult legal counsel before implementing a monitoring program to ensure compliance with all legal requirements.",
+      "category": "security",
+      "page": 95
+    },
+    {
+      "title": "Consult Legal Counsel for Monitoring",
+      "description": "Ensure the monitoring program meets all legal requirements and disclosures, including securely storing and processing workforce member data.",
+      "category": "compliance",
+      "page": 95
+    },
+    {
+      "title": "Reduce False Positives in SIEM Alerts",
+      "description": "Tune alerting systems to minimize false positives by adjusting rules and the systems feeding data into them.",
+      "category": "security",
+      "page": 95
+    },
+    {
+      "title": "Establish Baselines for Behavior Analysis",
+      "description": "Define expected behavior baselines at individual, role, department, and organizational levels to detect anomalies.",
+      "category": "behavioral analysis",
+      "page": 95
+    },
+    {
+      "title": "Collaborate Across Departments for Information Access",
+      "description": "Work across departments to determine data collection, federation in SIEM, and access permissions for alerts.",
+      "category": "internal collaboration",
+      "page": 95
+    },
+    {
+      "title": "Contextualize Risks with Sufficient Information",
+      "description": "Ensure analysts have enough context to understand motives and impacts of events before sending alerts.",
+      "category": "risk management",
+      "page": 95
+    },
+    {
+      "title": "Incorporate Physical Security in Monitoring",
+      "description": "Include physical security experts in IRMP to identify kinetic risks indicated by SIEM data.",
+      "category": "physical security",
+      "page": 95
+    },
+    {
+      "title": "Implement Log Correlation or SIEM Solution",
+      "description": "Use log correlation or SIEM to detect insider threats by correlating security events and generating alerts.",
+      "category": "security technologies",
+      "page": 95
+    },
+    {
+      "title": "Automatizzare gli avvisi con SIEM",
+      "description": "Implementare regole all'interno della soluzione SIEM per automatizzare gli avvisi.",
+      "category": "security",
+      "page": 96
+    },
+    {
+      "title": "Creare procedure di gestione dei log",
+      "description": "Definire policy e procedure per la gestione dei log, includendo retention, tipologie di log da raccogliere e responsabili.",
+      "category": "security",
+      "page": 96
+    },
+    {
+      "title": "Monitorare regolarmente SIEM",
+      "description": "Assegnare un ruolo dedicato per monitorare SIEM, individuando tendenze e incidenti critici non prioritari.",
+      "category": "monitoring",
+      "page": 96
+    },
+    {
+      "title": "Identify Services Accessible Remotely",
+      "description": "Determine which organizational services can be accessed remotely, such as signing into Microsoft Teams.",
+      "category": "security",
+      "page": 98
+    },
+    {
+      "title": "Monitor User Activity Visibility",
+      "description": "Assess the visibility available for monitoring user activity on each remote-accessible service.",
+      "category": "security",
+      "page": 98
+    },
+    {
+      "title": "Detective and Preventive Controls",
+      "description": "Implement detective and preventive controls to restrict or stop unauthorized remote activities on each service.",
+      "category": "security",
+      "page": 98
+    },
+    {
+      "title": "Responsive Controls for Incidents",
+      "description": "Establish responsive controls to contain and handle incidents arising from remote access.",
+      "category": "security",
+      "page": 98
+    },
+    {
+      "title": "Enhanced Controls for Critical Data",
+      "description": "Protect access to data or functions that could cause significant damage with enhanced controls and monitoring.",
+      "category": "security",
+      "page": 98
+    },
+    {
+      "title": "Use Proxy or VPN for Remote Access",
+      "description": "Restrict system access using a proxy or VPN if organization-owned equipment is not available to remote workers.",
+      "category": "security",
+      "page": 98
+    },
+    {
+      "title": "Include Mobile Devices in Risk Assessments",
+      "description": "Organizations should include mobile devices in their risk assessments and consider specific features such as cameras, microphones, remote access, applications, wireless capabilities, and mass storage.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Monitor Data Exfiltration via Mobile Devices",
+      "description": "Mobile devices can be used to exfiltrate data through cameras, microphones, emails, text messages, and synchronization with cloud storage or social media.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Establish Policies for Remote Management Applications",
+      "description": "Before allowing remote management of organizational assets via mobile devices, organizations should identify a justifiable business need, establish policies and procedures, and monitor usage.",
+      "category": "configuration",
+      "page": 92
+    },
+    {
+      "title": "Conduct Privacy Impact Assessments for MDM Services",
+      "description": "Organizations should perform a Privacy Impact Assessment (PIA) or Data Protection Impact Assessment (DPIA) on mobile device management (MDM) services with input from legal counsel.",
+      "category": "privacy",
+      "page": 92
+    },
+    {
+      "title": "Inform Employees About MDM Tracking",
+      "description": "Under GDPR, employees must be informed about tracking via MDM services and the consequences of using personal devices.",
+      "category": "legality",
+      "page": 92
+    },
+    {
+      "title": "Manage Access to Applications Upon Departure",
+      "description": "Organizations should disable access to applications on mobile devices when workforce members leave and establish agreements for remote erasure of devices if lost, stolen, or upon termination.",
+      "category": "security",
+      "page": 92
+    },
+    {
+      "title": "Weigh Risks of Personal Devices in Enterprise Networks",
+      "description": "Organizations should carefully consider the risks of allowing personally owned devices to connect to enterprise networks and prefer organization-owned equipment for better control.",
+      "category": "configuration",
+      "page": 92
+    },
+    {
+      "title": "Controllo degli Applicativi Mobili",
+      "description": "L'organizzazione deve monitorare e controllare gli applicativi installati sui dispositivi mobili, utilizzando strumenti come app store aziendali o tecnologie di gestione della configurazione per approvare solo applicazioni sicure.",
+      "category": "security",
+      "page": 100
+    },
+    {
+      "title": "Monitoraggio del Tethering",
+      "description": "Gli accessi via tethering devono essere monitorati e controllati per prevenire il bypass delle protezioni di rete e la creazione di backdoor nel sistema.",
+      "category": "security",
+      "page": 100
+    },
+    {
+      "title": "Prevenzione dell'Esfiltrazione Dati via Dispositivi Mobili",
+      "description": "I dispositivi mobili possono essere utilizzati per esfiltrare dati usando connessioni ISP non controllate dall'organizzazione. È necessario implementare controlli aggiuntivi come logging e auditing.",
+      "category": "security",
+      "page": 100
+    },
+    {
+      "title": "Trattamento dei Dispositivi Mobili come Supporti Removibili",
+      "description": "I dispositivi mobili con capacità di memorizzazione devono essere trattati come supporti rimovibili e protetti adeguatamente.",
+      "category": "security",
+      "page": 100
+    },
+    {
+      "title": "Accesso Remoto Controllato",
+      "description": "L'accesso remoto ai dati critici deve essere consentito solo da dispositivi owned dall'organizzazione, con logging e auditing frequenti.",
+      "category": "security",
+      "page": 100
+    },
+    {
+      "title": "Disabling Remote Access During Termination",
+      "description": "When terminating a workforce member, retrieve any organizational equipment, disable remote access accounts, firewall access, and remote management capabilities. Change passwords for shared accounts, close all open connections, and remotely erase devices if necessary.",
+      "category": "security",
+      "page": 101
+    },
+    {
+      "title": "Monitoring and Verification Using Logs",
+      "description": "Use remote access logs, source IP addresses, and phone records to identify insider threats. Corroborate information to prevent framing or manipulation.",
+      "category": "monitoring",
+      "page": 101
+    },
+    {
+      "title": "Enhancing Physical Security Controls",
+      "description": "In areas with sensitive trade secrets, implement additional controls like metal detectors and guards to prevent unauthorized photography.",
+      "category": "physical security",
+      "page": 101
+    },
+    {
+      "title": "Disable remote access upon separation",
+      "description": "Organizations should disable remote access to systems, VPN services, application servers, email, network infrastructure devices, and remote management software when an employee or contractor separates from the organization. All open sessions should be closed, and all organization-owned equipment, including MFA tokens, should be collected.",
+      "category": "security",
+      "page": 102
+    },
+    {
+      "title": "Include mobile devices in risk assessments",
+      "description": "Mobile devices should be included in enterprise risk assessments with a list of their features.",
+      "category": "risk management",
+      "page": 102
+    },
+    {
+      "title": "Prohibit or limit personally owned devices",
+      "description": "Organizations should prohibit or limit the use of personally owned devices, especially those with cameras in sensitive areas.",
+      "category": "physical security",
+      "page": 102
+    },
+    {
+      "title": "Implement central management for mobile devices",
+      "description": "A central management system should be implemented for mobile devices to monitor and control their use.",
+      "category": "mobility management",
+      "page": 102
+    },
+    {
+      "title": "Monitor and control remote access",
+      "description": "Organizations should monitor and control remote access to infrastructure. VPN tunnels should terminate at the furthest perimeter device and in front of an IDS and firewall for packet inspection and network access control. IP traffic-flow capture and analysis devices should be placed behind the VPN concentrator.",
+      "category": "network security",
+      "page": 102
+    },
+    {
+      "title": "Restrict personally owned equipment access",
+      "description": "Personally owned equipment, such as laptops or home computers, should only be allowed to access the corporate network through an application gateway to limit the number and type of applications available to untrusted connections.",
+      "category": "network security",
+      "page": 102
+    },
+    {
+      "title": "Establish a Baseline of Normal Behavior for Both Networks and Workforce Members",
+      "description": "Organizations should identify and analyze data streams related to critical assets. They must establish normal network and workforce member behavior by collecting relevant data points, determining the collection period, and selecting appropriate tools. The baseline should account for natural variations in activity and avoid including abnormal or malicious behavior. Seasonality in data patterns should be considered using time series methods.",
+      "category": "security",
+      "page": 105
+    },
+    {
+      "title": "Configurare firewall basati su host",
+      "description": "Configura i firewall basati su host per consentire solo comunicazioni autorizzate e monitora l'uso del VPN.",
+      "category": "security",
+      "page": 106
+    },
+    {
+      "title": "Definire criteri di accesso VPN",
+      "description": "Definisce criteri temporali per l'accesso VPN, blocca connessioni da paesi non necessari e limita l'accesso ai file condivisi.",
+      "category": "configuration",
+      "page": 106
+    },
+    {
+      "title": "Monitorare comportamenti anomali",
+      "description": "Osserva scarichi di dati improvvisi e controlla i log per attività insolite, come una sorgente che tenta di accedere a server FTP.",
+      "category": "monitoring",
+      "page": 106
+    },
+    {
+      "title": "Identificare protocolli e porte non standard",
+      "description": "Segnala l'uso di protocolli su porte non usuali, come SSH su porta 80.",
+      "category": "security",
+      "page": 106
+    },
+    {
+      "title": "Impostare baseline con SIEM",
+      "description": "Usa SIEM per stabilire baselines di attività normali e identifica cambiamenti improvvisi nel numero di avvisi.",
+      "category": "monitoring",
+      "page": 106
+    },
+    {
+      "title": "Analizzare accessi anomali",
+      "description": "Monitora deviazioni dal solito accesso a file, cartelle e applicazioni, confrontando con colleghi per identificare comportamenti inconsistenti.",
+      "category": "monitoring",
+      "page": 106
+    },
+    {
+      "title": "Stabilire baseline per monitorare l'attività",
+      "description": "Le organizzazioni devono stabilire baselines di attività normali per identificare comportamenti anomali che potrebbero indicare minacce interne.",
+      "category": "security",
+      "page": 107
+    },
+    {
+      "title": "Monitoraggio delle attività al di fuori delle ore lavorative",
+      "description": "Attenzione alle attività che avvengono al di fuori degli orari di lavoro, poiché possono essere un segnale di comportamenti sospetti.",
+      "category": "security",
+      "page": 107
+    },
+    {
+      "title": "Monitoraggio dell'attività di rete",
+      "description": "Usa strumenti appropriati per monitorare l'attività della rete e dei membri del personale per stabilire una baseline di comportamenti e tendenze normali.",
+      "category": "security",
+      "page": 108
+    },
+    {
+      "title": "Accesso VPN a paesi stranieri",
+      "description": "Nega l'accesso VPN a paesi esteri dove non esiste un bisogno aziendale genuino. Consenti esplicitamente l'accesso solo da paesi con un bisogno aziendale valido.",
+      "category": "security",
+      "page": 108
+    },
+    {
+      "title": "Configurazione di port e protocolli",
+      "description": "Individua quali port e protocolli sono necessari per l'attività normale della rete e configura i dispositivi per utilizzare solo questi servizi.",
+      "category": "configuration",
+      "page": 108
+    },
+    {
+      "title": "Allarmi firewall e IDS normali",
+      "description": "Determina quali allarmi del firewall e IDS sono normali. Correggi le cause di tali allarmi o documenta i loro intervalli normali e includili nella documentazione della baseline della rete.",
+      "category": "security",
+      "page": 108
+    },
+    {
+      "title": "Baseline di attività per sottounità",
+      "description": "Stabilisce baselines di attività di rete per singole sottounità dell'organizzazione.",
+      "category": "monitoring",
+      "page": 108
+    },
+    {
+      "title": "Accesso controllato alle comunicazioni",
+      "description": "Determina quali dispositivi nella rete devono comunicare tra loro e implementa ACL, regole del firewall host e altre tecnologie per limitare le comunicazioni.",
+      "category": "configuration",
+      "page": 108
+    },
+    {
+      "title": "Monitoraggio dell'utilizzo VPN",
+      "description": "Limita l'accesso VPN a determinate ore, monitora il consumo di banda e stabilisce quali risorse sono accessibili da indirizzi IP remoti specifici.",
+      "category": "monitoring",
+      "page": 108
+    },
+    {
+      "title": "Allerte su attività异常",
+      "description": "Allerta su qualsiasi attività che si discosta dalla norma.",
+      "category": "security",
+      "page": 108
+    },
+    {
+      "title": "Enforce Separation of Duties",
+      "description": "Divide functions among multiple people to prevent single-point malicious actions, using the two-person rule and various controls.",
+      "category": "security",
+      "page": 110
+    },
+    {
+      "title": "Enforce Least Privilege",
+      "description": "Limit access rights to only what is necessary for a job, reducing insider risks.",
+      "category": "security",
+      "page": 110
+    },
+    {
+      "title": "Require Management Authorization for Transactions",
+      "description": "Ensure critical data-entry transactions require online management authorization.",
+      "category": "security",
+      "page": 110
+    },
+    {
+      "title": "Implement Configuration Management Processes",
+      "description": "Use configuration management processes with roles for developer, reviewer, and tester to independently review changes.",
+      "category": "security",
+      "page": 110
+    },
+    {
+      "title": "Control Software Distributions and Modifications",
+      "description": "Use configuration management technology to control software distributions and system modifications.",
+      "category": "security",
+      "page": 110
+    },
+    {
+      "title": "Require Multiple Members for Backup Functions",
+      "description": "Ensure backup and restore functions are performed by two different workforce members.",
+      "category": "security",
+      "page": 110
+    },
+    {
+      "title": "Design Auditing Procedures to Prevent Collusion",
+      "description": "Create auditing procedures that prevent collusion among auditors.",
+      "category": "security",
+      "page": 110
+    },
+    {
+      "title": "Manage Least Privilege as an Ongoing Process",
+      "description": "Organizations must regularly review and adjust access rights when workforce members change roles to ensure they only have access necessary for their current job.",
+      "category": "security",
+      "page": 111
+    },
+    {
+      "title": "Enforce Separation of Duties with Technical Controls",
+      "description": "Implement separation of duties through technical controls in business processes to prevent insider threats, as relying solely on policy is insufficient.",
+      "category": "security",
+      "page": 111
+    },
+    {
+      "title": "Implement Role-Based Access Control",
+      "description": "Prevent workforce members from accessing resources beyond their job requirements using role-based access control in both physical and virtual environments.",
+      "category": "access control",
+      "page": 111
+    },
+    {
+      "title": "Audit Access Permissions Upon Role Changes",
+      "description": "Carefully audit a workforce member's access permissions when they change roles within your organization. Routinely audit user access permissions at least annually and remove permissions that are no longer needed.",
+      "category": "security",
+      "page": 112
+    },
+    {
+      "title": "Remove Unnecessary Permissions",
+      "description": "Ensure that permissions which are no longer needed by a workforce member are promptly removed to prevent privilege creep.",
+      "category": "security",
+      "page": 112
+    },
+    {
+      "title": "Establish Account Management Policies",
+      "description": "Develop and enforce account management policies and procedures. Regularly audit account maintenance operations, ensuring that account activity aligns with standard operating procedure documentation.",
+      "category": "configuration",
+      "page": 112
+    },
+    {
+      "title": "Separate Privileged and Standard Accounts",
+      "description": "Require privileged users to maintain both an administrative account with the minimum necessary privileges for their duties and a standard account for everyday, non-privileged activities.",
+      "category": "security",
+      "page": 112
+    },
+    {
+      "title": "Ensure Oversight for Sensitive Roles",
+      "description": "Review positions in the organization that handle sensitive information or perform critical functions. Ensure workforce members in these roles cannot perform critical functions without oversight and approval.",
+      "category": "personnel",
+      "page": 112
+    },
+    {
+      "title": "Separate Backup and Restore Roles",
+      "description": "One person should not be permitted to perform both backup and restore functions. Separate these roles, regularly test the backup and recovery processes (including media and equipment), and ensure that someone other than the workforce members performing backup and restore functions transports backup tapes off-site.",
+      "category": "security",
+      "page": 112
+    },
+    {
+      "title": "Define Explicit Security Agreements for Cloud Services",
+      "description": "Include provisions for data access control and monitoring in all agreements with cloud service providers to address security concerns specific to cloud services.",
+      "category": "security",
+      "page": 115
+    },
+    {
+      "title": "Securing Cloud Services",
+      "description": "Organizations must ensure that cloud service providers offer appropriate measures to protect data confidentiality, integrity, and availability. They should understand access controls, conduct audits, and verify protection levels through independent reports or self-audits.",
+      "category": "security",
+      "page": 116
+    },
+    {
+      "title": "Auditing and Monitoring Cloud Environments",
+      "description": "Regular auditing and monitoring of cloud environments are essential. Organizations should ensure they have access to necessary tools, meet legal requirements, supplement lacking capabilities, and define these in written agreements with providers.",
+      "category": "security",
+      "page": 116
+    },
+    {
+      "title": "Protecting the Cloud Control Plane",
+      "description": "Organizations should audit access, internal events, and external communications in near-real-time to detect anomalies. This helps protect against vulnerabilities introduced by complex control technologies.",
+      "category": "security",
+      "page": 116
+    },
+    {
+      "title": "Mitigating Insider Threats at Cloud Providers",
+      "description": "Organizations should assess risks posed by potential insider threats within cloud providers, ensuring SLAs or insurance cover these risks. They must identify different types of attackers and align policies with the provider's.",
+      "category": "security",
+      "page": 116
+    },
+    {
+      "title": "Specify HR Requirements in Contracts",
+      "description": "Include Human Resources requirements as part of legal contracts to help protect against rogue administrators.",
+      "category": "security",
+      "page": 117
+    },
+    {
+      "title": "Strict Supply Chain Management",
+      "description": "Enforce strict supply chain management and assess suppliers to mitigate insider threats.",
+      "category": "vendor management",
+      "page": 117
+    },
+    {
+      "title": "Define Security Breach Notification Processes",
+      "description": "Establish clear processes for notifying about security breaches as part of protecting against insider threats.",
+      "category": "security",
+      "page": 117
+    },
+    {
+      "title": "Ensure Transparency in Information Security Practices",
+      "description": "Maintain transparency in overall information security and management practices to enhance trust and security.",
+      "category": "security management",
+      "page": 117
+    },
+    {
+      "title": "Create Incident Response Plan with Offline Credential Verification",
+      "description": "Develop an incident response plan that includes offline credential verification to respond timely to attacks exploiting cloud vulnerabilities.",
+      "category": "incident management",
+      "page": 117
+    },
+    {
+      "title": "Familiarize System Administrators with Cloud Configuration Tools",
+      "description": "Ensure system administrators are proficient with configuration tools for cloud-based systems and can disable services if necessary.",
+      "category": "configuration",
+      "page": 117
+    },
+    {
+      "title": "Use Data Loss Prevention (DLP) Tools",
+      "description": "Implement DLP tools and techniques to detect sensitive data being transferred to cloud storage.",
+      "category": "data protection",
+      "page": 117
+    },
+    {
+      "title": "Implement Network or Host-Based Controls for Cloud Access",
+      "description": "Use network or host-based controls to prevent unauthorized access to specific external cloud resources by workforce members.",
+      "category": "secure access",
+      "page": 117
+    },
+    {
+      "title": "Review Risks Related to Data Location in Different Countries",
+      "description": "Assess risks associated with data centers located in various countries, considering local laws and regulations like GDPR.",
+      "category": "compliance",
+      "page": 117
+    },
+    {
+      "title": "Ensure Adequate Data Security Assurances in Contracts",
+      "description": "Verify that contracts with cloud service providers offer sufficient data security assurances, especially under GDPR for EU organizations.",
+      "category": "contracts and compliance",
+      "page": 117
+    },
+    {
+      "title": "Rigorous Vetting of Outside Consultants",
+      "description": "Perform thorough background checks and vetting on outside consultants involved in cloud migrations to mitigate risks associated with their access.",
+      "category": "consultant management",
+      "page": 117
+    },
+    {
+      "title": "Periodic Cloud Infrastructure Audits",
+      "description": "Conduct regular audits of cloud security, including virtual machines, to ensure they meet security configuration requirements.",
+      "category": "auditing",
+      "page": 117
+    },
+    {
+      "title": "Continuous Monitoring of Distributed Infrastructure",
+      "description": "Continuously monitor the behavior and usage of distributed cloud infrastructure in near real time for proactive threat detection.",
+      "category": "monitoring",
+      "page": 117
+    },
+    {
+      "title": "Review Audit Logs According to Policy",
+      "description": "Regularly review audit logs as per organizational policies to identify and address security issues promptly.",
+      "category": "log management",
+      "page": 117
+    },
+    {
+      "title": "Aggregation and Management of Diagnostic Data",
+      "description": "Efficiently aggregate and manage diagnostic data to support ongoing monitoring and incident response activities.",
+      "category": "data management",
+      "page": 117
+    },
+    {
+      "title": "Identify New Devices and Services in Cloud Infrastructure",
+      "description": "Continuously identify new devices and services within the cloud environment to ensure comprehensive security coverage.",
+      "category": "resource management",
+      "page": 117
+    },
+    {
+      "title": "Monitor Security Reconfigurations and Deviations",
+      "description": "Track any changes in security configurations and deviations from predefined norms to maintain a secure environment.",
+      "category": "configuration monitoring",
+      "page": 117
+    },
+    {
+      "title": "Monitoraggio e registrazione dell'ambiente virtuale",
+      "description": "Le organizzazioni devono monitorare e registrare accuratamente l'ambiente virtuale per poter rispondere rapidamente a eventuali problemi, riducendo il rischio di danni causati da accessi non autorizzati o azioni malintenzionate.",
+      "category": "security",
+      "page": 118
+    },
+    {
+      "title": "Controllo degli accessi remoti ai servizi virtuali",
+      "description": "Le organizzazioni devono controllare o vietare l'accesso remoto a strumenti che consentano la modifica di servizi virtuali, riducendo il rischio di danni causati da insiders con accessi amministrativi non monitorati.",
+      "category": "security",
+      "page": 118
+    },
+    {
+      "title": "Conduci un'analisi dei rischi prima di outsourcing",
+      "description": "Effettua una valutazione del rischio sui dati e servizi che intendi outsource a un provider cloud.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Verifica il livello di rischio del provider",
+      "description": "Assicurati che il provider cloud abbia un livello accettabile di rischio e controlli mitigatori implementati.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Esamina le prassi di sicurezza del provider",
+      "description": "Verifica che il provider cloud incontri o superi le tue prassi interne di sicurezza.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Controlla le prassi di assunzione del provider",
+      "description": "Verifica che il provider effettui indagini di background sicurezza complete sui suoi dipendenti.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Effettua controlli periodici sul personale",
+      "description": "Assicurati che il provider effettui controlli di credito e reinvestigazioni periodiche sui suoi dipendenti.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Controlla o elimina l'accesso remoto amministrativo",
+      "description": "Gestisci o elimina l'accesso remoto amministrativo ai host che forniscono servizi cloud o virtuali.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Capisci come il provider protegge i tuoi asset",
+      "description": "Prima di firmare un contratto, capisci come il provider cloud protegge i tuoi dati e altri asset.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Verifica la responsabilità per l'accesso agli asset",
+      "description": "Verifica chi è responsabile per il controllo di accesso fisico e logico ai tuoi asset cloud.",
+      "category": "security",
+      "page": 119
+    },
+    {
+      "title": "Institutionalize System Change Controls",
+      "description": "Organizations must control changes to systems and applications to prevent insertion of malicious code. Implement change controls across all project stages.",
+      "category": "security",
+      "page": 121
+    },
+    {
+      "title": "Document Baseline Configurations Securely",
+      "description": "Use cryptographic checksums, interface characterization, and recorded configuration files for comprehensive documentation of baseline configurations.",
+      "category": "configuration",
+      "page": 121
+    },
+    {
+      "title": "Validazione delle configurazioni",
+      "description": "L'organizzazione deve confrontare le configurazioni implementate con la documentazione e investigare le discrepanze per determinare se siano benigne o maliziose.",
+      "category": "security, configuration",
+      "page": 122
+    },
+    {
+      "title": "Gestione dei ruoli nei processi di modifica",
+      "description": "L'organizzazione deve definire ruoli specifici nel processo di gestione delle modifiche e assegnarli a persone diverse per prevenire modifiche non notate.",
+      "category": "security, governance",
+      "page": 122
+    },
+    {
+      "title": "Protezione dei log e backup",
+      "description": "Gli organizzazioni devono proteggere i log delle modifiche e i backup per rilevare modifiche non autorizzate e ripristinare lo stato precedente se necessario.",
+      "category": "security, data management",
+      "page": 122
+    },
+    {
+      "title": "Uso di antivirus aggiornato",
+      "description": "Installare antivirus sulle workstation, server e gateway Internet ed aggiornare regolarmente i segni di riconoscimento per ridurre il rischio di compromissioni.",
+      "category": "security, malware prevention",
+      "page": 122
+    },
+    {
+      "title": "Controlli sulle modifiche oltre l'antivirus",
+      "description": "Implementare controlli sulle modifiche per compensare le limitazioni degli antivirus e rilevare codici maliziosi come exploit zero-day o bomba logica.",
+      "category": "security, change control",
+      "page": 122
+    },
+    {
+      "title": "Gestione delle modifiche al codice sorgente",
+      "description": "Usare strumenti per gestire le modifiche al codice sorgente e altri file di applicazione, mantenendo controlli stretti anche dopo lo sviluppo iniziale.",
+      "category": "security, software development",
+      "page": 122
+    },
+    {
+      "title": "Implementare un processo di gestione del cambiamento",
+      "description": "Adottare un processo formale per la gestione del cambiamento e garantire una separazione delle mansioni per ridurre il rischio di intrusioni interne.",
+      "category": "security",
+      "page": 123
+    },
+    {
+      "title": "Utilizzare strumenti per confrontare baselines o hash dei file",
+      "description": "Eseguire regolarmente controlli mediante strumenti che confrontano baselines del sistema o hash dei file per rilevare modifiche non autorizzate in anticipo.",
+      "category": "security",
+      "page": 123
+    },
+    {
+      "title": "Implementare un programma di gestione delle modifiche",
+      "description": "Periodicamente controllare le baselines di configurazione contro i sistemi di produzione e verificare se le discrepanze sono state approvate. Se le modifiche non sono state approvate, verificare la necessità aziendale della modifica. Implementare un programma di gestione delle modifiche all'interno dell'organizzazione ed assicurarsi che una board di controllo delle modifiche approvi tutte le modifiche ai sistemi, reti e configurazioni hardware. Tutte le modifiche devono essere documentate e includere una ragione aziendale. Le modifiche proposte devono essere rivedute dal team di sicurezza informatica, dagli owner dei sistemi, degli dati, degli utenti e altri stakeholder. Il gestore della configurazione deve revisionare e presentare alla board di controllo delle modifiche qualsiasi software sviluppato in-house e qualsiasi modifica pianificata.",
+      "category": "configuration",
+      "page": 124
+    },
+    {
+      "title": "Implementare procedure di backup e ripristino sicure",
+      "description": "Gli organismi devono implementare e testare regolarmente procedure di backup e ripristino sicure per ridurre le interruzioni operative in caso di attacco da insider. Questo include controlli di accesso ai dati di backup, separazione delle mansioni, assegnazione di amministratori dedicati e richieste di accountability a fornitori esterni.",
+      "category": "security",
+      "page": 126
+    },
+    {
+      "title": "Encrypt Backup Media",
+      "description": "Organizations should encrypt backup media and verify cryptographic checksums before media leaves the organization to ensure data confidentiality and integrity.",
+      "category": "security",
+      "page": 127
+    },
+    {
+      "title": "Redundant Backup Copies",
+      "description": "Maintain multiple copies of backups, storing redundant copies in a secure off-site facility. Different individuals should manage each copy to prevent insider compromise.",
+      "category": "data protection",
+      "page": 127
+    },
+    {
+      "title": "Encryption Key Management",
+      "description": "Manage encryption keys securely, applying the two-person rule to ensure no single individual can act alone in managing decryption processes.",
+      "category": "security",
+      "page": 127
+    },
+    {
+      "title": "Physical Media Protection",
+      "description": "Ensure physical media storing backups is protected from insider corruption or destruction, as insiders may target backup systems to amplify attack impacts.",
+      "category": "physical protection",
+      "page": 127
+    },
+    {
+      "title": "Backup Testing and Validation",
+      "description": "Regularly test backups to ensure they can be restored. Conduct bare-metal restores as part of disaster recovery exercises, testing random dates without prior notice.",
+      "category": "disaster recovery",
+      "page": 127
+    },
+    {
+      "title": "Separate Communication Paths",
+      "description": "Create trusted communication paths outside the network to maintain critical operations during outages. This reduces reliance on insider-dependent methods and helps mitigate attack impacts.",
+      "category": "continuity planning",
+      "page": 127
+    },
+    {
+      "title": "Two-Person Rule for Backup Processes",
+      "description": "Apply the two-person rule to backup processes and physical media to prevent single individuals from compromising backups without oversight.",
+      "category": "access control",
+      "page": 127
+    },
+    {
+      "title": "Implementazione di backup resilienti",
+      "description": "Adottare processi avanzati e resistenti per il backup e il ripristino, con media e strutture sia locali che remote.",
+      "category": "security, backup",
+      "page": 128
+    },
+    {
+      "title": "Separazione delle mansioni",
+      "description": "Applicare la separazione delle mansioni per ridurre il rischio di attacchi interni.",
+      "category": "security, governance",
+      "page": 128
+    },
+    {
+      "title": "Gestione corretta delle chiavi di crittografia",
+      "description": "Acquistare hardware o software per gestire le chiavi di crittografia e garantire il successo dei processi di backup.",
+      "category": "security, key management",
+      "page": 128
+    },
+    {
+      "title": "Test regolare del ripristino",
+      "description": "Effettuare regolarmente test del processo di backup e ripristino per assicurarsi che siano operativi.",
+      "category": "security, procedures",
+      "page": 128
+    },
+    {
+      "title": "Archiviazione esterna di backup",
+      "description": "Utilizzare archivio esterno per backups per poter recuperare i dati in caso di accessi non autorizzati durante ore non lavorative.",
+      "category": "security, archiving",
+      "page": 128
+    },
+    {
+      "title": "Store Backup Media Off-Site",
+      "description": "Ensure backup media is protected from unauthorized access and can only be retrieved by a small number of individuals. Use a professional off-site storage facility.",
+      "category": "security",
+      "page": 129
+    },
+    {
+      "title": "Encrypt Backup Media",
+      "description": "Encrypt backup media and manage the encryption keys to ensure backup and recovery are possible.",
+      "category": "security",
+      "page": 129
+    },
+    {
+      "title": "Include Network Infrastructure Configurations in Backup Plan",
+      "description": "Ensure configurations of network infrastructure devices (e.g., routers, switches, firewalls) are part of the organization’s backup and recovery plan as well as its configuration management plan.",
+      "category": "configuration",
+      "page": 129
+    },
+    {
+      "title": "Implement Dual Administrator Backup Process",
+      "description": "Implement a backup and recovery process that involves at least two people: a backup administrator and a restore administrator. Both individuals should be trained to perform either role but not authorized to perform both roles simultaneously outside of critical or emergency circumstances.",
+      "category": "security",
+      "page": 129
+    },
+    {
+      "title": "Regularly Test Backup and Recovery Processes",
+      "description": "Ensure that the organization can reconstitute all critical data as defined in its business continuity plan and/or disaster recovery plan. Regularly test both backup and recovery processes.",
+      "category": "performance",
+      "page": 129
+    },
+    {
+      "title": "Avoid Single Points of Failure in Processes",
+      "description": "Ensure that each of these processes does not rely on any single person to be successful.",
+      "category": "business continuity",
+      "page": 129
+    },
+    {
+      "title": "Mitigate Unauthorized Data Exfiltration",
+      "description": "Organizations must understand and identify all possible exit points for data, including Bluetooth, removable media, loss of devices, and other potential vulnerabilities. Protective measures should be implemented to account for all devices and connections that could serve as exit points for sensitive information.",
+      "category": "security",
+      "page": 131
+    },
+    {
+      "title": "Controllare i dispositivi USB",
+      "description": "Utilizzare le politiche di gruppo per ambienti Microsoft-Windows o soluzioni commerciali per controllare i dispositivi installati e offrire funzionalità come copia shadow di file.",
+      "category": "security",
+      "page": 132
+    },
+    {
+      "title": "Copie shadow di file",
+      "description": "Effettuare una copia snapshot di qualsiasi file copiato su supporti rimovibili per consentire all'organizzazione di vedere chi ha copiato i file e cosa contengono.",
+      "category": "auditing",
+      "page": 132
+    },
+    {
+      "title": "Requisiti di crittografia",
+      "description": "Richiedere che i file su dispositivi rimovibili siano crittografati prima della trasferimento.",
+      "category": "security",
+      "page": 132
+    },
+    {
+      "title": "Politica per dispositivi autorizzati",
+      "description": "Richiedere l'uso solo di dispositivi posseduti dall'organizzazione per il trasferimento di file.",
+      "category": "configuration",
+      "page": 132
+    },
+    {
+      "title": "Limitare l'uso dei dispositivi USB",
+      "description": "Adottare politiche che restrincono chi può esaminare, approvare e gestire le trasferimenti di file.",
+      "category": "access control",
+      "page": 132
+    },
+    {
+      "title": "Utilizzo del two-person rule",
+      "description": "Limitare l'uso dei dispositivi a un agente fidato o almeno due persone per approvazione.",
+      "category": "access control",
+      "page": 132
+    },
+    {
+      "title": "Procedure formali di trasferimento dati",
+      "description": "Richiedere il completamento di un modulo che elenca nomi file, posizione, motivazione della trasferimento, destinatario, sensibilità e firma del richiedente.",
+      "category": "procedures",
+      "page": 132
+    },
+    {
+      "title": "Approvazione gerarchica",
+      "description": "Richiedere l'approvazione del gestore del richiedente, del proprietario dei dati e dell'agente fidato prima di effettuare il trasferimento.",
+      "category": "procedures",
+      "page": 132
+    },
+    {
+      "title": "Monitoraggio tramite DLP",
+      "description": "Implementare programmi DLP per filtrare i dati e prevenire l'uscita di informazioni sensibili via email.",
+      "category": "monitoring",
+      "page": 132
+    },
+    {
+      "title": "Rete separata per sviluppo software",
+      "description": "Utilizzare una rete disconnessa per codice sorgente e proprietà intellettuali, senza accesso a internet o altri network.",
+      "category": "network",
+      "page": 132
+    },
+    {
+      "title": "Definire e comprendere le connessioni di rete dell'organizzazione",
+      "description": "L'organizzazione deve identificare tutte le connessioni alla propria rete (network enclave), considerando elementi locali e remoti che accedono a risorse all'interno dell'enclave.",
+      "category": "security, configuration",
+      "page": 133
+    },
+    {
+      "title": "Monitorare i punti di uscita della rete",
+      "description": "I dati che passano attraverso i punti di uscita richiedono un'attenta analisi. Si consiglia di catturare il contenuto degli pacchetti alla periferia o almeno i flussi di rete e segnalare anomalie.",
+      "category": "security, monitoring",
+      "page": 133
+    },
+    {
+      "title": "Proxy del traffico di rete",
+      "description": "Utilizzare proxy per inspection del traffico non criptato e decryptare i comunicati web crittografati (SSL) se possibile.",
+      "category": "security, configuration",
+      "page": 133
+    },
+    {
+      "title": "Implementare soluzioni di filtro web",
+      "description": "Bloccare accesso a siti competitor e dominii malvagi. Le soluzioni devono filtrare sia per nomi di dominio che per indirizzi IP.",
+      "category": "security, configuration",
+      "page": 133
+    },
+    {
+      "title": "Utilizzare jump box per accesso SSH/FTP/SFTP",
+      "description": "Limitare l'accesso a strumenti amministrativi tramite un terminale di accesso limitato (jump box).",
+      "category": "security, configuration",
+      "page": 133
+    },
+    {
+      "title": "Cattura video delle sessioni utente",
+      "description": "Soluzioni che consentono la registrazione video delle sessioni per monitorare comandi eseguiti e modifiche al sistema.",
+      "category": "security, monitoring",
+      "page": 133
+    },
+    {
+      "title": "Monitorare servizi cloud/SaaS",
+      "description": "Attentamente controllare l'uso di servizi cloud come email e storage, implementando proxy e liste di blocco.",
+      "category": "security, monitoring",
+      "page": 133
+    },
+    {
+      "title": "Controllare dispositivi periferici",
+      "description": "Monitorare e controllare stampanti, scanner, fotocopiatrici e fax per prevenire esfiltrazione di dati.",
+      "category": "security, monitoring",
+      "page": 133
+    },
+    {
+      "title": "Identify Data Exfiltration Points",
+      "description": "Organizations should be aware of all potential data exfiltration points within the organization and include them as part of an enterprise risk assessment to implement effective mitigation strategies.",
+      "category": "security",
+      "page": 134
+    },
+    {
+      "title": "Monitor Insider Activities for Data Theft",
+      "description": "It is crucial to monitor insider activities, especially during employee transitions or when sensitive data transfers are attempted. Implementing forensic examinations and monitoring external storage device usage can help detect unauthorized data transfer.",
+      "category": "security",
+      "page": 134
+    },
+    {
+      "title": "Implementare controlli per la rimozione non autorizzata di dati",
+      "description": "Organizzare controlli per prevenire la rimozione o il trasferimento non autorizzato di dati, utilizzando tecnologie che definiscono criteri per il controllo del movimento dei dati verso dispositivi rimovibili o per stampa.",
+      "category": "security",
+      "page": 135
+    },
+    {
+      "title": "Etabbliamo una politica di cloud computing",
+      "description": "Definire una politica di cloud computing e monitorare l’utilizzo da parte del personale per prevenire l’esfiltrazione di dati.",
+      "category": "security, configuration",
+      "page": 135
+    },
+    {
+      "title": "Monitorare l’utilizzo degli stampanti e dispositivi correlati",
+      "description": "Monitorare i dispositivi come stampanti, fotocopiatrici, scanner e fax. Controllare i log per identificare anomalie.",
+      "category": "security, performance",
+      "page": 135
+    },
+    {
+      "title": "Creare una politica e procedura di trasferimento dati",
+      "description": "Definire criteri che assicurano il rimozione controllata delle informazioni sensibili dal sistema.",
+      "category": "security, configuration",
+      "page": 135
+    },
+    {
+      "title": "Etabbliamo una politica per i media rimovibili",
+      "description": "Imporre controlli su dispositivi come USB o CD-ROM per prevenire l’esfiltrazione non autorizzata.",
+      "category": "security, configuration",
+      "page": 135
+    },
+    {
+      "title": "Ristituire protocolli di trasferimento dati",
+      "description": "Limitare l’utilizzo di protocolli come FTP, SFTP o SCP solo a chi ha un bisogno giustificato e monitorarne l’uso.",
+      "category": "security, configuration",
+      "page": 135
+    },
+    {
+      "title": "Inventariare tutte le connessioni all’enclave",
+      "description": "Verificare che tutte le connessioni siano giustificate e Monitorarle con SLA o MOA.",
+      "category": "configuration, security",
+      "page": 135
+    },
+    {
+      "title": "Implementare misure di protezione alle punti ingresso/uscita",
+      "description": "Utilizzare firewall e IDS per monitorare i flussi di traffico e prevenire l’esfiltrazione di dati.",
+      "category": "security, configuration",
+      "page": 135
+    },
+    {
+      "title": "Isolare reti di sviluppo",
+      "description": "Disconnettere le reti di sviluppo dal resto del sistema o da Internet per prevenire accessi indesiderati.",
+      "category": "security, configuration",
+      "page": 135
+    },
+    {
+      "title": "Sviluppare un procedimento completo di terminazione del personale",
+      "description": "Gli organizzazioni devono avere un procedimento di terminazione che riduca il rischio di danni da ex dipendenti. Il procedimento deve assicurarsi che gli account del dipendente siano chiusi, l'equipaggiamento sia rimosso e il personale rimanente sia informato. Un checklist di terminazione aiuta a tracciare le attività, con dettagli su chi esegue, verifica, il termine e la firma. Il checklist deve essere restituito al RH prima della partenza.",
+      "category": "security",
+      "page": 138
+    },
+    {
+      "title": "Termination Checklist for Insider Threat Mitigation",
+      "description": "Ensure the departing workforce member returns all organization-owned equipment and documents.",
+      "category": "security",
+      "page": 139
+    },
+    {
+      "title": "Suspension of Accounts",
+      "description": "Terminate all access accounts, including VPN, email, cloud services, and social media.",
+      "category": "access control",
+      "page": 139
+    },
+    {
+      "title": "Change Shared Account Passwords",
+      "description": "For departing privileged users, change passwords for shared accounts, service accounts, network devices, etc.",
+      "category": "security",
+      "page": 139
+    },
+    {
+      "title": "Data Retention Request",
+      "description": "Archive and retain the last 100 days of email messages from the departing workforce member.",
+      "category": "data management",
+      "page": 139
+    },
+    {
+      "title": "Collect Remote Access Tokens",
+      "description": "Retrieve two-factor authentication devices to prevent unauthorized access.",
+      "category": "security",
+      "page": 139
+    },
+    {
+      "title": "Update Sensitive Area Access Lists",
+      "description": "Remove the departing employee from access lists for sensitive areas like server rooms and data centers.",
+      "category": "access control",
+      "page": 139
+    },
+    {
+      "title": "Exit Interview Conducted",
+      "description": "Ensure an exit interview is scheduled and completed by higher management or HR.",
+      "category": "compliance",
+      "page": 139
+    },
+    {
+      "title": "Final Performance Feedback",
+      "description": "Provide final performance appraisal feedback to the departing employee.",
+      "category": "HR procedures",
+      "page": 139
+    },
+    {
+      "title": "Collect Timesheets",
+      "description": "Ensure all timesheets are collected before separation.",
+      "category": "HR procedures",
+      "page": 139
+    },
+    {
+      "title": "Determine Final Paycheck Mailing Address",
+      "description": "Confirm the mailing address for the final paycheck distribution.",
+      "category": "finance",
+      "page": 139
+    },
+    {
+      "title": "Obtain Forwarding Address",
+      "description": "Get a forwarding mailing address from the departing workforce member.",
+      "category": "HR procedures",
+      "page": 139
+    },
+    {
+      "title": "Complete Separation Paperwork",
+      "description": "Ensure all necessary separation paperwork is completed by HR.",
+      "category": "compliance",
+      "page": 139
+    },
+    {
+      "title": "Notify Internal Personnel",
+      "description": "Inform appropriate personnel about the workforce member's separation.",
+      "category": "communication",
+      "page": 139
+    },
+    {
+      "title": "Reaffirm IP and Nondisclosure Agreements",
+      "description": "Confirm intellectual property and nondisclosure agreements with the departing employee.",
+      "category": "compliance",
+      "page": 139
+    },
+    {
+      "title": "Close Organizational Accounts",
+      "description": "Ensure the departing workforce member closes all organizational accounts, including credit cards.",
+      "category": "finance",
+      "page": 139
+    },
+    {
+      "title": "Return All Equipment",
+      "description": "Collect all issued equipment such as software, laptops, tablets, smartphones, etc.",
+      "category": "asset management",
+      "page": 139
+    },
+    {
+      "title": "Verify Equipment Inventory",
+      "description": "Ensure that returned equipment is correctly verified against inventory records.",
+      "category": "inventory control",
+      "page": 139
+    },
+    {
+      "title": "Collect Physical Access Items",
+      "description": "Retrieve identification badges, keys, access cards, parking passes, etc., from the departing employee.",
+      "category": "physical security",
+      "page": 139
+    },
+    {
+      "title": "Conduct Security Debriefing",
+      "description": "Perform a security debriefing with the departing workforce member to discuss post-separation obligations.",
+      "category": "security",
+      "page": 139
+    },
+    {
+      "title": "Clear Work Area",
+      "description": "Ensure the departing employee's desk phone and work area are cleared of all sensitive materials.",
+      "category": "physical security",
+      "page": 139
+    },
+    {
+      "title": "Monitoraggio delle attività pre e post licenziamento",
+      "description": "L'organizzazione dovrebbe esaminare almeno 30 giorni di attività del membro del personale intorno alla data della cessazione, estendendo a 90 giorni se i dati sono disponibili. Questo include attività email per assicurarsi che non siano state inviate informazioni sensibili all'esterno dell'organizzazione.",
+      "category": "security",
+      "page": 140
+    },
+    {
+      "title": "Log di accesso e monitoraggio del traffico",
+      "description": "Se l'organizzazione permette l'accesso a servizi di posta elettronica cloud personali, dovrebbe mantenere log di accesso (ad esempio, log del server proxy) e dati di flusso di rete per rilevare traffico insolito. Inoltre, dovrebbe monitorare o bloccare soluzioni di archiviazione cloud personali.",
+      "category": "security",
+      "page": 140
+    },
+    {
+      "title": "Notifica del personale sulle separazioni",
+      "description": "HR dovrebbe notificare tutti i membri del personale della separazione di un ex dipendente con un messaggio semplice, come: 'Joe Smith non lavora più per l'organizzazione. Si prega di non rivelare informazioni confidenziali a Joe Smith.'",
+      "category": "internal communication",
+      "page": 140
+    },
+    {
+      "title": "Eliminare o bloccare tutti i conti associati a un ex dipendente",
+      "description": "Sviluppare procedure ben definite per la gestione dei conti degli ex dipendenti, assicurandosi che non possano accedere ai sistemi.",
+      "category": "security",
+      "page": 141
+    },
+    {
+      "title": "Sviluppare un elenco di controllo aziendale per il processo di separazione",
+      "description": "Creare un checklist per gestire correttamente la separazione di un dipendente dall'organizzazione.",
+      "category": "configuration",
+      "page": 141
+    },
+    {
+      "title": "Eseguire il tracking di tutti i conti assegnati a ogni membro del personale",
+      "description": "Establiamo un processo per tenere traccia di tutti i conti associati a ogni dipendente.",
+      "category": "account management",
+      "page": 141
+    },
+    {
+      "title": "Rafforzare gli accordi di confidenzialità e diritti d'autore durante il processo di terminazione",
+      "description": "Riprendere tutti gli accordi legali come parte del processo di fine relazione lavorativa.",
+      "category": "legal/compliance",
+      "page": 141
+    },
+    {
+      "title": "Notificare i dipendenti delle partenze dove consentito e opportuno",
+      "description": "Comunicare alle altre persone della partenza di un membro del personale, se permesso e appropriato.",
+      "category": "communication",
+      "page": 141
+    },
+    {
+      "title": "Archiviare e bloccare l'accesso a tutti i conti associati a un dipendente che ha lasciato l'organizzazione",
+      "description": "Assicurarsi che accedere ai conti di un ex dipendente sia vietato.",
+      "category": "security",
+      "page": 141
+    },
+    {
+      "title": "Raccogliere tutto l'equipment aziendale del dipendente in fase di uscita",
+      "description": "Reperire tutti i dispositivi e asset dell'organizzazione posseduti dal dipendente prima della sua partenza.",
+      "category": "asset management",
+      "page": 141
+    },
+    {
+      "title": "Stabilire un sistema di inventario fisico per tracciare tutti gli asset assegnati a ogni dipendente",
+      "description": "Creare una procedura per tenere traccia degli asset forniti ai dipendenti.",
+      "category": "asset management",
+      "page": 141
+    },
+    {
+      "title": "Eseguire un inventario di tutti i sistemi di informazione e audit degli account su quei sistemi",
+      "description": "Controllare regolarmente i conti presenti sui sistemi per assicurarsi che siano corretti e aggiornati.",
+      "category": "security",
+      "page": 141
+    },
+    {
+      "title": "Adottare incentivi positivi per allineare il personale con l'organizzazione",
+      "description": "Utilizzare incentivi positivi per migliorare l'atteggiamento del personale e ridurre i rischi di minacce interne. Questi incentivi, che includono un supporto organizzativo percepito e il coinvolgimento del personale nelle attività dell'organizzazione, contribuiscono a creare un ambiente lavorativo favorevole alla sicurezza e all'efficacia delle difese contro le minacce interne.",
+      "category": "personnel management",
+      "page": 143
+    },
+    {
+      "title": "Adozione di incentivi positivi",
+      "description": "Adottare incentivi positivi per motivare i dipendenti a agire nel interesse dell'organizzazione, creando un clima di lavoro positivo che deterre le minacce interne.",
+      "category": "security, human resources management",
+      "page": 144
+    },
+    {
+      "title": "Gestione basata sulle capacità (Strengths-based management)",
+      "description": "Identificare e utilizzare le forze personali e professionali dei dipendenti per dirigere le loro carriere e gestire il loro rendimento, promuovendo l'impegno nel lavoro.",
+      "category": "human resources management, performance",
+      "page": 144
+    },
+    {
+      "title": "Supporto organizzativo percepito",
+      "description": "Implementare programmi che promuovano flessibilità, equilibrio tra lavoro e famiglia, assistenza ai dipendenti, compensazione conforme a基准 del mercato e supervisione costruttiva per rafforzare il supporto organizzativo percepito.",
+      "category": "human resources management, security",
+      "page": 144
+    },
+    {
+      "title": "Connessività nel lavoro",
+      "description": "Pratiche di formazione di team e rotazione dei ruoli per migliorare la connessione tra i dipendenti, creando un senso di appartenenza e fiducia.",
+      "category": "human resources management, collaboration",
+      "page": 144
+    },
+    {
+      "title": "Balanced Deterrence Approach",
+      "description": "Combining positive and negative incentives in an Insider Risk Management Program (IRMP) can reduce insider risk while improving workforce satisfaction, productivity, and retention. Positive deterrence focuses on organizational support, connectedness, and engagement, while negative deterrence involves monitoring, restrictions, and sanctions to prevent abuse.",
+      "category": "security",
+      "page": 145
+    },
+    {
+      "title": "Implementare incentivi positivi per ridurre il rischio di minacce interne",
+      "description": "L'adozione di incentivi positivi, in particolare quelli che aumentano la percezione del supporto organizzativo, può ridurre il rischio di insider threat migliorando le mentalità dei membri del personale. È importante trovare un bilanciamento tra incentivi positivi e negativi a seconda della cultura organizzativa.",
+      "category": "security",
+      "page": 146
+    },
+    {
+      "title": "Best Practice for Analyzing Insider Threats",
+      "description": "To analyze insider incidents, use a five-point scale to assess job engagement, perceived organizational support, and connectedness with co-workers. Provide clear examples and survey questions for each dimension, and determine final ratings through discussion and consensus among raters.",
+      "category": "security",
+      "page": 147
+    },
+    {
+      "title": "Focusing on Organizational Support",
+      "description": "Improving perceived organizational support is recommended as a key factor in reducing insider risk through positive incentives.",
+      "category": "security",
+      "page": 148
+    },
+    {
+      "title": "Communicate Organizational Values",
+      "description": "Routinely communicate organizational values and ensure organizational goals are aligned with those values.",
+      "category": "security",
+      "page": 149
+    },
+    {
+      "title": "Use Performance-Based Rewards",
+      "description": "Use performance-based rewards and recognition. Ensure criteria is transparent and managers are trained to fairly measure and reward performance.",
+      "category": "configuration",
+      "page": 149
+    },
+    {
+      "title": "Model Transparent Communication",
+      "description": "Expect and model transparent and respectful communication. Maintain communication expectations within a Code of Conduct or other internal resource.",
+      "category": "communication",
+      "page": 149
+    },
+    {
+      "title": "Maintain Employee Assistance Program (EAP)",
+      "description": "Maintain an Employee Assistance Program (EAP) for employees.",
+      "category": "wellness",
+      "page": 149
+    },
+    {
+      "title": "Learn From Past Insider Threat Incidents",
+      "description": "Organizations should understand how prior incidents unfolded, whether internally or externally, to gain insights into current insider risk management practices, identify gaps in controls, and inform training efforts. Collecting and analyzing incident data is crucial for effective risk management.",
+      "category": "security",
+      "page": 152
+    },
+    {
+      "title": "Design an Insider Threat Incident Repository",
+      "description": "Organizations should design an insider threat incident repository to collect and store information about prior incidents. This repository aids in deriving threat models, informs risk management decisions, supports awareness campaigns, and enhances operational resilience. The development involves defining the purpose, building a structured container, and establishing guidelines for data collection and maintenance.",
+      "category": "security",
+      "page": 153
+    },
+    {
+      "title": "Share incident data appropriately",
+      "description": "Organizations should share incident data internally with relevant stakeholders to improve insider threat risk decisions. Additionally, sharing data externally with the counter-insider threat community enhances understanding of threats and facilitates the exchange of tools, tactics, and prevention strategies.",
+      "category": "insider threat",
+      "page": 154
+    },
+    {
+      "title": "Derive insights from incident repository",
+      "description": "Use insider threat incident repositories to generate insights through case studies, root cause analysis, summary statistics, trend identification, and correlations. These insights can improve workforce awareness and training programs.",
+      "category": "insider threat",
+      "page": 154
+    },
+    {
+      "title": "Perform foundational analyses",
+      "description": "Conduct qualitative and quantitative analyses of incident repository data. Examples include creating case studies for training and analyzing trends in incident frequency and severity over time.",
+      "category": "insider threat",
+      "page": 154
+    },
+    {
+      "title": "Implement advanced analysis practices",
+      "description": "Use specialized tools or knowledge to perform complex analyses, such as machine learning for preprocessing data, identifying correlations, and incorporating external data sources. These practices refine threat models and risk scoring algorithms.",
+      "category": "insider threat",
+      "page": 154
+    },
+    {
+      "title": "Use natural language processing (NLP)",
+      "description": "Apply NLP techniques to analyze unstructured text associated with incidents, enhancing the extraction of meaningful insights from incident data.",
+      "category": "insider threat",
+      "page": 154
+    },
+    {
+      "title": "Incorporate external data sources",
+      "description": "Compare internal trends with external data to identify macro-influences on insider incidents and improve risk assessments.",
+      "category": "insider threat",
+      "page": 154
+    },
+    {
+      "title": "Assign an Incident Repository Project Manager",
+      "description": "Organizations should identify and assign someone to manage the incident repository. This role involves defining scope, collaborating on requirements, budgeting, setting standards, identifying stakeholders, determining necessary KSAs, assigning maintenance responsibilities, developing documentation, establishing change management plans, and setting expectations for ongoing stewardship.",
+      "category": "security",
+      "page": 155
+    },
+    {
+      "title": "Engage in Information Sharing with Groups",
+      "description": "Organizations should participate in information-sharing groups to improve insider risk management. Benefits include formal data usage agreements, timely relevant info, structured data receipt, opportunities to contribute back, and access to best practices. Joining various types of groups like geographically focused, sector-specific, or collaborative structures (e.g., ISAO SO, Global Resilience Federation) can enhance security efforts.",
+      "category": "security",
+      "page": 155
+    },
+    {
+      "title": "Data Anonymization for Information Sharing",
+      "description": "Use good data anonymization, NDAs, and terms of use to alleviate hesitancy in sharing insider incident information.",
+      "category": "security",
+      "page": 156
+    },
+    {
+      "title": "Conformity with Data Regulations",
+      "description": "Ensure involvement of legal counsel and ethics/compliance teams when dealing with protected data or systems.",
+      "category": "security",
+      "page": 156
+    },
+    {
+      "title": "Obtaining Support for Insider Threat Management",
+      "description": "Secure time, funding, and workforce resources to maintain incident repositories and engage in information sharing.",
+      "category": "configuration",
+      "page": 156
+    },
+    {
+      "title": "Recognizing Limitations of Past Data",
+      "description": "Acknowledge that past incidents may not provide all insights needed for IRMP, requiring additional strategies.",
+      "category": "analysis",
+      "page": 156
+    },
+    {
+      "title": "Collect case studies for workforce awareness",
+      "description": "Gather case studies from within your organization or industry to use in workforce awareness and training programs.",
+      "category": "security, awareness",
+      "page": 157
+    },
+    {
+      "title": "Clarify goals for information sharing",
+      "description": "Define how information sharing fits into the organization's overall security strategy, situational awareness, or incident response management plan.",
+      "category": "information sharing, strategy",
+      "page": 157
+    },
+    {
+      "title": "Dedicate resources for participation in information-sharing groups",
+      "description": "Allocate time and resources to engage in information-sharing organizations such as ISACs/ISAOs.",
+      "category": "collaboration, resources",
+      "page": 157
+    },
+    {
+      "title": "Incorporate information sharing into incident response processes",
+      "description": "Integrate the use of shared threat intelligence and insights from external partnerships or forums into your organization's incident response protocols.",
+      "category": "incident management, information sharing",
+      "page": 157
+    },
+    {
+      "title": "Enhanced Monitoring",
+      "description": "Implementare un monitoraggio avanzato oltre la base dell'organizzazione per mitigare rischi aumentati dovuti a ruoli, posizioni o comportamenti osservati.",
+      "category": "security",
+      "page": 161
+    },
+    {
+      "title": "Insider Risk Management Program (IRMP)",
+      "description": "Implementare un programma designato per gestire il rischio interno e mitigare minacce interne con capacità e risorse specifiche.",
+      "category": "risk management",
+      "page": 161
+    },
+    {
+      "title": "Least Privilege Principle",
+      "description": "Applicare il principio di privilegi minimi, limitando i privilegi degli utenti solo a quanto necessario per svolgere le loro mansioni.",
+      "category": "security",
+      "page": 161
+    },
+    {
+      "title": "Two-Person Rule",
+      "description": "Policy requiring at least two authorized persons for detecting incorrect or unauthorized procedures.",
+      "category": "security",
+      "page": 163
+    },
+    {
+      "title": "Trusted External Entity Management",
+      "description": "Securely managing access for external entities with authorized access to critical assets.",
+      "category": "configuration",
+      "page": 163
+    }
+  ]
+}

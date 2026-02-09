@@ -1,7 +1,7 @@
 from langchain.prompts import PromptTemplate
 #Some lines and structure were written with the help of ChatGPT
 prompt = PromptTemplate(
-    input_variables=["principles", "context", "bpmn_xml"],
+    input_variables=["principles", "context", "bpmn_xml", "mitigation_context"],
     template="""
 
 # BPMN Process Threat Analyzer
@@ -14,6 +14,8 @@ prompt = PromptTemplate(
 
 ## BPMN PROCESS:
 {bpmn_xml}
+
+{mitigation_context}
 
 ## BPMN Process Threat Analyzer
     You are an expert in business process analysis and threat modeling. Analyze the BPMN XML file for potential threats or vulnerabilities.
@@ -28,7 +30,8 @@ prompt = PromptTemplate(
     - Use the output example section under Style rules in this prompt as a guide for formatting and not for content.
     - DO NOT provide any introductory text explaining what your are doing or the purpose of the analysis. Also, no explanatory text other than the ouput defined in the style rules.
     - Make no assumptions about the structure and strictly follow the provided Style Rules.
-    - If you cannot find any mitigation strategies for a threat, mention that explicitly under "Mitigation Strategies".
+    - When suggesting mitigation strategies, PRIORITIZE using the retrieved mitigation best practices provided above when they are relevant to the identified threat.
+    - If you cannot find any relevant mitigation strategies from the retrieved best practices, you may suggest your own mitigation strategies.
 
 
 ## PROCESS THREAT ANALYSIS STEPS:
@@ -38,7 +41,7 @@ prompt = PromptTemplate(
     STEP 4: Retrieve the insider threats relevant to the element based on the selected {principles}.
     STEP 5: Shortly describe the identified insider threat within the context of the process under "**Threat Description**:"
     STEP 6: Show what impact each threat could have on the business process and the specific element.
-    STEP 7: Suggest mitigation strategies or recommendations to address each threat.
+    STEP 7: Suggest mitigation strategies or recommendations to address each threat. PRIORITIZE using the retrieved mitigation best practices when they are applicable to the identified threat.
 
 
 ## STYLE RULES:                              
@@ -53,7 +56,7 @@ prompt = PromptTemplate(
         - **Threat Description**: (short description of the threat identified under in the "**Potential Threat**: above. Do not include the impact since it is mentioned later on.)
         - **Principle**: (the principle name where the potential threat belongs to, e.g. "Integrity")
         - **Potential Impact**: one paragraph, not within the same line
-        - **Mitigation Strategies**: bullet list
+        - **Mitigation Strategies**: bullet list (PRIORITIZE using the retrieved best practices when applicable)
     5. No tables, code fences, or raw XML.
     6. Leave a space between each element described to improve readability.
     7. Order the elements by the order they appear in the BPMN XML.
@@ -69,7 +72,7 @@ prompt = PromptTemplate(
     - **Threat Description**: [Short description of identified threat]
     - **Principle**: [Name of the principle from {principles}, e.g., "Integrity"]
     - **Potential Impact**: Concisely describe the business process disruption or risks posed by this threat.
-    - **Mitigation Strategies**: Provide at least one practical recommendation per identified threat. Clearly link each mitigation to the specific threat identified.
+    - **Mitigation Strategies**: Provide at least one practical recommendation per identified threat. Clearly link each mitigation to the specific threat identified. Use the retrieved best practices when they are relevant to the threat.
 
     ## Example Output:
     Verify Customer Data
@@ -80,6 +83,9 @@ prompt = PromptTemplate(
     - **Potential Impact**:
         Data corruption while verifying customer data can lead directly to processing errors such as incorrect billing, delays in customer transactions, compromised data accuracy, loss of customer trust, and potential regulatory non-compliance issues. Such disruptions significantly impact operational reliability and may result in financial penalties.
     - **Mitigation Strategies**:
+        - Implement data integrity checks and validation rules to detect unauthorized changes
+        - Deploy solutions for monitoring workforce actions to track data modifications
+        - Establish a baseline of normal behavior to identify anomalies in data handling
     
     <!---- STYLE RULES END -->
     

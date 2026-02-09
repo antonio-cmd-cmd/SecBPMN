@@ -1,0 +1,348 @@
+[
+  {
+    "id": 1,
+    "best_practice": "Know and protect your critical assets",
+    "mitigated_threats": [
+      "Theft of Intellectual Property",
+      "Corporate Espionage",
+      "Sabotage of critical infrastructure",
+      "Unintentional data loss"
+    ],
+    "mitigation_strategies": [
+      "Identify and inventory all critical assets (people, information, technology, and facilities).",
+      "Conduct risk assessments to determine specific threats and vulnerabilities for each asset.",
+      "Classify and prioritize assets based on their criticality to the organizational mission.",
+      "Implement protection measures commensurate with the value and criticality of the asset."
+    ]
+  },
+  {
+    "id": 2,
+    "best_practice": "Develop a formalized Insider Risk Management Program (IRMP)",
+    "mitigated_threats": [
+      "Uncoordinated response to insider incidents",
+      "Privacy violations",
+      "General Insider Threats (Espionage, Sabotage, Fraud)",
+      "Workplace Violence"
+    ],
+    "mitigation_strategies": [
+      "Establish a dedicated program (IRMP) with executive leadership support.",
+      "Define clear roles and responsibilities for the IRMP team, involving HR, Legal, IT, and Physical Security.",
+      "Create confidential reporting procedures for suspicious behavior.",
+      "Develop an incident response plan specific to insider threats.",
+      "Ensure program oversight and compliance to protect employee privacy and civil liberties."
+    ]
+  },
+  {
+    "id": 3,
+    "best_practice": "Clearly document and consistently enforce administrative controls",
+    "mitigated_threats": [
+      "Ambiguity leading to negligence",
+      "Non-compliance with security policies",
+      "Legal liability due to lack of policy enforcement",
+      "Unintentional security violations"
+    ],
+    "mitigation_strategies": [
+      "Document all policies and procedures (e.g., acceptable use, intellectual property) clearly and concisely.",
+      "Communicate policies to all personnel and require acknowledgment of reading/acceptance.",
+      "Enforce policies consistently and impartially at all levels of the organization.",
+      "Periodically review policies to ensure they are up to date."
+    ]
+  },
+  {
+    "id": 4,
+    "best_practice": "Beginning with the hiring process, monitor and respond to suspicious or disruptive behavior",
+    "mitigated_threats": [
+      "Hiring of malicious insiders",
+      "Workplace violence",
+      "Recurring bad behavior",
+      "Negligent hiring"
+    ],
+    "mitigation_strategies": [
+      "Conduct thorough background checks for all candidates and vendors, including criminal and credit checks (where legal).",
+      "Train supervisors to recognize and handle inappropriate behavior or warning signs.",
+      "Monitor and document suspicious or disruptive behavior.",
+      "Provide a secure and anonymous mechanism for reporting concerns."
+    ]
+  },
+  {
+    "id": 5,
+    "best_practice": "Anticipate and manage negative issues in the work environment",
+    "mitigated_threats": [
+      "Disgruntlement leading to sabotage",
+      "Workplace violence",
+      "Revenge data theft",
+      "Reduced productivity leading to errors"
+    ],
+    "mitigation_strategies": [
+      "Proactively communicate organizational changes or negative events (e.g., layoffs, budget cuts).",
+      "Offer Employee Assistance Programs (EAP) to support staff in difficulty.",
+      "Ensure open channels for grievance resolution and dispute handling.",
+      "Increase monitoring during periods of uncertainty or organizational stress."
+    ]
+  },
+  {
+    "id": 6,
+    "best_practice": "Consider threats from insiders and trusted external entities in enterprise-wide risk assessments",
+    "mitigated_threats": [
+      "Supply chain attacks",
+      "Third-party data breaches",
+      "Unaccounted insider risks",
+      "Partner privilege abuse"
+    ],
+    "mitigation_strategies": [
+      "Explicitly include insider threats and Trusted External Entities (TEE) in risk assessments.",
+      "Verify that external partners have security standards and employee checks equivalent to internal ones.",
+      "Define clear contractual agreements regarding security and data management with third parties."
+    ]
+  },
+  {
+    "id": 7,
+    "best_practice": "Be especially vigilant regarding social media",
+    "mitigated_threats": [
+      "Social Engineering",
+      "Spear-phishing",
+      "Information Leakage",
+      "Reputation damage"
+    ],
+    "mitigation_strategies": [
+      "Establish a social media policy defining what can be shared about the organization.",
+      "Train employees on the risks of social engineering and phishing via social media.",
+      "Monitor (respecting privacy laws) publicly exposed information that could facilitate targeted attacks."
+    ]
+  },
+  {
+    "id": 8,
+    "best_practice": "Structure management and tasks to minimize insider stress and mistakes",
+    "mitigated_threats": [
+      "Human Error",
+      "Burnout-induced negligence",
+      "Disgruntlement",
+      "Accidental data exposure"
+    ],
+    "mitigation_strategies": [
+      "Promote a work culture that values results rather than just productivity at all costs.",
+      "Avoid excessive workloads and unrealistic deadlines that lead to errors or security shortcuts.",
+      "Encourage employees to focus on one task at a time (reduce forced multitasking).",
+      "Monitor staff stress and burnout levels."
+    ]
+  },
+  {
+    "id": 9,
+    "best_practice": "Incorporate insider threat awareness into periodic security training for all workforce members",
+    "mitigated_threats": [
+      "Unintentional insider threat",
+      "Phishing susceptibility",
+      "Social Engineering",
+      "Failure to report incidents"
+    ],
+    "mitigation_strategies": [
+      "Provide security training to all employees upon hiring and periodically (at least annually).",
+      "Include specific modules on how to recognize insider threat indicators (behavioral and technical).",
+      "Use simulations (e.g., phishing) to test and reinforce awareness.",
+      "Clarify that security is everyone's responsibility, not just the IT department's."
+    ]
+  },
+  {
+    "id": 10,
+    "best_practice": "Implement strict password and account management policies and practices",
+    "mitigated_threats": [
+      "Credential Theft",
+      "Account Takeover",
+      "Unauthorized Access",
+      "Privilege Escalation"
+    ],
+    "mitigation_strategies": [
+      "Enforce the use of complex, unique passwords and Multi-Factor Authentication (MFA).",
+      "Prohibit credential sharing.",
+      "Immediately delete or disable unnecessary accounts or those of departed employees.",
+      "Avoid the use of shared accounts; if necessary, monitor them strictly."
+    ]
+  },
+  {
+    "id": 11,
+    "best_practice": "Institute stringent access controls and monitoring policies for privileged users",
+    "mitigated_threats": [
+      "Privilege Abuse",
+      "Sabotage by administrators",
+      "Cover-up of malicious acts",
+      "Unauthorized system changes"
+    ],
+    "mitigation_strategies": [
+      "Apply the principle of least privilege: grant only strictly necessary access.",
+      "Monitor and log all activities of privileged users (administrators).",
+      "Require the use of separate accounts for administrative tasks and daily activities (email, web).",
+      "Implement the two-person rule for critical system changes."
+    ]
+  },
+  {
+    "id": 12,
+    "best_practice": "Deploy solutions for monitoring employee actions and correlating information from multiple data sources",
+    "mitigated_threats": [
+      "Fraud",
+      "Data Exfiltration",
+      "Sabotage",
+      "Slow incident detection"
+    ],
+    "mitigation_strategies": [
+      "Use SIEM (Security Information and Event Management) tools to centralize logs.",
+      "Correlate technical data (network logs, access) with non-technical data (physical access, HR reports).",
+      "Implement User Activity Monitoring (UAM) to detect anomalies.",
+      "Analyze data to identify risky behavioral patterns."
+    ]
+  },
+  {
+    "id": 13,
+    "best_practice": "Monitor and control remote access from all endpoints, including mobile devices",
+    "mitigated_threats": [
+      "Compromised remote endpoints",
+      "Credential theft via VPN/Cloud",
+      "Data leakage from unmanaged devices",
+      "Unauthorized remote access"
+    ],
+    "mitigation_strategies": [
+      "Log and monitor all remote access (VPN, cloud access).",
+      "Limit remote access to company-managed devices only, where possible.",
+      "Implement session timeouts and strict endpoint controls.",
+      "Immediately disable remote access upon termination of employment."
+    ]
+  },
+  {
+    "id": 14,
+    "best_practice": "Establish a baseline of normal behavior for both networks and employees",
+    "mitigated_threats": [
+      "Anomalous user activity",
+      "Zero-day insider attacks",
+      "Hidden data exfiltration",
+      "Account compromise"
+    ],
+    "mitigation_strategies": [
+      "Define profiles of 'normal' activity for users, roles, and systems.",
+      "Use User and Entity Behavior Analytics (UEBA) tools to detect significant deviations from the norm (e.g., massive downloads, unusual hours).",
+      "Promptly investigate anomalies detected against the baseline."
+    ]
+  },
+  {
+    "id": 15,
+    "best_practice": "Enforce separation of duties and least privilege",
+    "mitigated_threats": [
+      "Fraud",
+      "Embezzlement",
+      "Solo sabotage",
+      "Unauthorized critical actions"
+    ],
+    "mitigation_strategies": [
+      "Separate critical duties so that no single person can complete a damaging action alone (e.g., requesting and approving a payment).",
+      "Periodically review access rights to ensure they are still necessary (recertification).",
+      "Remove unnecessary privileges when an employee changes roles."
+    ]
+  },
+  {
+    "id": 16,
+    "best_practice": "Define explicit security agreements for any cloud services, especially access restrictions and monitoring capabilities",
+    "mitigated_threats": [
+      "Cloud data leakage",
+      "Misconfigured cloud storage",
+      "Third-party insider access",
+      "Loss of visibility in cloud"
+    ],
+    "mitigation_strategies": [
+      "Assess security risks of cloud providers before entering into contracts.",
+      "Ensure contracts (SLAs) include requirements for monitoring, breach notification, and right to audit.",
+      "Manage encryption keys internally, if possible, and monitor data access in the cloud."
+    ]
+  },
+  {
+    "id": 17,
+    "best_practice": "Institutionalize system change controls",
+    "mitigated_threats": [
+      "Logic Bombs",
+      "Backdoors",
+      "Unauthorized code changes",
+      "System instability/Sabotage"
+    ],
+    "mitigation_strategies": [
+      "Implement a formal change management process for hardware and software.",
+      "Monitor the integrity of critical files and detect unauthorized changes.",
+      "Require code approval and review before moving to production.",
+      "Maintain configuration backups and change logs."
+    ]
+  },
+  {
+    "id": 18,
+    "best_practice": "Implement secure backup and recovery processes",
+    "mitigated_threats": [
+      "Ransomware (insider initiated)",
+      "Sabotage (Deletion of data)",
+      "Data corruption",
+      "Permanent data loss"
+    ],
+    "mitigation_strategies": [
+      "Perform regular backups of all critical data and systems.",
+      "Protect backups from modification or deletion (e.g., offline or immutable backups).",
+      "Periodically test recovery procedures to ensure effectiveness.",
+      "Separate the roles of those who perform backups from those who can delete or modify them."
+    ]
+  },
+  {
+    "id": 19,
+    "best_practice": "Mitigate unauthorized data exfiltration",
+    "mitigated_threats": [
+      "Data Theft",
+      "Intellectual Property Theft",
+      "Corporate Espionage",
+      "Leaking sensitive info"
+    ],
+    "mitigation_strategies": [
+      "Use Data Loss Prevention (DLP) tools to block or monitor the transfer of sensitive data.",
+      "Restrict the use of removable media (USB) and unapproved file-sharing services.",
+      "Monitor network exit points (email, web, cloud uploads).",
+      "Identify and protect 'crown jewel' data with stricter controls."
+    ]
+  },
+  {
+    "id": 20,
+    "best_practice": "Develop a comprehensive employee termination procedure",
+    "mitigated_threats": [
+      "Data theft at exit",
+      "Sabotage (logic bombs left behind)",
+      "Retaliation",
+      "Lingering access"
+    ],
+    "mitigation_strategies": [
+      "Use an exit checklist to ensure revocation of all access (physical and logical).",
+      "Retrieve all devices and company property.",
+      "Conduct exit interviews to remind of non-disclosure obligations.",
+      "Monitor employee activity in the period leading up to departure (e.g., 30 days) to detect data exfiltration."
+    ]
+  },
+  {
+    "id": 21,
+    "best_practice": "Adopt positive incentives to align the workforce with the organization",
+    "mitigated_threats": [
+      "Disgruntlement",
+      "Malicious intent due to lack of loyalty",
+      "Espionage recruitment",
+      "Low morale"
+    ],
+    "mitigation_strategies": [
+      "Use positive incentives (recognition, growth opportunities) to increase engagement and loyalty.",
+      "Improve perceived organizational support to reduce disgruntlement.",
+      "Promote connection and trust between colleagues and management."
+    ]
+  },
+  {
+    "id": 22,
+    "best_practice": "Learn from past insider threat incidents",
+    "mitigated_threats": [
+      "Recurring incidents",
+      "Failure to adapt defenses",
+      "Zero-day exploitation",
+      "Unknown vulnerabilities"
+    ],
+    "mitigation_strategies": [
+      "Create an insider incident repository to track and analyze past events.",
+      "Use incident data to identify trends, control gaps, and areas for improvement.",
+      "Share lessons learned (anonymized) to improve awareness and prevention."
+    ]
+  }
+]
