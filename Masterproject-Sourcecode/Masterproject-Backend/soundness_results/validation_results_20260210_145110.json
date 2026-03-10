@@ -1,0 +1,30 @@
+[
+  {
+    "file": "1.bpmn2.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "test.bpmn",
+    "status": "success",
+    "valid": true,
+    "sound": false,
+    "message": "BPMN is valid and sound",
+    "details": {
+      "valid": true,
+      "message": "BPMN is valid and sound",
+      "petri_net_info": {
+        "places": 7,
+        "transitions": 6,
+        "arcs": 14
+      }
+    }
+  }
+]

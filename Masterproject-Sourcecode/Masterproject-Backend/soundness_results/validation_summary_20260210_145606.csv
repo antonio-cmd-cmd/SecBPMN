@@ -1,0 +1,10 @@
+file,status,valid,sound,message
+ex10_writer0062.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+ex10_writer0068.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+ex10_writer0069.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+ex10_writer0070.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+ex10_writer0071.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+ex10_writer0072.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+ex10_writer0073.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+ex10_writer0074.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+test.bpmn,success,True,False,BPMN is valid and sound

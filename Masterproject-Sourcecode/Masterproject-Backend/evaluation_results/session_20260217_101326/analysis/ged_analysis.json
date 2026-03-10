@@ -1,0 +1,11 @@
+{
+  "ged": 20.0,
+  "normalized_ged": 0.5555555555555556,
+  "similarity": 0.4444444444444444,
+  "graph1_size": 24,
+  "graph2_size": 36,
+  "graph1_nodes": 12,
+  "graph1_edges": 12,
+  "graph2_nodes": 18,
+  "graph2_edges": 18
+}

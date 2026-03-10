@@ -1,0 +1,1170 @@
+[
+  {
+    "file": "ex10_writer0000.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0001.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0002.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0003.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0005.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0006.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0007.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0008.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0009.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0010.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0011.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0012.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0013.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0014.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0016.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0019.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0020.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0021.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0022.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0023.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0024.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0025.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0026.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0027.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0029.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0030.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0031.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0032.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0033.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0034.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0035.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0036.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0037.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0038.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0039.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0040.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0041.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0042.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0043.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0044.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0045.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0047.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0048.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0049.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0050.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0051.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0052.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0053.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0054.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0055.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0056.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0058.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0059.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0060.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0061.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0062.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0063.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0064.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0066.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0067.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0068.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0069.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0070.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0071.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0072.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0073.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0074.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0075.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0076.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0077.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0078.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0079.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0081.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0083.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0084.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0085.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0086.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0087.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0088.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0089.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0090.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0091.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0092.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0093.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0095.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0096.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0097.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0098.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0099.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0100.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0101.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0102.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0103.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0104.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0105.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "ex10_writer0106.bpmn",
+    "status": "success",
+    "valid": false,
+    "sound": false,
+    "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+    "details": {
+      "valid": false,
+      "message": "Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts",
+      "error_type": "soundness_error"
+    }
+  },
+  {
+    "file": "test.bpmn",
+    "status": "success",
+    "valid": true,
+    "sound": false,
+    "message": "BPMN is valid and sound",
+    "details": {
+      "valid": true,
+      "message": "BPMN is valid and sound",
+      "petri_net_info": {
+        "places": 7,
+        "transitions": 6,
+        "arcs": 14
+      }
+    }
+  }
+]

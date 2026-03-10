@@ -1,0 +1,111 @@
+{
+  "token_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "num_traces_fixed": 100,
+  "fitness_scores": [
+    1.0,
+    0.9456619047619041,
+    0.9288636069812607,
+    0.9215499999999934,
+    0.9169797143630558,
+    0.9143757544485034,
+    0.9118008390501048,
+    0.910009399281281,
+    0.9091818745233733,
+    0.9089501895389073
+  ],
+  "percentage_fit_traces": [
+    100.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "details": [
+    {
+      "num_tokens": 1,
+      "num_traces": 100,
+      "average_trace_fitness": 1.0,
+      "percentage_of_fitting_traces": 100.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 2,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9456619047619041,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 3,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9288636069812607,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 4,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9215499999999934,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 5,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9169797143630558,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 6,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9143757544485034,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 7,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9118008390501048,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 8,
+      "num_traces": 100,
+      "average_trace_fitness": 0.910009399281281,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 9,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9091818745233733,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 10,
+      "num_traces": 100,
+      "average_trace_fitness": 0.9089501895389073,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    }
+  ]
+}

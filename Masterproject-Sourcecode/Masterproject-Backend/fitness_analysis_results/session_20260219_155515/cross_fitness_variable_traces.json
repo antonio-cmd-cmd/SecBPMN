@@ -1,0 +1,152 @@
+{
+  "traces_numbers": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90
+  ],
+  "num_tokens_fixed": 3,
+  "cross_fitness_scores": [
+    0.6667487113505738,
+    0.6664647200065205,
+    0.6664118944007535,
+    0.6681867775155745,
+    0.6673627553045554,
+    0.6673625350913317,
+    0.6671405938402887,
+    0.6684025666799707,
+    0.6681437027368962
+  ],
+  "cross_fitness_log1_on_net2": [
+    0.4030284145850726,
+    0.4033004807370149,
+    0.40355021270439384,
+    0.4070258569775612,
+    0.40635662459315885,
+    0.4054497703191219,
+    0.4046734881905178,
+    0.4079007305731781,
+    0.4072410792509883
+  ],
+  "cross_fitness_log2_on_net1": [
+    0.9304690081160749,
+    0.9296289592760261,
+    0.9292735760971133,
+    0.929347698053588,
+    0.9283688860159519,
+    0.9292752998635416,
+    0.9296076994900596,
+    0.9289044027867631,
+    0.9290463262228039
+  ],
+  "self_fitness_bpmn1": [
+    0.9303799468505421,
+    0.9302848524025081,
+    0.9302265316383047,
+    0.9287544351073843,
+    0.9290540831717368,
+    0.9294335990806645,
+    0.9297714573008773,
+    0.9284409969115931,
+    0.9287015729368737
+  ],
+  "self_fitness_bpmn2": [
+    0.9526467611335995,
+    0.9519247331615708,
+    0.9516200772911266,
+    0.9517233468286045,
+    0.9509034167586748,
+    0.9516741810820712,
+    0.951935897435893,
+    0.9513237946264226,
+    0.9514468163415485
+  ],
+  "details": [
+    {
+      "num_traces": 10,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6667487113505738,
+      "cross_fitness_original_on_mitigated": 0.4030284145850726,
+      "cross_fitness_mitigated_on_original": 0.9304690081160749,
+      "self_fitness_original": 0.9303799468505421,
+      "self_fitness_mitigated": 0.9526467611335995
+    },
+    {
+      "num_traces": 20,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6664647200065205,
+      "cross_fitness_original_on_mitigated": 0.4033004807370149,
+      "cross_fitness_mitigated_on_original": 0.9296289592760261,
+      "self_fitness_original": 0.9302848524025081,
+      "self_fitness_mitigated": 0.9519247331615708
+    },
+    {
+      "num_traces": 30,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6664118944007535,
+      "cross_fitness_original_on_mitigated": 0.40355021270439384,
+      "cross_fitness_mitigated_on_original": 0.9292735760971133,
+      "self_fitness_original": 0.9302265316383047,
+      "self_fitness_mitigated": 0.9516200772911266
+    },
+    {
+      "num_traces": 40,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6681867775155745,
+      "cross_fitness_original_on_mitigated": 0.4070258569775612,
+      "cross_fitness_mitigated_on_original": 0.929347698053588,
+      "self_fitness_original": 0.9287544351073843,
+      "self_fitness_mitigated": 0.9517233468286045
+    },
+    {
+      "num_traces": 50,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6673627553045554,
+      "cross_fitness_original_on_mitigated": 0.40635662459315885,
+      "cross_fitness_mitigated_on_original": 0.9283688860159519,
+      "self_fitness_original": 0.9290540831717368,
+      "self_fitness_mitigated": 0.9509034167586748
+    },
+    {
+      "num_traces": 60,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6673625350913317,
+      "cross_fitness_original_on_mitigated": 0.4054497703191219,
+      "cross_fitness_mitigated_on_original": 0.9292752998635416,
+      "self_fitness_original": 0.9294335990806645,
+      "self_fitness_mitigated": 0.9516741810820712
+    },
+    {
+      "num_traces": 70,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6671405938402887,
+      "cross_fitness_original_on_mitigated": 0.4046734881905178,
+      "cross_fitness_mitigated_on_original": 0.9296076994900596,
+      "self_fitness_original": 0.9297714573008773,
+      "self_fitness_mitigated": 0.951935897435893
+    },
+    {
+      "num_traces": 80,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6684025666799707,
+      "cross_fitness_original_on_mitigated": 0.4079007305731781,
+      "cross_fitness_mitigated_on_original": 0.9289044027867631,
+      "self_fitness_original": 0.9284409969115931,
+      "self_fitness_mitigated": 0.9513237946264226
+    },
+    {
+      "num_traces": 90,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6681437027368962,
+      "cross_fitness_original_on_mitigated": 0.4072410792509883,
+      "cross_fitness_mitigated_on_original": 0.9290463262228039,
+      "self_fitness_original": 0.9287015729368737,
+      "self_fitness_mitigated": 0.9514468163415485
+    }
+  ]
+}

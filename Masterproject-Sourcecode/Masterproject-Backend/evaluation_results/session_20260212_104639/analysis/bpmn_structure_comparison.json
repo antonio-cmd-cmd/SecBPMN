@@ -1,0 +1,104 @@
+{
+  "original": {
+    "tasks": 6,
+    "user_tasks": 0,
+    "service_tasks": 0,
+    "gateways": 0,
+    "exclusive_gateways": 1,
+    "parallel_gateways": 2,
+    "events": 0,
+    "start_events": 1,
+    "end_events": 2,
+    "sequence_flows": 12,
+    "data_objects": 0,
+    "data_stores": 0
+  },
+  "mitigated": {
+    "tasks": 9,
+    "user_tasks": 0,
+    "service_tasks": 0,
+    "gateways": 0,
+    "exclusive_gateways": 1,
+    "parallel_gateways": 2,
+    "events": 0,
+    "start_events": 1,
+    "end_events": 2,
+    "sequence_flows": 15,
+    "data_objects": 0,
+    "data_stores": 0
+  },
+  "differences": {
+    "tasks": {
+      "original": 6,
+      "mitigated": 9,
+      "delta": 3,
+      "delta_percent": 50.0
+    },
+    "user_tasks": {
+      "original": 0,
+      "mitigated": 0,
+      "delta": 0,
+      "delta_percent": 0
+    },
+    "service_tasks": {
+      "original": 0,
+      "mitigated": 0,
+      "delta": 0,
+      "delta_percent": 0
+    },
+    "gateways": {
+      "original": 0,
+      "mitigated": 0,
+      "delta": 0,
+      "delta_percent": 0
+    },
+    "exclusive_gateways": {
+      "original": 1,
+      "mitigated": 1,
+      "delta": 0,
+      "delta_percent": 0.0
+    },
+    "parallel_gateways": {
+      "original": 2,
+      "mitigated": 2,
+      "delta": 0,
+      "delta_percent": 0.0
+    },
+    "events": {
+      "original": 0,
+      "mitigated": 0,
+      "delta": 0,
+      "delta_percent": 0
+    },
+    "start_events": {
+      "original": 1,
+      "mitigated": 1,
+      "delta": 0,
+      "delta_percent": 0.0
+    },
+    "end_events": {
+      "original": 2,
+      "mitigated": 2,
+      "delta": 0,
+      "delta_percent": 0.0
+    },
+    "sequence_flows": {
+      "original": 12,
+      "mitigated": 15,
+      "delta": 3,
+      "delta_percent": 25.0
+    },
+    "data_objects": {
+      "original": 0,
+      "mitigated": 0,
+      "delta": 0,
+      "delta_percent": 0
+    },
+    "data_stores": {
+      "original": 0,
+      "mitigated": 0,
+      "delta": 0,
+      "delta_percent": 0
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "token_numbers": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200
+  ],
+  "fitness_scores": [
+    0.2292778713372509,
+    0.12169240210771536,
+    0.08168667151240007,
+    0.06167846528692199,
+    0.049432209200337494,
+    0.041273100263776084,
+    0.03536006006230939,
+    0.030941334860703468,
+    0.027545729272066666,
+    0.024865090328095075,
+    0.022574297492949248,
+    0.02069170069352713,
+    0.019159823435660975,
+    0.017823909962957473,
+    0.016632346379964687,
+    0.01555330705536875,
+    0.014663493974655308,
+    0.013883644909038142,
+    0.013133915020374604,
+    0.012485245661375842
+  ],
+  "percentage_fit_traces": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "average_trace_fitness": [
+    0.2292778713372509,
+    0.12169240210771536,
+    0.08168667151240007,
+    0.06167846528692199,
+    0.049432209200337494,
+    0.041273100263776084,
+    0.03536006006230939,
+    0.030941334860703468,
+    0.027545729272066666,
+    0.024865090328095075,
+    0.022574297492949248,
+    0.02069170069352713,
+    0.019159823435660975,
+    0.017823909962957473,
+    0.016632346379964687,
+    0.01555330705536875,
+    0.014663493974655308,
+    0.013883644909038142,
+    0.013133915020374604,
+    0.012485245661375842
+  ],
+  "details": [
+    {
+      "num_tokens": 10,
+      "average_trace_fitness": 0.2292778713372509,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.2292778713372509,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.2292778713372509,
+        "log_fitness": 0.2268831086714842
+      }
+    },
+    {
+      "num_tokens": 20,
+      "average_trace_fitness": 0.12169240210771536,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.12169240210771536,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.12169240210771536,
+        "log_fitness": 0.12066681146828839
+      }
+    },
+    {
+      "num_tokens": 30,
+      "average_trace_fitness": 0.08168667151240007,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.08168667151240007,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.08168667151240007,
+        "log_fitness": 0.08123395613322504
+      }
+    },
+    {
+      "num_tokens": 40,
+      "average_trace_fitness": 0.06167846528692199,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.06167846528692199,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.06167846528692199,
+        "log_fitness": 0.06138674033149172
+      }
+    },
+    {
+      "num_tokens": 50,
+      "average_trace_fitness": 0.049432209200337494,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.049432209200337494,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.049432209200337494,
+        "log_fitness": 0.04924700575210783
+      }
+    },
+    {
+      "num_tokens": 60,
+      "average_trace_fitness": 0.041273100263776084,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.041273100263776084,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.041273100263776084,
+        "log_fitness": 0.04114643339148749
+      }
+    },
+    {
+      "num_tokens": 70,
+      "average_trace_fitness": 0.03536006006230939,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.03536006006230939,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.03536006006230939,
+        "log_fitness": 0.03526555226407113
+      }
+    },
+    {
+      "num_tokens": 80,
+      "average_trace_fitness": 0.030941334860703468,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.030941334860703468,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.030941334860703468,
+        "log_fitness": 0.030866556369068987
+      }
+    },
+    {
+      "num_tokens": 90,
+      "average_trace_fitness": 0.027545729272066666,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.027545729272066666,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.027545729272066666,
+        "log_fitness": 0.02749098286744811
+      }
+    },
+    {
+      "num_tokens": 100,
+      "average_trace_fitness": 0.024865090328095075,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.024865090328095075,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.024865090328095075,
+        "log_fitness": 0.02481955999444041
+      }
+    },
+    {
+      "num_tokens": 110,
+      "average_trace_fitness": 0.022574297492949248,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.022574297492949248,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.022574297492949248,
+        "log_fitness": 0.022535900047776614
+      }
+    },
+    {
+      "num_tokens": 120,
+      "average_trace_fitness": 0.02069170069352713,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.02069170069352713,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.02069170069352713,
+        "log_fitness": 0.0206595844902816
+      }
+    },
+    {
+      "num_tokens": 130,
+      "average_trace_fitness": 0.019159823435660975,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.019159823435660975,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.019159823435660975,
+        "log_fitness": 0.019132412927517994
+      }
+    },
+    {
+      "num_tokens": 140,
+      "average_trace_fitness": 0.017823909962957473,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.017823909962957473,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.017823909962957473,
+        "log_fitness": 0.017798356839265006
+      }
+    },
+    {
+      "num_tokens": 150,
+      "average_trace_fitness": 0.016632346379964687,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.016632346379964687,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.016632346379964687,
+        "log_fitness": 0.01661245414916801
+      }
+    },
+    {
+      "num_tokens": 160,
+      "average_trace_fitness": 0.01555330705536875,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.01555330705536875,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.01555330705536875,
+        "log_fitness": 0.015535804172337242
+      }
+    },
+    {
+      "num_tokens": 170,
+      "average_trace_fitness": 0.014663493974655308,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.014663493974655308,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.014663493974655308,
+        "log_fitness": 0.014647575801962742
+      }
+    },
+    {
+      "num_tokens": 180,
+      "average_trace_fitness": 0.013883644909038142,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.013883644909038142,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.013883644909038142,
+        "log_fitness": 0.013869255990191509
+      }
+    },
+    {
+      "num_tokens": 190,
+      "average_trace_fitness": 0.013133915020374604,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.013133915020374604,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.013133915020374604,
+        "log_fitness": 0.013120886560928802
+      }
+    },
+    {
+      "num_tokens": 200,
+      "average_trace_fitness": 0.012485245661375842,
+      "percentage_of_fitting_traces": 0.0,
+      "num_traces": 1000,
+      "full_result": {
+        "percFitTraces": 0.0,
+        "averageFitness": 0.012485245661375842,
+        "percentage_of_fitting_traces": 0.0,
+        "average_trace_fitness": 0.012485245661375842,
+        "log_fitness": 0.01247274677576271
+      }
+    }
+  ]
+}

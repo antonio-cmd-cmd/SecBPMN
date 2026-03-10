@@ -1,0 +1,47 @@
+{
+  "token_numbers": [
+    10,
+    20
+  ],
+  "num_traces_fixed": 100,
+  "cross_fitness_scores": [
+    0.11114795070035582,
+    0.056842709144287656
+  ],
+  "cross_fitness_log1_on_net2": [
+    0.10687710004075383,
+    0.0552913667999178
+  ],
+  "cross_fitness_log2_on_net1": [
+    0.11541880135995783,
+    0.05839405148865751
+  ],
+  "self_fitness_bpmn1": [
+    0.19213091052985765,
+    0.0981276974066422
+  ],
+  "self_fitness_bpmn2": [
+    0.19456970196628776,
+    0.0992648834222411
+  ],
+  "details": [
+    {
+      "num_tokens": 10,
+      "num_traces": 100,
+      "cross_fitness_average": 0.11114795070035582,
+      "cross_fitness_original_on_mitigated": 0.10687710004075383,
+      "cross_fitness_mitigated_on_original": 0.11541880135995783,
+      "self_fitness_original": 0.19213091052985765,
+      "self_fitness_mitigated": 0.19456970196628776
+    },
+    {
+      "num_tokens": 20,
+      "num_traces": 100,
+      "cross_fitness_average": 0.056842709144287656,
+      "cross_fitness_original_on_mitigated": 0.0552913667999178,
+      "cross_fitness_mitigated_on_original": 0.05839405148865751,
+      "self_fitness_original": 0.0981276974066422,
+      "self_fitness_mitigated": 0.0992648834222411
+    }
+  ]
+}

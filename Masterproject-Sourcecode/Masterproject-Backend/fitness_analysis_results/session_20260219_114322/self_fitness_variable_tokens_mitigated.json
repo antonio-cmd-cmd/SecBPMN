@@ -1,0 +1,31 @@
+{
+  "token_numbers": [
+    10,
+    20
+  ],
+  "num_traces_fixed": 100,
+  "fitness_scores": [
+    0.194927387292859,
+    0.09838141355534626
+  ],
+  "percentage_fit_traces": [
+    0.0,
+    0.0
+  ],
+  "details": [
+    {
+      "num_tokens": 10,
+      "num_traces": 100,
+      "average_trace_fitness": 0.194927387292859,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    },
+    {
+      "num_tokens": 20,
+      "num_traces": 100,
+      "average_trace_fitness": 0.09838141355534626,
+      "percentage_of_fitting_traces": 0.0,
+      "traces_generated": 1000
+    }
+  ]
+}

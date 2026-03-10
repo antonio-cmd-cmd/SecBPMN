@@ -1,0 +1,77 @@
+{
+  "traces_numbers": [
+    10,
+    20,
+    30,
+    40
+  ],
+  "num_tokens_fixed": 3,
+  "cross_fitness_scores": [
+    0.666976742280772,
+    0.6676683825290681,
+    0.6673665419547821,
+    0.6675467308061778
+  ],
+  "cross_fitness_log1_on_net2": [
+    0.4044538077677413,
+    0.40612553184689576,
+    0.4057536972831106,
+    0.4063651702958222
+  ],
+  "cross_fitness_log2_on_net1": [
+    0.9294996767938025,
+    0.9292112332112406,
+    0.9289793866264536,
+    0.9287282913165333
+  ],
+  "self_fitness_bpmn1": [
+    0.9298214465273367,
+    0.9291290670114272,
+    0.9292833441068814,
+    0.9290621274150752
+  ],
+  "self_fitness_bpmn2": [
+    0.9517937676358693,
+    0.9515515887621107,
+    0.9513768249294515,
+    0.9511904674273057
+  ],
+  "details": [
+    {
+      "num_traces": 10,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.666976742280772,
+      "cross_fitness_original_on_mitigated": 0.4044538077677413,
+      "cross_fitness_mitigated_on_original": 0.9294996767938025,
+      "self_fitness_original": 0.9298214465273367,
+      "self_fitness_mitigated": 0.9517937676358693
+    },
+    {
+      "num_traces": 20,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6676683825290681,
+      "cross_fitness_original_on_mitigated": 0.40612553184689576,
+      "cross_fitness_mitigated_on_original": 0.9292112332112406,
+      "self_fitness_original": 0.9291290670114272,
+      "self_fitness_mitigated": 0.9515515887621107
+    },
+    {
+      "num_traces": 30,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6673665419547821,
+      "cross_fitness_original_on_mitigated": 0.4057536972831106,
+      "cross_fitness_mitigated_on_original": 0.9289793866264536,
+      "self_fitness_original": 0.9292833441068814,
+      "self_fitness_mitigated": 0.9513768249294515
+    },
+    {
+      "num_traces": 40,
+      "num_tokens": 3,
+      "cross_fitness_average": 0.6675467308061778,
+      "cross_fitness_original_on_mitigated": 0.4063651702958222,
+      "cross_fitness_mitigated_on_original": 0.9287282913165333,
+      "self_fitness_original": 0.9290621274150752,
+      "self_fitness_mitigated": 0.9511904674273057
+    }
+  ]
+}

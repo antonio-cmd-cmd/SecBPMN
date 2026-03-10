@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.6.0">
+  <bpmn:collaboration id="Collaboration_1">
+    <bpmn:participant id="Participant_Venditore" name="Seller" processRef="Process_EvasioneOrdine" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_EvasioneOrdine" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_Magazzino" name="Warehouse">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_VerificaDisponibilita</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1a2b3c4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Disponibilita</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AddebitaCarta</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_5d6e7f8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Split</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Imballaggio</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Fattura</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Join</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Spedisci</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_9g0h1i2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_Completato</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Amministrazione" name="Administration">
+        <bpmn:flowNodeRef>Task_NotificaAnnullamento</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_Annullato</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Task_VerificaDisponibilita" name="Check Inventory">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_3j4k5l6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1a2b3c4" name="Audit Inventory Check">
+      <bpmn:incoming>Flow_3j4k5l6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7m8n9o0</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_Disponibilita" name="Item in stock?" gatewayDirection="exclusive">
+      <bpmn:incoming>Flow_7m8n9o0</bpmn:incoming>
+      <bpmn:outgoing>Flow_No</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Si</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Task_NotificaAnnullamento" name="Notify Cancellation">
+      <bpmn:incoming>Flow_No</bpmn:incoming>
+      <bpmn:outgoing>Flow_To_EndAnnulled</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_Annullato" name="End Cancellation">
+      <bpmn:incoming>Flow_To_EndAnnulled</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="Task_AddebitaCarta" name="Charge Credit Card">
+      <bpmn:incoming>Flow_Si</bpmn:incoming>
+      <bpmn:outgoing>Flow_p1q2r3s</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_5d6e7f8" name="Verify Payment Authorization">
+      <bpmn:incoming>Flow_p1q2r3s</bpmn:incoming>
+      <bpmn:outgoing>Flow_t4u5v6w</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_Split" name="Split" gatewayDirection="diverging">
+      <bpmn:incoming>Flow_t4u5v6w</bpmn:incoming>
+      <bpmn:outgoing>Flow_To_Imballaggio</bpmn:outgoing>
+      <bpmn:outgoing>Flow_To_Fattura</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="Task_Imballaggio" name="Pack Items">
+      <bpmn:incoming>Flow_To_Imballaggio</bpmn:incoming>
+      <bpmn:outgoing>Gateway_Join</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_Fattura" name="Generate Invoice">
+      <bpmn:incoming>Flow_To_Fattura</bpmn:incoming>
+      <bpmn:outgoing>Gateway_Join</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_Join" name="Join" gatewayDirection="converging">
+      <bpmn:incoming>Flow_From_Imballaggio</bpmn:incoming>
+      <bpmn:incoming>Flow_From_Fattura</bpmn:incoming>
+      <bpmn:outgoing>Flow_To_Spedizione</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="Task_Spedisci" name="Ship Items">
+      <bpmn:incoming>Flow_To_Spedizione</bpmn:incoming>
+      <bpmn:outgoing>Flow_x7y8z9a</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_9g0h1i2" name="Log Shipping Activity">
+      <bpmn:incoming>Flow_x7y8z9a</bpmn:incoming>
+      <bpmn:outgoing>Flow_b0c1d2e</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_Completato" name="End">
+      <bpmn:incoming>Flow_b0c1d2e</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_VerificaDisponibilita" />
+    <bpmn:sequenceFlow id="Flow_3j4k5l6" sourceRef="Task_VerificaDisponibilita" targetRef="Activity_1a2b3c4" />
+    <bpmn:sequenceFlow id="Flow_7m8n9o0" sourceRef="Activity_1a2b3c4" targetRef="Gateway_Disponibilita" />
+    <bpmn:sequenceFlow id="Flow_No" name="No" sourceRef="Gateway_Disponibilita" targetRef="Task_NotificaAnnullamento" />
+    <bpmn:sequenceFlow id="Flow_To_EndAnnulled" sourceRef="Task_NotificaAnnullamento" targetRef="EndEvent_Annullato" />
+    <bpmn:sequenceFlow id="Flow_Si" name="Yes" sourceRef="Gateway_Disponibilita" targetRef="Task_AddebitaCarta" />
+    <bpmn:sequenceFlow id="Flow_p1q2r3s" sourceRef="Task_AddebitaCarta" targetRef="Activity_5d6e7f8" />
+    <bpmn:sequenceFlow id="Flow_t4u5v6w" sourceRef="Activity_5d6e7f8" targetRef="Gateway_Split" />
+    <bpmn:sequenceFlow id="Flow_To_Imballaggio" sourceRef="Gateway_Split" targetRef="Task_Imballaggio" />
+    <bpmn:sequenceFlow id="Flow_To_Fattura" sourceRef="Gateway_Split" targetRef="Task_Fattura" />
+    <bpmn:sequenceFlow id="Flow_From_Imballaggio" sourceRef="Task_Imballaggio" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_From_Fattura" sourceRef="Task_Fattura" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_To_Spedizione" sourceRef="Gateway_Join" targetRef="Task_Spedisci" />
+    <bpmn:sequenceFlow id="Flow_x7y8z9a" sourceRef="Task_Spedisci" targetRef="Activity_9g0h1i2" />
+    <bpmn:sequenceFlow id="Flow_b0c1d2e" sourceRef="Activity_9g0h1i2" targetRef="EndEvent_Completato" />
+  </bpmn:process>
+</bpmn:definitions>

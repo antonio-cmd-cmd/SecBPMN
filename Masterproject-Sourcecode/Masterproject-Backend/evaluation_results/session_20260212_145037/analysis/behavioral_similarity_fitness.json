@@ -1,0 +1,28 @@
+{
+  "behavioral_similarity": 0.8999999999999944,
+  "fitness_bpmn2_on_log1": {
+    "perc_fit_traces": 0.0,
+    "average_trace_fitness": 0.7999999999999887,
+    "log_fitness": 0.8,
+    "percentage_of_fitting_traces": 0.0
+  },
+  "fitness_bpmn1_on_log2": {
+    "perc_fit_traces": 100.0,
+    "average_trace_fitness": 1.0,
+    "log_fitness": 1.0,
+    "percentage_of_fitting_traces": 100.0
+  },
+  "fitness_bpmn1_self": {
+    "perc_fit_traces": 100.0,
+    "average_trace_fitness": 1.0,
+    "log_fitness": 1.0,
+    "percentage_of_fitting_traces": 100.0
+  },
+  "fitness_bpmn2_self": {
+    "perc_fit_traces": 100.0,
+    "average_trace_fitness": 1.0,
+    "log_fitness": 1.0,
+    "percentage_of_fitting_traces": 100.0
+  },
+  "num_traces": 100
+}

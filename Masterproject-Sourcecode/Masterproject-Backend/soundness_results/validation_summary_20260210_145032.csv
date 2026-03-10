@@ -1,0 +1,3 @@
+file,status,valid,sound,message
+0.bpmn2.bpmn,success,False,False,"Petri net is not sound: the process model may have deadlocks, livelocks, or unreachable parts"
+test.bpmn,success,True,False,BPMN is valid and sound

@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" targetNamespace="http://bpmn.io/schema/bpmn" id="Def_1ba7b40cfd804781a4aaa394635d1760">
+	
+  
+	<bpmn:process id="Process_1ba7b40cfd804781a4aaa394635d1760" name="12345678_rev4" isExecutable="false">
+		
+    
+		<bpmn:startEvent id="sid-7212D978-6AAA-4DA8-ACA6-D31FAFE878D2" name="">
+			
+      
+			<bpmn:outgoing>sid-622207E7-DC34-411F-8740-C41535D30E96</bpmn:outgoing>
+			
+    
+		</bpmn:startEvent>
+		
+    
+		<bpmn:task id="sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C" name="[CollapsedSubprocess] Create Event">
+			
+      
+			<bpmn:outgoing>sid-748871F0-BF41-49C5-A9D5-8C22153CBAFA</bpmn:outgoing>
+			
+    
+		</bpmn:task>
+		
+    
+		<bpmn:task id="sid-EF493C10-90CB-431B-8B71-392BC21E95EA" name="[CollapsedSubprocess] Invite Guests">
+			
+      
+			<bpmn:outgoing>sid-7067B0F9-5E35-42D8-9883-9A4F102162E5</bpmn:outgoing>
+			
+    
+		</bpmn:task>
+		
+    
+		<bpmn:task id="sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB" name="[CollapsedSubprocess] Customise Event ">
+			
+      
+			<bpmn:outgoing>sid-1688C211-1326-4BBD-8122-B99ACD6ADD61</bpmn:outgoing>
+			
+    
+		</bpmn:task>
+		
+    
+		<bpmn:task id="sid-485D2959-F7F3-4116-B6D9-797CCEB4D707" name="[CollapsedSubprocess] Publish Event">
+			
+      
+			<bpmn:outgoing>sid-9FD3787D-5960-48DE-9E94-D8EE37992EF8</bpmn:outgoing>
+			
+    
+		</bpmn:task>
+		
+    
+		<bpmn:endEvent id="sid-49832DEA-DF4B-43A9-B0EB-2281BA9AB5F3" name="">
+    </bpmn:endEvent>
+		
+    
+		<bpmn:sequenceFlow id="sid-622207E7-DC34-411F-8740-C41535D30E96" sourceRef="sid-7212D978-6AAA-4DA8-ACA6-D31FAFE878D2" targetRef="sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C"/>
+		
+    
+		<bpmn:sequenceFlow id="sid-748871F0-BF41-49C5-A9D5-8C22153CBAFA" sourceRef="sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C" targetRef="sid-EF493C10-90CB-431B-8B71-392BC21E95EA"/>
+		
+    
+		<bpmn:sequenceFlow id="sid-7067B0F9-5E35-42D8-9883-9A4F102162E5" sourceRef="sid-EF493C10-90CB-431B-8B71-392BC21E95EA" targetRef="sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB"/>
+		
+    
+		<bpmn:sequenceFlow id="sid-1688C211-1326-4BBD-8122-B99ACD6ADD61" sourceRef="sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB" targetRef="sid-485D2959-F7F3-4116-B6D9-797CCEB4D707"/>
+		
+    
+		<bpmn:sequenceFlow id="sid-9FD3787D-5960-48DE-9E94-D8EE37992EF8" sourceRef="sid-485D2959-F7F3-4116-B6D9-797CCEB4D707" targetRef="sid-49832DEA-DF4B-43A9-B0EB-2281BA9AB5F3"/>
+		
+  
+	</bpmn:process>
+	
+
+</bpmn:definitions>

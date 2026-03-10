@@ -1,0 +1,2 @@
+file,status,valid,sound,message
+test.bpmn,success,True,False,BPMN is valid and sound

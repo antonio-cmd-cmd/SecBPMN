@@ -1,0 +1,198 @@
+{
+  "structure_comparison": {
+    "original": {
+      "tasks": 6,
+      "user_tasks": 0,
+      "service_tasks": 0,
+      "gateways": 0,
+      "exclusive_gateways": 1,
+      "parallel_gateways": 2,
+      "events": 0,
+      "start_events": 1,
+      "end_events": 2,
+      "sequence_flows": 12,
+      "data_objects": 0,
+      "data_stores": 0
+    },
+    "mitigated": {
+      "tasks": 9,
+      "user_tasks": 0,
+      "service_tasks": 0,
+      "gateways": 0,
+      "exclusive_gateways": 1,
+      "parallel_gateways": 2,
+      "events": 0,
+      "start_events": 1,
+      "end_events": 2,
+      "sequence_flows": 15,
+      "data_objects": 0,
+      "data_stores": 0
+    },
+    "differences": {
+      "tasks": {
+        "original": 6,
+        "mitigated": 9,
+        "delta": 3,
+        "delta_percent": 50.0
+      },
+      "user_tasks": {
+        "original": 0,
+        "mitigated": 0,
+        "delta": 0,
+        "delta_percent": 0
+      },
+      "service_tasks": {
+        "original": 0,
+        "mitigated": 0,
+        "delta": 0,
+        "delta_percent": 0
+      },
+      "gateways": {
+        "original": 0,
+        "mitigated": 0,
+        "delta": 0,
+        "delta_percent": 0
+      },
+      "exclusive_gateways": {
+        "original": 1,
+        "mitigated": 1,
+        "delta": 0,
+        "delta_percent": 0.0
+      },
+      "parallel_gateways": {
+        "original": 2,
+        "mitigated": 2,
+        "delta": 0,
+        "delta_percent": 0.0
+      },
+      "events": {
+        "original": 0,
+        "mitigated": 0,
+        "delta": 0,
+        "delta_percent": 0
+      },
+      "start_events": {
+        "original": 1,
+        "mitigated": 1,
+        "delta": 0,
+        "delta_percent": 0.0
+      },
+      "end_events": {
+        "original": 2,
+        "mitigated": 2,
+        "delta": 0,
+        "delta_percent": 0.0
+      },
+      "sequence_flows": {
+        "original": 12,
+        "mitigated": 15,
+        "delta": 3,
+        "delta_percent": 25.0
+      },
+      "data_objects": {
+        "original": 0,
+        "mitigated": 0,
+        "delta": 0,
+        "delta_percent": 0
+      },
+      "data_stores": {
+        "original": 0,
+        "mitigated": 0,
+        "delta": 0,
+        "delta_percent": 0
+      }
+    }
+  },
+  "original_complexity": {
+    "total_elements": 24,
+    "control_flow_complexity": 0,
+    "task_complexity": 6,
+    "data_complexity": 0,
+    "cyclomatic_complexity_estimate": 1,
+    "structure_metrics": {
+      "tasks": 6,
+      "user_tasks": 0,
+      "service_tasks": 0,
+      "gateways": 0,
+      "exclusive_gateways": 1,
+      "parallel_gateways": 2,
+      "events": 0,
+      "start_events": 1,
+      "end_events": 2,
+      "sequence_flows": 12,
+      "data_objects": 0,
+      "data_stores": 0
+    }
+  },
+  "mitigated_complexity": {
+    "total_elements": 30,
+    "control_flow_complexity": 0,
+    "task_complexity": 9,
+    "data_complexity": 0,
+    "cyclomatic_complexity_estimate": 1,
+    "structure_metrics": {
+      "tasks": 9,
+      "user_tasks": 0,
+      "service_tasks": 0,
+      "gateways": 0,
+      "exclusive_gateways": 1,
+      "parallel_gateways": 2,
+      "events": 0,
+      "start_events": 1,
+      "end_events": 2,
+      "sequence_flows": 15,
+      "data_objects": 0,
+      "data_stores": 0
+    }
+  },
+  "ged_metrics": {
+    "ged": 16.0,
+    "normalized_ged": 0.5333333333333333,
+    "similarity": 0.4666666666666667,
+    "graph1_size": 24,
+    "graph2_size": 30,
+    "graph1_nodes": 12,
+    "graph1_edges": 12,
+    "graph2_nodes": 15,
+    "graph2_edges": 15
+  },
+  "structural_similarity_advanced": {
+    "structural_similarity": 0.5664335664335665,
+    "node_similarity": 0.7692307692307693,
+    "flow_similarity": 0.36363636363636365,
+    "nodes_bpmn1": 10,
+    "nodes_bpmn2": 13,
+    "nodes_common": 10,
+    "flows_bpmn1": 6,
+    "flows_bpmn2": 9,
+    "flows_common": 4
+  },
+  "behavioral_similarity": {
+    "behavioral_similarity": 0.8452857142857111,
+    "fitness_bpmn2_on_log1": {
+      "perc_fit_traces": 0.0,
+      "average_trace_fitness": 0.6905714285714222,
+      "log_fitness": 0.7000798722044728,
+      "percentage_of_fitting_traces": 0.0
+    },
+    "fitness_bpmn1_on_log2": {
+      "perc_fit_traces": 100.0,
+      "average_trace_fitness": 1.0,
+      "log_fitness": 1.0,
+      "percentage_of_fitting_traces": 100.0
+    },
+    "fitness_bpmn1_self": {
+      "perc_fit_traces": 100.0,
+      "average_trace_fitness": 1.0,
+      "log_fitness": 1.0,
+      "percentage_of_fitting_traces": 100.0
+    },
+    "fitness_bpmn2_self": {
+      "perc_fit_traces": 100.0,
+      "average_trace_fitness": 1.0,
+      "log_fitness": 1.0,
+      "percentage_of_fitting_traces": 100.0
+    },
+    "num_traces": 100
+  }
+}

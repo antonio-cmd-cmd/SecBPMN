@@ -1,0 +1,262 @@
+{
+  "timestamp": "20260212_145037",
+  "backend_url": "http://localhost:8000",
+  "steps": {
+    "load_bpmn": {
+      "success": true,
+      "file_path": "/mnt/c/Users/ianna/OneDrive - Uniparthenope/Uniparthenope1/Dottorato/Periodo estero/studio/Masterproject-Sourcecode/Masterproject-Sourcecode/Masterproject-Backend/dataset.bpmn",
+      "file_size": 2441
+    },
+    "validate_bpmn": {
+      "success": true,
+      "valid": true,
+      "message": "BPMN is valid and sound",
+      "elapsed_time": 0.032396554946899414
+    },
+    "analyze_threats": {
+      "success": true,
+      "element_ids_count": 1,
+      "elapsed_time": 61.3945689201355
+    },
+    "generate_mitigated_bpmn": {
+      "success": true,
+      "element_count": 0,
+      "elapsed_time": 163.6363594532013,
+      "message": "Mitigated BPMN generated successfully (LLM: 2 iterations, Petri Net: 0 iterations)",
+      "dual_llm_info": {
+        "iterations_count": 2,
+        "iterations_history": [
+          {
+            "iteration": 1,
+            "phase": "complete",
+            "status": "invalid",
+            "generated_bpmn": "<?xml version=\"1.0\" ?>\n<bpmn:definitions xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" targetNamespace=\"http://bpmn.io/schema/bpmn\" id=\"Def_1ba7b40cfd804781a4aaa394635d1760\">\n\t\n  \n\t<bpmn:process id=\"Process_1ba7b40cfd804781a4aaa394635d1760\" name=\"12345678_rev4\" isExecutable=\"false\">\n\t\t\n    \n\t\t<bpmn:startEvent id=\"sid-7212D978-6AAA-4DA8-ACA6-D31FAFE878D2\" name=\"\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-622207E7-DC34-411F-8740-C41535D30E96</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:startEvent>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C\" name=\"[CollapsedSubprocess] Create Event\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-748871F0-BF41-49C5-A9D5-8C22153CBAFA</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-EF493C10-90CB-431B-8B71-392BC21E95EA\" name=\"[CollapsedSubprocess] Invite Guests\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-7067B0F9-5E35-42D8-9883-9A4F102162E5</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB\" name=\"[CollapsedSubprocess] Customise Event \">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>Flow_a1b2c3d</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-485D2959-F7F3-4116-B6D9-797CCEB4D707\" name=\"[CollapsedSubprocess] Publish Event\">\n\t\t\t\n      \n\t\t\t<bpmn:incoming>Flow_i7j8k9l</bpmn:incoming>\n\t\t\t<bpmn:outgoing>sid-9FD3787D-5960-48DE-9E94-D8EE37992EF8</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:endEvent id=\"sid-49832DEA-DF4B-43A9-B0EB-2281BA9AB5F3\" name=\"Event Published\">\n    </bpmn:endEvent>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-622207E7-DC34-411F-8740-C41535D30E96\" sourceRef=\"sid-7212D978-6AAA-4DA8-ACA6-D31FAFE878D2\" targetRef=\"sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-748871F0-BF41-49C5-A9D5-8C22153CBAFA\" sourceRef=\"sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C\" targetRef=\"sid-EF493C10-90CB-431B-8B71-392BC21E95EA\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-7067B0F9-5E35-42D8-9883-9A4F102162E5\" sourceRef=\"sid-EF493C10-90CB-431B-8B71-392BC21E95EA\" targetRef=\"sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-9FD3787D-5960-48DE-9E94-D8EE37992EF8\" sourceRef=\"sid-485D2959-F7F3-4116-B6D9-797CCEB4D707\" targetRef=\"sid-49832DEA-DF4B-43A9-B0EB-2281BA9AB5F3\"/>\n\t\t\n    \n\t\t<!-- New Security Elements for Insider Threat Mitigation (Integrity) -->\n\t\t<bpmn:task id=\"Activity_r7s2t1v\" name=\"Review Event for Approval\">\n\t\t\t<bpmn:incoming>Flow_a1b2c3d</bpmn:incoming>\n\t\t\t<bpmn:outgoing>Flow_e4f5g6h</bpmn:outgoing>\n\t\t</bpmn:task>\n\t\t\n\t\t<bpmn:exclusiveGateway id=\"Gateway_p9o8i7u\" name=\"Event Approved?\">\n\t\t\t<bpmn:incoming>Flow_e4f5g6h</bpmn:incoming>\n\t\t\t<bpmn:outgoing>Flow_i7j8k9l</bpmn:outgoing>\n\t\t\t<bpmn:outgoing>Flow_m0n1o2p</bpmn:outgoing>\n\t\t</bpmn:exclusiveGateway>\n\t\t\n\t\t<bpmn:task id=\"Activity_m1n2b3v\" name=\"Log Event Rejection\">\n\t\t\t<bpmn:incoming>Flow_m0n1o2p</bpmn:incoming>\n\t\t\t<bpmn:outgoing>Flow_q3r4s5t</bpmn:outgoing>\n\t\t</bpmn:task>\n\t\t\n\t\t<bpmn:task id=\"Activity_x5y6z7a\" name=\"Notify Event Creator of Rejection\">\n\t\t\t<bpmn:incoming>Flow_q3r4s5t</bpmn:incoming>\n\t\t\t<bpmn:outgoing>Flow_u6v7w8x</bpmn:outgoing>\n\t\t</bpmn:task>\n\t\t\n\t\t<bpmn:endEvent id=\"EndEvent_q1w2e3r\" name=\"Event Rejected\">\n\t\t\t<bpmn:incoming>Flow_u6v7w8x</bpmn:incoming>\n\t\t</bpmn:endEvent>\n\t\t\n\t\t<!-- New Sequence Flows -->\n\t\t<bpmn:sequenceFlow id=\"Flow_a1b2c3d\" sourceRef=\"sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB\" targetRef=\"Activity_r7s2t1v\"/>\n\t\t<bpmn:sequenceFlow id=\"Flow_e4f5g6h\" sourceRef=\"Activity_r7s2t1v\" targetRef=\"Gateway_p9o8i7u\"/>\n\t\t<bpmn:sequenceFlow id=\"Flow_i7j8k9l\" sourceRef=\"Gateway_p9o8i7u\" targetRef=\"sid-485D2959-F7F3-4116-B6D9-797CCEB4D707\" name=\"Yes\"/>\n\t\t<bpmn:sequenceFlow id=\"Flow_m0n1o2p\" sourceRef=\"Gateway_p9o8i7u\" targetRef=\"Activity_m1n2b3v\" name=\"No\"/>\n\t\t<bpmn:sequenceFlow id=\"Flow_q3r4s5t\" sourceRef=\"Activity_m1n2b3v\" targetRef=\"Activity_x5y6z7a\"/>\n\t\t<bpmn:sequenceFlow id=\"Flow_u6v7w8x\" sourceRef=\"Activity_x5y6z7a\" targetRef=\"EndEvent_q1w2e3r\"/>\n\t\t\n  \n\t</bpmn:process>\n\t\n\n</bpmn:definitions>",
+            "validation_feedback": "B0F9-5E35-42D8-9883-9A4F102162E5`:*\n        Source: `sid-EF493C10-90CB-431B-8B71-392BC21E95EA` (Invite)\n        Target: `sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB` (Customise)\n        Matches perfectly.\n\n    *   *Check the sequence flow `sid-748871F0-BF41-49C5-A9D5-8C22153CBAFA`:*\n        Source: `sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C` (Create)\n        Target: `sid-EF493C10-90CB-431B-8B71-392BC21E95EA` (Invite)\n        Matches perfectly.\n\n    *   *Check the sequence flow `sid-622207E7-DC34-411F-8740-C41535D30E96`:*\n        Source: `sid-7212D",
+            "issues_count": 0,
+            "issues": []
+          },
+          {
+            "iteration": 2,
+            "phase": "complete",
+            "status": "valid",
+            "generated_bpmn": "<?xml version=\"1.0\" ?>\n<bpmn:definitions xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" targetNamespace=\"http://bpmn.io/schema/bpmn\" id=\"Def_1ba7b40cfd804781a4aaa394635d1760\">\n\t\n  \n\t<bpmn:process id=\"Process_1ba7b40cfd804781a4aaa394635d1760\" name=\"12345678_rev4\" isExecutable=\"false\">\n\t\t\n    \n\t\t<bpmn:startEvent id=\"sid-7212D978-6AAA-4DA8-ACA6-D31FAFE878D2\" name=\"Start Event\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-622207E7-DC34-411F-8740-C41535D30E96</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:startEvent>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C\" name=\"[CollapsedSubprocess] Create Event\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-748871F0-BF41-49C5-A9D5-8C22153CBAFA</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-EF493C10-90CB-431B-8B71-392BC21E95EA\" name=\"[CollapsedSubprocess] Invite Guests\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-7067B0F9-5E35-42D8-9883-9A4F102162E5</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB\" name=\"[CollapsedSubprocess] Customise Event \">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-FLOW-CUSTOMISE-TO-REVIEW</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-REVIEW-EVENT-DETAILS\" name=\"Review Event Details for Integrity\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-FLOW-REVIEW-TO-PUBLISH</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:task id=\"sid-485D2959-F7F3-4116-B6D9-797CCEB4D707\" name=\"[CollapsedSubprocess] Publish Event\">\n\t\t\t\n      \n\t\t\t<bpmn:outgoing>sid-9FD3787D-5960-48DE-9E94-D8EE37992EF8</bpmn:outgoing>\n\t\t\t\n    \n\t\t</bpmn:task>\n\t\t\n    \n\t\t<bpmn:endEvent id=\"sid-49832DEA-DF4B-43A9-B0EB-2281BA9AB5F3\" name=\"\">\n    </bpmn:endEvent>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-622207E7-DC34-411F-8740-C41535D30E96\" sourceRef=\"sid-7212D978-6AAA-4DA8-ACA6-D31FAFE878D2\" targetRef=\"sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-748871F0-BF41-49C5-A9D5-8C22153CBAFA\" sourceRef=\"sid-51D2B9D6-0E34-47F9-AEF5-52CA6A06898C\" targetRef=\"sid-EF493C10-90CB-431B-8B71-392BC21E95EA\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-7067B0F9-5E35-42D8-9883-9A4F102162E5\" sourceRef=\"sid-EF493C10-90CB-431B-8B71-392BC21E95EA\" targetRef=\"sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-FLOW-CUSTOMISE-TO-REVIEW\" sourceRef=\"sid-8899FD0E-D9E4-4EFD-97FD-2B3BF8841CEB\" targetRef=\"sid-REVIEW-EVENT-DETAILS\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-FLOW-REVIEW-TO-PUBLISH\" sourceRef=\"sid-REVIEW-EVENT-DETAILS\" targetRef=\"sid-485D2959-F7F3-4116-B6D9-797CCEB4D707\"/>\n\t\t\n    \n\t\t<bpmn:sequenceFlow id=\"sid-9FD3787D-5960-48DE-9E94-D8EE37992EF8\" sourceRef=\"sid-485D2959-F7F3-4116-B6D9-797CCEB4D707\" targetRef=\"sid-49832DEA-DF4B-43A9-B0EB-2281BA9AB5F3\"/>\n\t\t\n  \n\t</bpmn:process>\n\t\n\n</bpmn:definitions>",
+            "validation_feedback": "**VALIDATION_RESULT: PASS**\n\n**ISSUES_FOUND:**\nNone - BPMN is valid.\n\n**SECURITY_IMPLEMENTATION:**\nThe security mitigation was successfully implemented by introducing a new manual/service task \"Review Event Details for Integrity\" (ID: `sid-REVIEW-EVENT-DETAILS`) between the customization and publication phases. This effectively addresses potential integrity risks by ensuring event details are verified before being made public. The flow was correctly rerouted: the original direct connection from \"Customise Event\" to \"Publish Event\" was replaced with a two-step sequence passing through the new security task.\n\n**RECOMMENDATIONS:**\n1. **Schema Completeness:** While the BPMN graph is logically sound and consistent with the original provided, it is recommended to include `<bpmn:incoming>` elements within all flow nodes (tasks and end events) to fully comply with BPMN 2.0 XML best practices. Currently, the XML relies on the `targetRef` in `sequenceFlow` elements for connectivity, but mirroring these as `incoming` references inside the tasks improves compatibility with stricter BPMN engines.\n2. **Task Type Specification:** The new security task is currently defined as a generic `bpmn:task`. Depending on the implementation, changing this to a `bpmn:userTask` (if a human reviews it) or a `bpmn:serviceTask` (if an automated integrity check is performed) would provide more technical clarity.\n3. **End Event Naming:** Consider providing a name for the End Event (ID: `sid-49832",
+            "issues_count": 0,
+            "issues": []
+          }
+        ],
+        "warning": null
+      }
+    },
+    "download_bpmn": {
+      "success": true,
+      "file_size": 2754,
+      "elapsed_time": 0.004574775695800781
+    }
+  },
+  "timings": {
+    "validate_bpmn": 0.032396554946899414,
+    "analyze_threats": 61.3945689201355,
+    "generate_mitigated_bpmn": 163.6363594532013,
+    "download_bpmn": 0.004574775695800781
+  },
+  "analysis": {
+    "structure_comparison": {
+      "original": {
+        "tasks": 4,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 0,
+        "parallel_gateways": 0,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 1,
+        "sequence_flows": 5,
+        "data_objects": 0,
+        "data_stores": 0
+      },
+      "mitigated": {
+        "tasks": 5,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 0,
+        "parallel_gateways": 0,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 1,
+        "sequence_flows": 6,
+        "data_objects": 0,
+        "data_stores": 0
+      },
+      "differences": {
+        "tasks": {
+          "original": 4,
+          "mitigated": 5,
+          "delta": 1,
+          "delta_percent": 25.0
+        },
+        "user_tasks": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "service_tasks": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "gateways": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "exclusive_gateways": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "parallel_gateways": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "events": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "start_events": {
+          "original": 1,
+          "mitigated": 1,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "end_events": {
+          "original": 1,
+          "mitigated": 1,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "sequence_flows": {
+          "original": 5,
+          "mitigated": 6,
+          "delta": 1,
+          "delta_percent": 20.0
+        },
+        "data_objects": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "data_stores": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        }
+      }
+    },
+    "original_complexity": {
+      "total_elements": 11,
+      "control_flow_complexity": 0,
+      "task_complexity": 4,
+      "data_complexity": 0,
+      "cyclomatic_complexity_estimate": 1,
+      "structure_metrics": {
+        "tasks": 4,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 0,
+        "parallel_gateways": 0,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 1,
+        "sequence_flows": 5,
+        "data_objects": 0,
+        "data_stores": 0
+      }
+    },
+    "mitigated_complexity": {
+      "total_elements": 13,
+      "control_flow_complexity": 0,
+      "task_complexity": 5,
+      "data_complexity": 0,
+      "cyclomatic_complexity_estimate": 1,
+      "structure_metrics": {
+        "tasks": 5,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 0,
+        "parallel_gateways": 0,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 1,
+        "sequence_flows": 6,
+        "data_objects": 0,
+        "data_stores": 0
+      }
+    },
+    "ged_metrics": {
+      "ged": 2.0,
+      "normalized_ged": 0.15384615384615385,
+      "similarity": 0.8461538461538461,
+      "graph1_size": 11,
+      "graph2_size": 13,
+      "graph1_nodes": 6,
+      "graph1_edges": 5,
+      "graph2_nodes": 7,
+      "graph2_edges": 6
+    },
+    "structural_similarity_advanced": {
+      "structural_similarity": 0.5,
+      "node_similarity": 0.6666666666666666,
+      "flow_similarity": 0.3333333333333333,
+      "nodes_bpmn1": 4,
+      "nodes_bpmn2": 6,
+      "nodes_common": 4,
+      "flows_bpmn1": 3,
+      "flows_bpmn2": 5,
+      "flows_common": 2
+    },
+    "behavioral_similarity": {
+      "behavioral_similarity": 0.8999999999999944,
+      "fitness_bpmn2_on_log1": {
+        "perc_fit_traces": 0.0,
+        "average_trace_fitness": 0.7999999999999887,
+        "log_fitness": 0.8,
+        "percentage_of_fitting_traces": 0.0
+      },
+      "fitness_bpmn1_on_log2": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "fitness_bpmn1_self": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "fitness_bpmn2_self": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "num_traces": 100
+    }
+  },
+  "total_evaluation_time": 225.50933861732483
+}

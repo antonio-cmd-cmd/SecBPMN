@@ -1,0 +1,3 @@
+file,status,valid,sound,message
+Diagram 1.bpmn,success,False,False,BPMN must have at least one start event
+test.bpmn,success,True,False,BPMN is valid and sound

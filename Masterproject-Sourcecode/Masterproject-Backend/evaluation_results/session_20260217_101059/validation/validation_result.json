@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "message": "BPMN is valid and sound",
+  "petri_net_info": {
+    "places": 5,
+    "transitions": 4,
+    "arcs": 8
+  }
+}

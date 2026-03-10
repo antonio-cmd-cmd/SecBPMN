@@ -1,86 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
-  <bpmn:process id="Process_1" name="Process">
-    <bpmn:startEvent id="StartEvent_1"/>
-    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_VerificaDisponibilita"/>
-    <bpmn:task id="Task_VerificaDisponibilita" name="Check Availability">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.6.0">
+  <bpmn:collaboration id="Collaboration_1">
+    <bpmn:participant id="Participant_Venditore" name="Seller" processRef="Process_EvasioneOrdine" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_EvasioneOrdine" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_Magazzino" name="Warehouse">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_VerificaDisponibilita</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Disponibilita</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Imballaggio</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Spedisci</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_Completato</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Join</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_u7v8w9x</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_PackingVerified</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_IncorrectPacking</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Amministrazione" name="Administration">
+        <bpmn:flowNodeRef>Task_NotificaAnnullamento</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_Annullato</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AddebitaCarta</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Split</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Fattura</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_a1b2c3d</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_AuditCharge</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_FraudDetected</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    
+    <bpmn:startEvent id="StartEvent_1" name="Order Received">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    
+    <bpmn:task id="Task_VerificaDisponibilita" name="Check Item Availability">
       <bpmn:incoming>Flow_1</bpmn:incoming>
       <bpmn:outgoing>Flow_2</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:exclusiveGateway id="Gateway_Disponibilita" name="Availability Check">
-      <bpmn:incoming>Flow_Main</bpmn:incoming>
+    
+    <bpmn:exclusiveGateway id="Gateway_Disponibilita" name="Item in stock?">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
       <bpmn:outgoing>Flow_No</bpmn:outgoing>
       <bpmn:outgoing>Flow_Si</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="Flow_No" sourceRef="Gateway_Disponibilita" targetRef="Task_NotificaAnnullamento"/>
-    <bpmn:task id="Task_NotificaAnnullamento" name="Notify Cancellation">
+    
+    <bpmn:task id="Task_NotificaAnnullamento" name="Send Cancellation Notice">
       <bpmn:incoming>Flow_No</bpmn:incoming>
-      <bpmn:outgoing>Flow_End_Cancel</bpmn:outgoing>
+      <bpmn:outgoing>Flow_To_EndAnnulled</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:endEvent id="EndEvent_Cancel" name="End (Cancelled)"/>
-    <bpmn:sequenceFlow id="Flow_End_Cancel" sourceRef="Task_NotificaAnnullamento" targetRef="EndEvent_Cancel"/>
-    <bpmn:sequenceFlow id="Flow_Si" sourceRef="Gateway_Disponibilita" targetRef="Task_AddebitoCarta"/>
-    <bpmn:task id="Task_AddebitoCarta" name="Charge Card">
+    <bpmn:endEvent id="EndEvent_Annullato" name="Order Cancelled">
+      <bpmn:incoming>Flow_To_EndAnnulled</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:task id="Task_AddebitaCarta" name="Charge Credit Card">
       <bpmn:incoming>Flow_Si</bpmn:incoming>
-      <bpmn:outgoing>Flow_VerificaAccessi</bpmn:outgoing>
+      <bpmn:outgoing>Flow_e4f5g6h</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_VerificaAccessi" sourceRef="Task_AddebitoCarta" targetRef="Task_VerificaAccessi"/>
-    <bpmn:task id="Task_VerificaAccessi" name="Verify Access">
-      <bpmn:incoming>Flow_VerificaAccessi</bpmn:incoming>
-      <bpmn:outgoing>Flow_Security2</bpmn:outgoing>
+
+    <!-- INSIDER THREAT MITIGATION: Audit Charge Transaction -->
+    <bpmn:task id="Activity_a1b2c3d" name="Audit Charge Transaction">
+      <bpmn:incoming>Flow_e4f5g6h</bpmn:incoming>
+      <bpmn:outgoing>Flow_i7j8k9l</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:parallelGateway id="Gateway_Split" name="Split">
-      <bpmn:incoming>Flow_Security2</bpmn:incoming>
-      <bpmn:outgoing>Flow_Imballaggio</bpmn:outgoing>
-      <bpmn:outgoing>Flow_Fattura</bpmn:outgoing>
+    <bpmn:exclusiveGateway id="Gateway_AuditCharge" name="Charge Audit OK?">
+      <bpmn:incoming>Flow_i7j8k9l</bpmn:incoming>
+      <bpmn:outgoing>Flow_m1n2o3p</bpmn:outgoing>
+      <bpmn:outgoing>Flow_q4r5s6t</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="EndEvent_FraudDetected" name="Fraud Detected">
+      <bpmn:incoming>Flow_q4r5s6t</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:parallelGateway id="Gateway_Split">
+      <bpmn:incoming>Flow_m1n2o3p</bpmn:incoming>
+      <bpmn:outgoing>Flow_To_Imballaggio</bpmn:outgoing>
+      <bpmn:outgoing>Flow_To_Fattura</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:sequenceFlow id="Flow_Imballaggio" sourceRef="Gateway_Split" targetRef="Task_Imballaggio"/>
-    <bpmn:task id="Task_Imballaggio" name="Packaging">
-      <bpmn:incoming>Flow_Imballaggio</bpmn:incoming>
-      <bpmn:outgoing>Flow_Join</bpmn:outgoing>
+    
+    <bpmn:task id="Task_Imballaggio" name="Pack Item">
+      <bpmn:incoming>Flow_To_Imballaggio</bpmn:incoming>
+      <bpmn:outgoing>Flow_y1z2a3b</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_Fattura" sourceRef="Gateway_Split" targetRef="Task_Fattura"/>
-    <bpmn:task id="Task_Fattura" name="Invoice">
-      <bpmn:incoming>Flow_Fattura</bpmn:incoming>
-      <bpmn:outgoing>Flow_Audit</bpmn:outgoing>
+
+    <!-- INSIDER THREAT MITIGATION: Verify Packed Items -->
+    <bpmn:task id="Activity_u7v8w9x" name="Verify Packed Items">
+      <bpmn:incoming>Flow_y1z2a3b</bpmn:incoming>
+      <bpmn:outgoing>Flow_c4d5e6f</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_Audit" sourceRef="Task_Fattura" targetRef="Task_AuditFattura"/>
-    <bpmn:task id="Task_AuditFattura" name="Invoice Audit">
-      <bpmn:incoming>Flow_Audit</bpmn:incoming>
-      <bpmn:outgoing>Flow_Join</bpmn:outgoing>
+    <bpmn:exclusiveGateway id="Gateway_PackingVerified" name="Packing Verified?">
+      <bpmn:incoming>Flow_c4d5e6f</bpmn:incoming>
+      <bpmn:outgoing>Flow_g7h8i9j</bpmn:outgoing>
+      <bpmn:outgoing>Flow_k1l2m3n</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="EndEvent_IncorrectPacking" name="Incorrect Packing">
+      <bpmn:incoming>Flow_k1l2m3n</bpmn:incoming>
+      <bpmn:terminateEventDefinition id="TerminateEventDefinition_IncorrectPacking" />
+    </bpmn:endEvent>
+
+    <bpmn:task id="Task_Fattura" name="Issue Invoice">
+      <bpmn:incoming>Flow_To_Fattura</bpmn:incoming>
+      <bpmn:outgoing>Flow_From_Fattura</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:parallelGateway id="Gateway_Join" name="Join">
-      <bpmn:incoming>Flow_Join</bpmn:incoming>
-      <bpmn:incoming>Flow_Join</bpmn:incoming>
-      <bpmn:outgoing>Flow_Spedizione</bpmn:outgoing>
+    
+    <bpmn:parallelGateway id="Gateway_Join">
+      <bpmn:incoming>Flow_g7h8i9j</bpmn:incoming>
+      <bpmn:incoming>Flow_From_Fattura</bpmn:incoming>
+      <bpmn:outgoing>Flow_To_Spedizione</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:sequenceFlow id="Flow_Spedizione" sourceRef="Gateway_Join" targetRef="Task_Spedizione"/>
-    <bpmn:task id="Task_Spedizione" name="Shipping">
-      <bpmn:incoming>Flow_Spedizione</bpmn:incoming>
-      <bpmn:outgoing>Flow_Monitoraggio</bpmn:outgoing>
+    
+    <bpmn:task id="Task_Spedisci" name="Ship Order">
+      <bpmn:incoming>Flow_To_Spedizione</bpmn:incoming>
+      <bpmn:outgoing>Flow_To_EndCompleted</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_Monitoraggio" sourceRef="Task_Spedizione" targetRef="Task_MonitoraggioSpedizione"/>
-    <bpmn:task id="Task_MonitoraggioSpedizione" name="Monitor Shipment">
-      <bpmn:incoming>Flow_Monitoraggio</bpmn:incoming>
-      <bpmn:outgoing>Flow_End</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:endEvent id="EndEvent_Success" name="End (Success)"/>
-    <bpmn:sequenceFlow id="Flow_End" sourceRef="Task_MonitoraggioSpedizione" targetRef="EndEvent_Success"/>
-    <bpmn:parallelGateway id="Gateway_Split_Log" name="Split">
-      <bpmn:incoming>Flow_2</bpmn:incoming>
-      <bpmn:outgoing>Flow_Main</bpmn:outgoing>
-      <bpmn:outgoing>Flow_Log</bpmn:outgoing>
-    </bpmn:parallelGateway>
-    <bpmn:sequenceFlow id="Flow_Log" sourceRef="Gateway_Split_Log" targetRef="Task_Log"/>
-    <bpmn:task id="Task_Log" name="Log Availability">
-      <bpmn:incoming>Flow_Log</bpmn:incoming>
-      <bpmn:outgoing>Flow_Join_Log</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:parallelGateway id="Gateway_Join_Log" name="Join">
-      <bpmn:incoming>Flow_Main</bpmn:incoming>
-      <bpmn:incoming>Flow_Join_Log</bpmn:incoming>
-      <bpmn:outgoing>Flow_Disponibilita</bpmn:outgoing>
-    </bpmn:parallelGateway>
-    <bpmn:sequenceFlow id="Flow_Disponibilita" sourceRef="Gateway_Join_Log" targetRef="Gateway_Disponibilita"/>
+    <bpmn:endEvent id="EndEvent_Completato" name="Order Completed">
+      <bpmn:incoming>Flow_To_EndCompleted</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_VerificaDisponibilita" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_VerificaDisponibilita" targetRef="Gateway_Disponibilita" />
+    <bpmn:sequenceFlow id="Flow_No" name="No" sourceRef="Gateway_Disponibilita" targetRef="Task_NotificaAnnullamento" />
+    <bpmn:sequenceFlow id="Flow_To_EndAnnulled" sourceRef="Task_NotificaAnnullamento" targetRef="EndEvent_Annullato" />
+    <bpmn:sequenceFlow id="Flow_Si" name="Yes" sourceRef="Gateway_Disponibilita" targetRef="Task_AddebitaCarta" />
+    
+    <!-- New flows for Audit Charge Transaction -->
+    <bpmn:sequenceFlow id="Flow_e4f5g6h" sourceRef="Task_AddebitaCarta" targetRef="Activity_a1b2c3d" />
+    <bpmn:sequenceFlow id="Flow_i7j8k9l" sourceRef="Activity_a1b2c3d" targetRef="Gateway_AuditCharge" />
+    <bpmn:sequenceFlow id="Flow_m1n2o3p" name="Yes" sourceRef="Gateway_AuditCharge" targetRef="Gateway_Split" />
+    <bpmn:sequenceFlow id="Flow_q4r5s6t" name="No" sourceRef="Gateway_AuditCharge" targetRef="EndEvent_FraudDetected" />
+    
+    <bpmn:sequenceFlow id="Flow_To_Imballaggio" sourceRef="Gateway_Split" targetRef="Task_Imballaggio" />
+    <bpmn:sequenceFlow id="Flow_To_Fattura" sourceRef="Gateway_Split" targetRef="Task_Fattura" />
+    
+    <!-- New flows for Verify Packed Items -->
+    <bpmn:sequenceFlow id="Flow_y1z2a3b" sourceRef="Task_Imballaggio" targetRef="Activity_u7v8w9x" />
+    <bpmn:sequenceFlow id="Flow_c4d5e6f" sourceRef="Activity_u7v8w9x" targetRef="Gateway_PackingVerified" />
+    <bpmn:sequenceFlow id="Flow_g7h8i9j" name="Yes" sourceRef="Gateway_PackingVerified" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_k1l2m3n" name="No" sourceRef="Gateway_PackingVerified" targetRef="EndEvent_IncorrectPacking" />
+
+    <bpmn:sequenceFlow id="Flow_From_Fattura" sourceRef="Task_Fattura" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_To_Spedizione" sourceRef="Gateway_Join" targetRef="Task_Spedisci" />
+    <bpmn:sequenceFlow id="Flow_To_EndCompleted" sourceRef="Task_Spedisci" targetRef="EndEvent_Completato" />
+    
   </bpmn:process>
+
+  
 </bpmn:definitions>

@@ -1,0 +1,94 @@
+================================================================================
+REPORT DI VALUTAZIONE - BPMN THREAT ANALYSIS & MITIGATION
+================================================================================
+
+Timestamp: 20260217_102404
+Backend URL: http://localhost:8000
+Output Directory: evaluation_results/session_20260217_102404
+
+================================================================================
+RIEPILOGO STEPS
+================================================================================
+
+load_bpmn: ✓ SUCCESS
+
+validate_bpmn: ✓ SUCCESS
+  Tempo: 0.09s
+
+analyze_threats: ✓ SUCCESS
+  Tempo: 73.30s
+
+generate_mitigated_bpmn: ✓ SUCCESS
+  Tempo: 92.44s
+
+download_bpmn: ✓ SUCCESS
+  Tempo: 0.02s
+
+================================================================================
+TIMINGS
+================================================================================
+
+validate_bpmn: 0.09s
+analyze_threats: 73.30s
+generate_mitigated_bpmn: 92.44s
+download_bpmn: 0.02s
+
+Tempo totale: 165.85s
+
+================================================================================
+ANALISI
+================================================================================
+
+Confronto Strutture:
+  tasks: 6 → 10 (Δ: +4, +66.7%)
+  user_tasks: 0 → 0 (Δ: +0, +0.0%)
+  service_tasks: 0 → 0 (Δ: +0, +0.0%)
+  gateways: 0 → 0 (Δ: +0, +0.0%)
+  exclusive_gateways: 1 → 1 (Δ: +0, +0.0%)
+  parallel_gateways: 2 → 2 (Δ: +0, +0.0%)
+  events: 0 → 0 (Δ: +0, +0.0%)
+  start_events: 1 → 1 (Δ: +0, +0.0%)
+  end_events: 2 → 2 (Δ: +0, +0.0%)
+  sequence_flows: 12 → 16 (Δ: +4, +33.3%)
+  data_objects: 0 → 0 (Δ: +0, +0.0%)
+  data_stores: 0 → 0 (Δ: +0, +0.0%)
+
+Complessità BPMN Originale:
+  Elementi totali: 24
+  Complessità control flow: 0
+  Complessità task: 6
+
+Complessità BPMN Mitigato:
+  Elementi totali: 32
+  Complessità control flow: 0
+  Complessità task: 10
+
+=== Graph Edit Distance (GED) ===
+  GED: 18.00
+  GED normalizzata: 0.5625
+  Similarità (1-GED norm): 0.4375 (43.75%)
+  Grafo 1: 12 nodi, 12 archi
+  Grafo 2: 16 nodi, 16 archi
+
+=== Similarità Strutturale Avanzata ===
+  Similarità complessiva: 0.5238 (52.38%)
+  Similarità nodi: 0.7143 (71.43%)
+  Similarità flussi: 0.3333 (33.33%)
+  Nodi comuni: 10/10 ∩ 14
+  Flussi comuni: 4/6 ∩ 10
+
+=== Similarità Comportamentale & Fitness ===
+  Similarità comportamentale: 0.7756 (77.56%)
+  Tracce analizzate: 100
+
+  Fitness BPMN Originale (self):
+    - Average trace fitness: 1.0000
+    - Percentage fit traces: 100.0000
+
+  Fitness BPMN Mitigato (self):
+    - Average trace fitness: 1.0000
+    - Percentage fit traces: 100.0000
+
+================================================================================
+Fine Report
+================================================================================

@@ -8,10 +8,10 @@
       <bpmn:lane id="Lane_Magazzino" name="Warehouse">
         <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_VerificaDisponibilita</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_a1b2c3d</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_a7b2c1d</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_e8f3g4h</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Disponibilita</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Imballaggio</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_i7j8k9l</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Spedisci</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_Completato</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Join</bpmn:flowNodeRef>
@@ -19,10 +19,15 @@
       <bpmn:lane id="Lane_Amministrazione" name="Administration">
         <bpmn:flowNodeRef>Task_NotificaAnnullamento</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_Annullato</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_e4f5g6h</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_f6g7h8i</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_InventoryIssue</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_AddebitaCarta</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Split</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Fattura</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_i9j4k5l</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_m0n5o6p</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_q1r2s3t</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_FinancialFraud</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     
@@ -34,14 +39,22 @@
       <bpmn:incoming>Flow_1</bpmn:incoming>
       <bpmn:outgoing>Flow_2</bpmn:outgoing>
     </bpmn:task>
-    
-    <bpmn:task id="Activity_a1b2c3d" name="Segregate Inventory Check Duties">
+
+    <!-- NEW SECURITY CONTROL: Automated Inventory Data Integrity Check -->
+    <bpmn:task id="Activity_a7b2c1d" name="Automated Inventory Data Integrity Check">
       <bpmn:incoming>Flow_2</bpmn:incoming>
-      <bpmn:outgoing>Flow_3a4b5c6</bpmn:outgoing>
+      <bpmn:outgoing>Flow_b3c4d5e</bpmn:outgoing>
     </bpmn:task>
+
+    <!-- NEW SECURITY GATEWAY: Inventory Data Valid? -->
+    <bpmn:exclusiveGateway id="Gateway_e8f3g4h" name="Inventory Data Valid?">
+      <bpmn:incoming>Flow_b3c4d5e</bpmn:incoming>
+      <bpmn:outgoing>Flow_f7g8h9i</bpmn:outgoing>
+      <bpmn:outgoing>Flow_j1k2l3m</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
     
     <bpmn:exclusiveGateway id="Gateway_Disponibilita" name="Item in stock?">
-      <bpmn:incoming>Flow_3a4b5c6</bpmn:incoming>
+      <bpmn:incoming>Flow_f7g8h9i</bpmn:incoming>
       <bpmn:outgoing>Flow_No</bpmn:outgoing>
       <bpmn:outgoing>Flow_Si</bpmn:outgoing>
     </bpmn:exclusiveGateway>
@@ -53,14 +66,18 @@
     <bpmn:endEvent id="EndEvent_Annullato" name="Order Cancelled">
       <bpmn:incoming>Flow_To_EndAnnulled</bpmn:incoming>
     </bpmn:endEvent>
-    
-    <bpmn:task id="Activity_e4f5g6h" name="Separate Payment Configuration Duties">
-      <bpmn:incoming>Flow_Si</bpmn:incoming>
-      <bpmn:outgoing>Flow_4d7e8f9</bpmn:outgoing>
+
+    <!-- NEW SECURITY TASK: Notify Inventory Discrepancy -->
+    <bpmn:task id="Activity_f6g7h8i" name="Notify Inventory Discrepancy">
+      <bpmn:incoming>Flow_j1k2l3m</bpmn:incoming>
+      <bpmn:outgoing>Flow_n4o5p6q</bpmn:outgoing>
     </bpmn:task>
+    <bpmn:endEvent id="EndEvent_InventoryIssue" name="Inventory Issue">
+      <bpmn:incoming>Flow_n4o5p6q</bpmn:incoming>
+    </bpmn:endEvent>
     
     <bpmn:task id="Task_AddebitaCarta" name="Charge Credit Card">
-      <bpmn:incoming>Flow_4d7e8f9</bpmn:incoming>
+      <bpmn:incoming>Flow_Si</bpmn:incoming>
       <bpmn:outgoing>Flow_To_Split</bpmn:outgoing>
     </bpmn:task>
     
@@ -84,35 +101,63 @@
       <bpmn:incoming>Flow_From_Fattura</bpmn:incoming>
       <bpmn:outgoing>Flow_To_Spedizione</bpmn:outgoing>
     </bpmn:parallelGateway>
-    
-    <bpmn:task id="Activity_i7j8k9l" name="Restrict Shipping Schedule Modification">
+
+    <!-- NEW SECURITY CONTROL: Automated Financial Reconciliation -->
+    <bpmn:task id="Activity_i9j4k5l" name="Automated Financial Reconciliation">
       <bpmn:incoming>Flow_To_Spedizione</bpmn:incoming>
-      <bpmn:outgoing>Flow_5g0h1i2</bpmn:outgoing>
+      <bpmn:outgoing>Flow_r5s6t7u</bpmn:outgoing>
     </bpmn:task>
+
+    <!-- NEW SECURITY GATEWAY: Financials Reconciled? -->
+    <bpmn:exclusiveGateway id="Gateway_m0n5o6p" name="Financials Reconciled?">
+      <bpmn:incoming>Flow_r5s6t7u</bpmn:incoming>
+      <bpmn:outgoing>Flow_v8w9x0y</bpmn:outgoing>
+      <bpmn:outgoing>Flow_z1a2b3c</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
     
     <bpmn:task id="Task_Spedisci" name="Ship Order">
-      <bpmn:incoming>Flow_5g0h1i2</bpmn:incoming>
+      <bpmn:incoming>Flow_v8w9x0y</bpmn:incoming>
       <bpmn:outgoing>Flow_To_EndCompleted</bpmn:outgoing>
     </bpmn:task>
     <bpmn:endEvent id="EndEvent_Completato" name="Order Completed">
       <bpmn:incoming>Flow_To_EndCompleted</bpmn:incoming>
     </bpmn:endEvent>
 
+    <!-- NEW SECURITY TASK: Notify Financial Discrepancy -->
+    <bpmn:task id="Activity_q1r2s3t" name="Notify Financial Discrepancy">
+      <bpmn:incoming>Flow_z1a2b3c</bpmn:incoming>
+      <bpmn:outgoing>Flow_d4e5f6g</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_FinancialFraud" name="Financial Fraud Detected">
+      <bpmn:incoming>Flow_d4e5f6g</bpmn:incoming>
+    </bpmn:endEvent>
+
     <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_VerificaDisponibilita" />
-    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_VerificaDisponibilita" targetRef="Activity_a1b2c3d" />
-    <bpmn:sequenceFlow id="Flow_3a4b5c6" sourceRef="Activity_a1b2c3d" targetRef="Gateway_Disponibilita" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_VerificaDisponibilita" targetRef="Activity_a7b2c1d" />
     <bpmn:sequenceFlow id="Flow_No" name="No" sourceRef="Gateway_Disponibilita" targetRef="Task_NotificaAnnullamento" />
     <bpmn:sequenceFlow id="Flow_To_EndAnnulled" sourceRef="Task_NotificaAnnullamento" targetRef="EndEvent_Annullato" />
-    <bpmn:sequenceFlow id="Flow_Si" name="Yes" sourceRef="Gateway_Disponibilita" targetRef="Activity_e4f5g6h" />
-    <bpmn:sequenceFlow id="Flow_4d7e8f9" sourceRef="Activity_e4f5g6h" targetRef="Task_AddebitaCarta" />
+    <bpmn:sequenceFlow id="Flow_Si" name="Yes" sourceRef="Gateway_Disponibilita" targetRef="Task_AddebitaCarta" />
     <bpmn:sequenceFlow id="Flow_To_Split" sourceRef="Task_AddebitaCarta" targetRef="Gateway_Split" />
     <bpmn:sequenceFlow id="Flow_To_Imballaggio" sourceRef="Gateway_Split" targetRef="Task_Imballaggio" />
     <bpmn:sequenceFlow id="Flow_To_Fattura" sourceRef="Gateway_Split" targetRef="Task_Fattura" />
     <bpmn:sequenceFlow id="Flow_From_Imballaggio" sourceRef="Task_Imballaggio" targetRef="Gateway_Join" />
     <bpmn:sequenceFlow id="Flow_From_Fattura" sourceRef="Task_Fattura" targetRef="Gateway_Join" />
-    <bpmn:sequenceFlow id="Flow_To_Spedizione" sourceRef="Gateway_Join" targetRef="Activity_i7j8k9l" />
-    <bpmn:sequenceFlow id="Flow_5g0h1i2" sourceRef="Activity_i7j8k9l" targetRef="Task_Spedisci" />
+    <bpmn:sequenceFlow id="Flow_To_Spedizione" sourceRef="Gateway_Join" targetRef="Activity_i9j4k5l" />
     <bpmn:sequenceFlow id="Flow_To_EndCompleted" sourceRef="Task_Spedisci" targetRef="EndEvent_Completato" />
     
+    <!-- NEW SECURITY FLOWS for Inventory Data Integrity Check -->
+    <bpmn:sequenceFlow id="Flow_b3c4d5e" sourceRef="Activity_a7b2c1d" targetRef="Gateway_e8f3g4h" />
+    <bpmn:sequenceFlow id="Flow_f7g8h9i" name="Yes" sourceRef="Gateway_e8f3g4h" targetRef="Gateway_Disponibilita" />
+    <bpmn:sequenceFlow id="Flow_j1k2l3m" name="No" sourceRef="Gateway_e8f3g4h" targetRef="Activity_f6g7h8i" />
+    <bpmn:sequenceFlow id="Flow_n4o5p6q" sourceRef="Activity_f6g7h8i" targetRef="EndEvent_InventoryIssue" />
+
+    <!-- NEW SECURITY FLOWS for Financial Reconciliation -->
+    <bpmn:sequenceFlow id="Flow_r5s6t7u" sourceRef="Activity_i9j4k5l" targetRef="Gateway_m0n5o6p" />
+    <bpmn:sequenceFlow id="Flow_v8w9x0y" name="Yes" sourceRef="Gateway_m0n5o6p" targetRef="Task_Spedisci" />
+    <bpmn:sequenceFlow id="Flow_z1a2b3c" name="No" sourceRef="Gateway_m0n5o6p" targetRef="Activity_q1r2s3t" />
+    <bpmn:sequenceFlow id="Flow_d4e5f6g" sourceRef="Activity_q1r2s3t" targetRef="EndEvent_FinancialFraud" />
+    
   </bpmn:process>
+
+  
 </bpmn:definitions>

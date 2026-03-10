@@ -1,0 +1,11 @@
+{
+  "structural_similarity": 0.5,
+  "node_similarity": 0.6666666666666666,
+  "flow_similarity": 0.3333333333333333,
+  "nodes_bpmn1": 4,
+  "nodes_bpmn2": 6,
+  "nodes_common": 4,
+  "flows_bpmn1": 3,
+  "flows_bpmn2": 5,
+  "flows_common": 2
+}

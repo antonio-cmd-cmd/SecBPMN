@@ -1,0 +1,957 @@
+{
+  "timestamp": "20260217_104134",
+  "backend_url": "http://localhost:8000",
+  "steps": {
+    "load_bpmn": {
+      "success": true,
+      "file_path": "/mnt/c/Users/ianna/OneDrive - Uniparthenope/Uniparthenope1/Dottorato/Periodo estero/studio/Masterproject-Sourcecode/Masterproject-Sourcecode/Masterproject-Backend/test.bpmn",
+      "file_size": 11333
+    },
+    "validate_bpmn": {
+      "success": true,
+      "valid": true,
+      "message": "BPMN is valid and sound",
+      "elapsed_time": 0.08258295059204102
+    },
+    "analyze_threats": {
+      "success": true,
+      "element_ids_count": 5,
+      "elapsed_time": 74.13483333587646
+    },
+    "generate_mitigated_bpmn": {
+      "success": true,
+      "element_count": 0,
+      "elapsed_time": 100.11073136329651,
+      "message": "Mitigated BPMN generated successfully (LLM: 1 iterations, Petri Net: 0 iterations)",
+      "dual_llm_info": {
+        "iterations_count": 1,
+        "iterations_history": [
+          {
+            "iteration": 1,
+            "phase": "complete",
+            "status": "valid",
+            "generated_bpmn": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bpmn:definitions xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" id=\"Definitions_1\" targetNamespace=\"http://bpmn.io/schema/bpmn\" exporter=\"Camunda Modeler\" exporterVersion=\"4.6.0\">\n  <bpmn:collaboration id=\"Collaboration_1\">\n    <bpmn:participant id=\"Participant_Venditore\" name=\"Seller\" processRef=\"Process_EvasioneOrdine\" />\n  </bpmn:collaboration>\n  <bpmn:process id=\"Process_EvasioneOrdine\" isExecutable=\"false\">\n    <bpmn:laneSet id=\"LaneSet_1\">\n      <bpmn:lane id=\"Lane_Magazzino\" name=\"Warehouse\">\n        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_VerificaDisponibilita</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Activity_a7b2c1d</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_e8f3g4h</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_Disponibilita</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_Imballaggio</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_Spedisci</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>EndEvent_Completato</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_Join</bpmn:flowNodeRef>\n      </bpmn:lane>\n      <bpmn:lane id=\"Lane_Amministrazione\" name=\"Administration\">\n        <bpmn:flowNodeRef>Task_NotificaAnnullamento</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>EndEvent_Annullato</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Activity_f6g7h8i</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>EndEvent_InventoryIssue</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_AddebitaCarta</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_Split</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_Fattura</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Activity_i9j4k5l</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_m0n5o6p</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Activity_q1r2s3t</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>EndEvent_FinancialFraud</bpmn:flowNodeRef>\n      </bpmn:lane>\n    </bpmn:laneSet>\n    \n    <bpmn:startEvent id=\"StartEvent_1\" name=\"Order Received\">\n      <bpmn:outgoing>Flow_1</bpmn:outgoing>\n    </bpmn:startEvent>\n    \n    <bpmn:task id=\"Task_VerificaDisponibilita\" name=\"Check Item Availability\">\n      <bpmn:incoming>Flow_1</bpmn:incoming>\n      <bpmn:outgoing>Flow_2</bpmn:outgoing>\n    </bpmn:task>\n\n    <!-- NEW SECURITY CONTROL: Automated Inventory Data Integrity Check -->\n    <bpmn:task id=\"Activity_a7b2c1d\" name=\"Automated Inventory Data Integrity Check\">\n      <bpmn:incoming>Flow_2</bpmn:incoming>\n      <bpmn:outgoing>Flow_b3c4d5e</bpmn:outgoing>\n    </bpmn:task>\n\n    <!-- NEW SECURITY GATEWAY: Inventory Data Valid? -->\n    <bpmn:exclusiveGateway id=\"Gateway_e8f3g4h\" name=\"Inventory Data Valid?\">\n      <bpmn:incoming>Flow_b3c4d5e</bpmn:incoming>\n      <bpmn:outgoing>Flow_f7g8h9i</bpmn:outgoing>\n      <bpmn:outgoing>Flow_j1k2l3m</bpmn:outgoing>\n    </bpmn:exclusiveGateway>\n    \n    <bpmn:exclusiveGateway id=\"Gateway_Disponibilita\" name=\"Item in stock?\">\n      <bpmn:incoming>Flow_f7g8h9i</bpmn:incoming>\n      <bpmn:outgoing>Flow_No</bpmn:outgoing>\n      <bpmn:outgoing>Flow_Si</bpmn:outgoing>\n    </bpmn:exclusiveGateway>\n    \n    <bpmn:task id=\"Task_NotificaAnnullamento\" name=\"Send Cancellation Notice\">\n      <bpmn:incoming>Flow_No</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_EndAnnulled</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:endEvent id=\"EndEvent_Annullato\" name=\"Order Cancelled\">\n      <bpmn:incoming>Flow_To_EndAnnulled</bpmn:incoming>\n    </bpmn:endEvent>\n\n    <!-- NEW SECURITY TASK: Notify Inventory Discrepancy -->\n    <bpmn:task id=\"Activity_f6g7h8i\" name=\"Notify Inventory Discrepancy\">\n      <bpmn:incoming>Flow_j1k2l3m</bpmn:incoming>\n      <bpmn:outgoing>Flow_n4o5p6q</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:endEvent id=\"EndEvent_InventoryIssue\" name=\"Inventory Issue\">\n      <bpmn:incoming>Flow_n4o5p6q</bpmn:incoming>\n    </bpmn:endEvent>\n    \n    <bpmn:task id=\"Task_AddebitaCarta\" name=\"Charge Credit Card\">\n      <bpmn:incoming>Flow_Si</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_Split</bpmn:outgoing>\n    </bpmn:task>\n    \n    <bpmn:parallelGateway id=\"Gateway_Split\">\n      <bpmn:incoming>Flow_To_Split</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_Imballaggio</bpmn:outgoing>\n      <bpmn:outgoing>Flow_To_Fattura</bpmn:outgoing>\n    </bpmn:parallelGateway>\n    \n    <bpmn:task id=\"Task_Imballaggio\" name=\"Pack Item\">\n      <bpmn:incoming>Flow_To_Imballaggio</bpmn:incoming>\n      <bpmn:outgoing>Flow_From_Imballaggio</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:task id=\"Task_Fattura\" name=\"Issue Invoice\">\n      <bpmn:incoming>Flow_To_Fattura</bpmn:incoming>\n      <bpmn:outgoing>Flow_From_Fattura</bpmn:outgoing>\n    </bpmn:task>\n    \n    <bpmn:parallelGateway id=\"Gateway_Join\">\n      <bpmn:incoming>Flow_From_Imballaggio</bpmn:incoming>\n      <bpmn:incoming>Flow_From_Fattura</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_Spedizione</bpmn:outgoing>\n    </bpmn:parallelGateway>\n\n    <!-- NEW SECURITY CONTROL: Automated Financial Reconciliation -->\n    <bpmn:task id=\"Activity_i9j4k5l\" name=\"Automated Financial Reconciliation\">\n      <bpmn:incoming>Flow_To_Spedizione</bpmn:incoming>\n      <bpmn:outgoing>Flow_r5s6t7u</bpmn:outgoing>\n    </bpmn:task>\n\n    <!-- NEW SECURITY GATEWAY: Financials Reconciled? -->\n    <bpmn:exclusiveGateway id=\"Gateway_m0n5o6p\" name=\"Financials Reconciled?\">\n      <bpmn:incoming>Flow_r5s6t7u</bpmn:incoming>\n      <bpmn:outgoing>Flow_v8w9x0y</bpmn:outgoing>\n      <bpmn:outgoing>Flow_z1a2b3c</bpmn:outgoing>\n    </bpmn:exclusiveGateway>\n    \n    <bpmn:task id=\"Task_Spedisci\" name=\"Ship Order\">\n      <bpmn:incoming>Flow_v8w9x0y</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_EndCompleted</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:endEvent id=\"EndEvent_Completato\" name=\"Order Completed\">\n      <bpmn:incoming>Flow_To_EndCompleted</bpmn:incoming>\n    </bpmn:endEvent>\n\n    <!-- NEW SECURITY TASK: Notify Financial Discrepancy -->\n    <bpmn:task id=\"Activity_q1r2s3t\" name=\"Notify Financial Discrepancy\">\n      <bpmn:incoming>Flow_z1a2b3c</bpmn:incoming>\n      <bpmn:outgoing>Flow_d4e5f6g</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:endEvent id=\"EndEvent_FinancialFraud\" name=\"Financial Fraud Detected\">\n      <bpmn:incoming>Flow_d4e5f6g</bpmn:incoming>\n    </bpmn:endEvent>\n\n    <bpmn:sequenceFlow id=\"Flow_1\" sourceRef=\"StartEvent_1\" targetRef=\"Task_VerificaDisponibilita\" />\n    <bpmn:sequenceFlow id=\"Flow_2\" sourceRef=\"Task_VerificaDisponibilita\" targetRef=\"Activity_a7b2c1d\" />\n    <bpmn:sequenceFlow id=\"Flow_No\" name=\"No\" sourceRef=\"Gateway_Disponibilita\" targetRef=\"Task_NotificaAnnullamento\" />\n    <bpmn:sequenceFlow id=\"Flow_To_EndAnnulled\" sourceRef=\"Task_NotificaAnnullamento\" targetRef=\"EndEvent_Annullato\" />\n    <bpmn:sequenceFlow id=\"Flow_Si\" name=\"Yes\" sourceRef=\"Gateway_Disponibilita\" targetRef=\"Task_AddebitaCarta\" />\n    <bpmn:sequenceFlow id=\"Flow_To_Split\" sourceRef=\"Task_AddebitaCarta\" targetRef=\"Gateway_Split\" />\n    <bpmn:sequenceFlow id=\"Flow_To_Imballaggio\" sourceRef=\"Gateway_Split\" targetRef=\"Task_Imballaggio\" />\n    <bpmn:sequenceFlow id=\"Flow_To_Fattura\" sourceRef=\"Gateway_Split\" targetRef=\"Task_Fattura\" />\n    <bpmn:sequenceFlow id=\"Flow_From_Imballaggio\" sourceRef=\"Task_Imballaggio\" targetRef=\"Gateway_Join\" />\n    <bpmn:sequenceFlow id=\"Flow_From_Fattura\" sourceRef=\"Task_Fattura\" targetRef=\"Gateway_Join\" />\n    <bpmn:sequenceFlow id=\"Flow_To_Spedizione\" sourceRef=\"Gateway_Join\" targetRef=\"Activity_i9j4k5l\" />\n    <bpmn:sequenceFlow id=\"Flow_To_EndCompleted\" sourceRef=\"Task_Spedisci\" targetRef=\"EndEvent_Completato\" />\n    \n    <!-- NEW SECURITY FLOWS for Inventory Data Integrity Check -->\n    <bpmn:sequenceFlow id=\"Flow_b3c4d5e\" sourceRef=\"Activity_a7b2c1d\" targetRef=\"Gateway_e8f3g4h\" />\n    <bpmn:sequenceFlow id=\"Flow_f7g8h9i\" name=\"Yes\" sourceRef=\"Gateway_e8f3g4h\" targetRef=\"Gateway_Disponibilita\" />\n    <bpmn:sequenceFlow id=\"Flow_j1k2l3m\" name=\"No\" sourceRef=\"Gateway_e8f3g4h\" targetRef=\"Activity_f6g7h8i\" />\n    <bpmn:sequenceFlow id=\"Flow_n4o5p6q\" sourceRef=\"Activity_f6g7h8i\" targetRef=\"EndEvent_InventoryIssue\" />\n\n    <!-- NEW SECURITY FLOWS for Financial Reconciliation -->\n    <bpmn:sequenceFlow id=\"Flow_r5s6t7u\" sourceRef=\"Activity_i9j4k5l\" targetRef=\"Gateway_m0n5o6p\" />\n    <bpmn:sequenceFlow id=\"Flow_v8w9x0y\" name=\"Yes\" sourceRef=\"Gateway_m0n5o6p\" targetRef=\"Task_Spedisci\" />\n    <bpmn:sequenceFlow id=\"Flow_z1a2b3c\" name=\"No\" sourceRef=\"Gateway_m0n5o6p\" targetRef=\"Activity_q1r2s3t\" />\n    <bpmn:sequenceFlow id=\"Flow_d4e5f6g\" sourceRef=\"Activity_q1r2s3t\" targetRef=\"EndEvent_FinancialFraud\" />\n    \n  </bpmn:process>\n\n  \n</bpmn:definitions>",
+            "validation_feedback": "**VALIDATION_RESULT: PASS**\n\n**ISSUES_FOUND:**\nNone - BPMN is valid\n\n**SECURITY_IMPLEMENTATION:**\nThe security mitigations have been properly implemented and integrated into the business logic without breaking the original process flow. Specifically:\n1.  **Inventory Integrity:** An \"Automated Inventory Data Integrity Check\" (`Activity_a7b2c1d`) was inserted immediately after the initial availability check. It includes an exclusive gateway (`Gateway_e8f3g4h`) to handle data discrepancies, routing them to a notification task and a specific end event (`EndEvent_InventoryIssue`).\n2.  **Financial Reconciliation:** An \"Automated Financial Reconciliation\" task (`Activity_i9j4k5l`) was inserted after the parallel join of packing and invoicing but before the shipping task. This ensures that shipping only occurs if the financials are reconciled via `Gateway_m0n5o6p`.\n3.  **Fraud Detection:** A dedicated path for financial discrepancies was added, leading to \"Notify Financial Discrepancy\" and a \"Financial Fraud Detected\" end event.\n4.  **Structural Integrity:** All original element IDs were preserved, and new elements were correctly assigned to the appropriate lanes (Warehouse vs. Administration).\n\n**RECOMMENDATIONS:**\n1.  **Diagram Interchange (DI) Metadata:** While the semantic XML is valid, the generated XML lacks the `bpmndi` namespace and elements. If this file is opened in a visual modeler (like Camunda or Signavio), the elements will likely overlap at coordinates (0,0). For better maintainability, consider generating the `bpmndi:BPMNDiagram` section.\n2.  **Task Types:** The security tasks are currently defined as generic `bpmn:task`. For automation purposes, these could be specialized as `bpmn:serviceTask` or `bpmn:scriptTask` to reflect their automated nature as described in their names.\n3.  **Namespace Consistency:** The generated XML removed some unused namespaces (`xmlns:bpmndi`, `xmlns:dc`, `xmlns:di`) present in the original. While not an error, keeping them ensures maximum compatibility with various BPMN tools.",
+            "issues_count": 0,
+            "issues": []
+          }
+        ],
+        "warning": null
+      }
+    },
+    "download_bpmn": {
+      "success": true,
+      "file_size": 8615,
+      "elapsed_time": 0.015134811401367188
+    }
+  },
+  "timings": {
+    "validate_bpmn": 0.08258295059204102,
+    "analyze_threats": 74.13483333587646,
+    "generate_mitigated_bpmn": 100.11073136329651,
+    "download_bpmn": 0.015134811401367188
+  },
+  "analysis": {
+    "structure_comparison": {
+      "original": {
+        "tasks": 6,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 1,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 2,
+        "sequence_flows": 12,
+        "data_objects": 0,
+        "data_stores": 0
+      },
+      "mitigated": {
+        "tasks": 10,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 3,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 4,
+        "sequence_flows": 20,
+        "data_objects": 0,
+        "data_stores": 0
+      },
+      "differences": {
+        "tasks": {
+          "original": 6,
+          "mitigated": 10,
+          "delta": 4,
+          "delta_percent": 66.66666666666666
+        },
+        "user_tasks": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "service_tasks": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "gateways": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "exclusive_gateways": {
+          "original": 1,
+          "mitigated": 3,
+          "delta": 2,
+          "delta_percent": 200.0
+        },
+        "parallel_gateways": {
+          "original": 2,
+          "mitigated": 2,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "events": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "start_events": {
+          "original": 1,
+          "mitigated": 1,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "end_events": {
+          "original": 2,
+          "mitigated": 4,
+          "delta": 2,
+          "delta_percent": 100.0
+        },
+        "sequence_flows": {
+          "original": 12,
+          "mitigated": 20,
+          "delta": 8,
+          "delta_percent": 66.66666666666666
+        },
+        "data_objects": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "data_stores": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        }
+      }
+    },
+    "original_complexity": {
+      "total_elements": 24,
+      "control_flow_complexity": 0,
+      "task_complexity": 6,
+      "data_complexity": 0,
+      "cyclomatic_complexity_estimate": 1,
+      "structure_metrics": {
+        "tasks": 6,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 1,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 2,
+        "sequence_flows": 12,
+        "data_objects": 0,
+        "data_stores": 0
+      }
+    },
+    "mitigated_complexity": {
+      "total_elements": 40,
+      "control_flow_complexity": 0,
+      "task_complexity": 10,
+      "data_complexity": 0,
+      "cyclomatic_complexity_estimate": 1,
+      "structure_metrics": {
+        "tasks": 10,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 3,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 4,
+        "sequence_flows": 20,
+        "data_objects": 0,
+        "data_stores": 0
+      }
+    },
+    "ged_metrics": {
+      "ged": 28.0,
+      "normalized_ged": 0.7,
+      "similarity": 0.30000000000000004,
+      "graph1_size": 24,
+      "graph2_size": 40,
+      "graph1_nodes": 12,
+      "graph1_edges": 12,
+      "graph2_nodes": 20,
+      "graph2_edges": 20
+    },
+    "structural_similarity_advanced": {
+      "structural_similarity": 0.4444444444444444,
+      "node_similarity": 0.5555555555555556,
+      "flow_similarity": 0.3333333333333333,
+      "nodes_bpmn1": 10,
+      "nodes_bpmn2": 18,
+      "nodes_common": 10,
+      "flows_bpmn1": 6,
+      "flows_bpmn2": 14,
+      "flows_common": 5
+    },
+    "behavioral_similarity": {
+      "behavioral_similarity": 0.6862357142857104,
+      "fitness_bpmn2_on_log1": {
+        "perc_fit_traces": 0.0,
+        "average_trace_fitness": 0.6425714285714199,
+        "log_fitness": 0.6330944798301487,
+        "percentage_of_fitting_traces": 0.0
+      },
+      "fitness_bpmn1_on_log2": {
+        "perc_fit_traces": 40.8,
+        "average_trace_fitness": 0.7299000000000009,
+        "log_fitness": 0.8052242021874977,
+        "percentage_of_fitting_traces": 40.8
+      },
+      "fitness_bpmn1_self": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "fitness_bpmn2_self": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "num_traces": 100
+    },
+    "fitness_variable_tokens": {
+      "token_numbers": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120,
+        130,
+        140,
+        150,
+        160,
+        170,
+        180,
+        190,
+        200
+      ],
+      "fitness_scores": [
+        0.2292778713372509,
+        0.12169240210771536,
+        0.08168667151240007,
+        0.06167846528692199,
+        0.049432209200337494,
+        0.041273100263776084,
+        0.03536006006230939,
+        0.030941334860703468,
+        0.027545729272066666,
+        0.024865090328095075,
+        0.022574297492949248,
+        0.02069170069352713,
+        0.019159823435660975,
+        0.017823909962957473,
+        0.016632346379964687,
+        0.01555330705536875,
+        0.014663493974655308,
+        0.013883644909038142,
+        0.013133915020374604,
+        0.012485245661375842
+      ],
+      "percentage_fit_traces": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "average_trace_fitness": [
+        0.2292778713372509,
+        0.12169240210771536,
+        0.08168667151240007,
+        0.06167846528692199,
+        0.049432209200337494,
+        0.041273100263776084,
+        0.03536006006230939,
+        0.030941334860703468,
+        0.027545729272066666,
+        0.024865090328095075,
+        0.022574297492949248,
+        0.02069170069352713,
+        0.019159823435660975,
+        0.017823909962957473,
+        0.016632346379964687,
+        0.01555330705536875,
+        0.014663493974655308,
+        0.013883644909038142,
+        0.013133915020374604,
+        0.012485245661375842
+      ],
+      "details": [
+        {
+          "num_tokens": 10,
+          "average_trace_fitness": 0.2292778713372509,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.2292778713372509,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.2292778713372509,
+            "log_fitness": 0.2268831086714842
+          }
+        },
+        {
+          "num_tokens": 20,
+          "average_trace_fitness": 0.12169240210771536,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.12169240210771536,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.12169240210771536,
+            "log_fitness": 0.12066681146828839
+          }
+        },
+        {
+          "num_tokens": 30,
+          "average_trace_fitness": 0.08168667151240007,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.08168667151240007,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.08168667151240007,
+            "log_fitness": 0.08123395613322504
+          }
+        },
+        {
+          "num_tokens": 40,
+          "average_trace_fitness": 0.06167846528692199,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.06167846528692199,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.06167846528692199,
+            "log_fitness": 0.06138674033149172
+          }
+        },
+        {
+          "num_tokens": 50,
+          "average_trace_fitness": 0.049432209200337494,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.049432209200337494,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.049432209200337494,
+            "log_fitness": 0.04924700575210783
+          }
+        },
+        {
+          "num_tokens": 60,
+          "average_trace_fitness": 0.041273100263776084,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.041273100263776084,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.041273100263776084,
+            "log_fitness": 0.04114643339148749
+          }
+        },
+        {
+          "num_tokens": 70,
+          "average_trace_fitness": 0.03536006006230939,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.03536006006230939,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.03536006006230939,
+            "log_fitness": 0.03526555226407113
+          }
+        },
+        {
+          "num_tokens": 80,
+          "average_trace_fitness": 0.030941334860703468,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.030941334860703468,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.030941334860703468,
+            "log_fitness": 0.030866556369068987
+          }
+        },
+        {
+          "num_tokens": 90,
+          "average_trace_fitness": 0.027545729272066666,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.027545729272066666,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.027545729272066666,
+            "log_fitness": 0.02749098286744811
+          }
+        },
+        {
+          "num_tokens": 100,
+          "average_trace_fitness": 0.024865090328095075,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.024865090328095075,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.024865090328095075,
+            "log_fitness": 0.02481955999444041
+          }
+        },
+        {
+          "num_tokens": 110,
+          "average_trace_fitness": 0.022574297492949248,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.022574297492949248,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.022574297492949248,
+            "log_fitness": 0.022535900047776614
+          }
+        },
+        {
+          "num_tokens": 120,
+          "average_trace_fitness": 0.02069170069352713,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.02069170069352713,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.02069170069352713,
+            "log_fitness": 0.0206595844902816
+          }
+        },
+        {
+          "num_tokens": 130,
+          "average_trace_fitness": 0.019159823435660975,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.019159823435660975,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.019159823435660975,
+            "log_fitness": 0.019132412927517994
+          }
+        },
+        {
+          "num_tokens": 140,
+          "average_trace_fitness": 0.017823909962957473,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.017823909962957473,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.017823909962957473,
+            "log_fitness": 0.017798356839265006
+          }
+        },
+        {
+          "num_tokens": 150,
+          "average_trace_fitness": 0.016632346379964687,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.016632346379964687,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.016632346379964687,
+            "log_fitness": 0.01661245414916801
+          }
+        },
+        {
+          "num_tokens": 160,
+          "average_trace_fitness": 0.01555330705536875,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.01555330705536875,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.01555330705536875,
+            "log_fitness": 0.015535804172337242
+          }
+        },
+        {
+          "num_tokens": 170,
+          "average_trace_fitness": 0.014663493974655308,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.014663493974655308,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.014663493974655308,
+            "log_fitness": 0.014647575801962742
+          }
+        },
+        {
+          "num_tokens": 180,
+          "average_trace_fitness": 0.013883644909038142,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.013883644909038142,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.013883644909038142,
+            "log_fitness": 0.013869255990191509
+          }
+        },
+        {
+          "num_tokens": 190,
+          "average_trace_fitness": 0.013133915020374604,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.013133915020374604,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.013133915020374604,
+            "log_fitness": 0.013120886560928802
+          }
+        },
+        {
+          "num_tokens": 200,
+          "average_trace_fitness": 0.012485245661375842,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.012485245661375842,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.012485245661375842,
+            "log_fitness": 0.01247274677576271
+          }
+        }
+      ]
+    },
+    "fitness_variable_tokens_original": {
+      "token_numbers": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120,
+        130,
+        140,
+        150,
+        160,
+        170,
+        180,
+        190,
+        200
+      ],
+      "fitness_scores": [
+        0.19197471965221302,
+        0.09841512307598113,
+        0.06586415318744955,
+        0.04963005177277419,
+        0.03966077930754474,
+        0.033151144243171074,
+        0.028408238204289216,
+        0.02487127326721823,
+        0.022159837714621326,
+        0.019946626622364894,
+        0.018090546861597955,
+        0.016615298787046612,
+        0.015317017895723664,
+        0.014269013742961209,
+        0.013304167616895147,
+        0.012462391591680137,
+        0.011749733578982523,
+        0.011087877220412703,
+        0.010512008108391683,
+        0.009987258210462306
+      ],
+      "percentage_fit_traces": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "average_trace_fitness": [
+        0.19197471965221302,
+        0.09841512307598113,
+        0.06586415318744955,
+        0.04963005177277419,
+        0.03966077930754474,
+        0.033151144243171074,
+        0.028408238204289216,
+        0.02487127326721823,
+        0.022159837714621326,
+        0.019946626622364894,
+        0.018090546861597955,
+        0.016615298787046612,
+        0.015317017895723664,
+        0.014269013742961209,
+        0.013304167616895147,
+        0.012462391591680137,
+        0.011749733578982523,
+        0.011087877220412703,
+        0.010512008108391683,
+        0.009987258210462306
+      ],
+      "details": [
+        {
+          "num_tokens": 10,
+          "average_trace_fitness": 0.19197471965221302,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.19197471965221302,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.19197471965221302,
+            "log_fitness": 0.18897467739322926
+          }
+        },
+        {
+          "num_tokens": 20,
+          "average_trace_fitness": 0.09841512307598113,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.09841512307598113,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.09841512307598113,
+            "log_fitness": 0.09750254203056008
+          }
+        },
+        {
+          "num_tokens": 30,
+          "average_trace_fitness": 0.06586415318744955,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.06586415318744955,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.06586415318744955,
+            "log_fitness": 0.06548114610714584
+          }
+        },
+        {
+          "num_tokens": 40,
+          "average_trace_fitness": 0.04963005177277419,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.04963005177277419,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.04963005177277419,
+            "log_fitness": 0.049395957999322615
+          }
+        },
+        {
+          "num_tokens": 50,
+          "average_trace_fitness": 0.03966077930754474,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.03966077930754474,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.03966077930754474,
+            "log_fitness": 0.039519889795964436
+          }
+        },
+        {
+          "num_tokens": 60,
+          "average_trace_fitness": 0.033151144243171074,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.033151144243171074,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.033151144243171074,
+            "log_fitness": 0.03305254410153746
+          }
+        },
+        {
+          "num_tokens": 70,
+          "average_trace_fitness": 0.028408238204289216,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.028408238204289216,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.028408238204289216,
+            "log_fitness": 0.028334230583968445
+          }
+        },
+        {
+          "num_tokens": 80,
+          "average_trace_fitness": 0.02487127326721823,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.02487127326721823,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.02487127326721823,
+            "log_fitness": 0.02481715077837221
+          }
+        },
+        {
+          "num_tokens": 90,
+          "average_trace_fitness": 0.022159837714621326,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.022159837714621326,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.022159837714621326,
+            "log_fitness": 0.022116973513344407
+          }
+        },
+        {
+          "num_tokens": 100,
+          "average_trace_fitness": 0.019946626622364894,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.019946626622364894,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.019946626622364894,
+            "log_fitness": 0.019910120029580702
+          }
+        },
+        {
+          "num_tokens": 110,
+          "average_trace_fitness": 0.018090546861597955,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.018090546861597955,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.018090546861597955,
+            "log_fitness": 0.01806265159725451
+          }
+        },
+        {
+          "num_tokens": 120,
+          "average_trace_fitness": 0.016615298787046612,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.016615298787046612,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.016615298787046612,
+            "log_fitness": 0.016589564689822534
+          }
+        },
+        {
+          "num_tokens": 130,
+          "average_trace_fitness": 0.015317017895723664,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.015317017895723664,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.015317017895723664,
+            "log_fitness": 0.01529569863103497
+          }
+        },
+        {
+          "num_tokens": 140,
+          "average_trace_fitness": 0.014269013742961209,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.014269013742961209,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.014269013742961209,
+            "log_fitness": 0.014249973026836726
+          }
+        },
+        {
+          "num_tokens": 150,
+          "average_trace_fitness": 0.013304167616895147,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.013304167616895147,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.013304167616895147,
+            "log_fitness": 0.013288557223374964
+          }
+        },
+        {
+          "num_tokens": 160,
+          "average_trace_fitness": 0.012462391591680137,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.012462391591680137,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.012462391591680137,
+            "log_fitness": 0.012449069965551618
+          }
+        },
+        {
+          "num_tokens": 170,
+          "average_trace_fitness": 0.011749733578982523,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.011749733578982523,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.011749733578982523,
+            "log_fitness": 0.011736971123697648
+          }
+        },
+        {
+          "num_tokens": 180,
+          "average_trace_fitness": 0.011087877220412703,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.011087877220412703,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.011087877220412703,
+            "log_fitness": 0.01107652773008716
+          }
+        },
+        {
+          "num_tokens": 190,
+          "average_trace_fitness": 0.010512008108391683,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.010512008108391683,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.010512008108391683,
+            "log_fitness": 0.010502026891189953
+          }
+        },
+        {
+          "num_tokens": 200,
+          "average_trace_fitness": 0.009987258210462306,
+          "percentage_of_fitting_traces": 0.0,
+          "num_traces": 1000,
+          "full_result": {
+            "percFitTraces": 0.0,
+            "averageFitness": 0.009987258210462306,
+            "percentage_of_fitting_traces": 0.0,
+            "average_trace_fitness": 0.009987258210462306,
+            "log_fitness": 0.009977778062857157
+          }
+        }
+      ]
+    }
+  },
+  "total_evaluation_time": 29379.05168223381
+}

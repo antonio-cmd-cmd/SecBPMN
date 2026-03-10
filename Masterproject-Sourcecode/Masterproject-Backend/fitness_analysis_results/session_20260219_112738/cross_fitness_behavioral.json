@@ -1,0 +1,28 @@
+{
+  "behavioral_similarity": 0.7735714285714315,
+  "cross_fitness_log_original_on_bpmn_mitigated": {
+    "perc_fit_traces": 0.0,
+    "average_trace_fitness": 0.5471428571428628,
+    "log_fitness": 0.49960063897763574,
+    "percentage_of_fitting_traces": 0.0
+  },
+  "cross_fitness_log_mitigated_on_bpmn_original": {
+    "perc_fit_traces": 100.0,
+    "average_trace_fitness": 1.0,
+    "log_fitness": 1.0,
+    "percentage_of_fitting_traces": 100.0
+  },
+  "self_fitness_original": {
+    "perc_fit_traces": 100.0,
+    "average_trace_fitness": 1.0,
+    "log_fitness": 1.0,
+    "percentage_of_fitting_traces": 100.0
+  },
+  "self_fitness_mitigated": {
+    "perc_fit_traces": 100.0,
+    "average_trace_fitness": 1.0,
+    "log_fitness": 1.0,
+    "percentage_of_fitting_traces": 100.0
+  },
+  "num_traces": 100
+}

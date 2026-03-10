@@ -1,0 +1,253 @@
+{
+  "timestamp": "20260212_104639",
+  "backend_url": "http://localhost:8000",
+  "steps": {
+    "load_bpmn": {
+      "success": true,
+      "file_path": "/mnt/c/Users/ianna/OneDrive - Uniparthenope/Uniparthenope1/Dottorato/Periodo estero/studio/Masterproject-Sourcecode/Masterproject-Sourcecode/Masterproject-Backend/test.bpmn",
+      "file_size": 11333
+    },
+    "validate_bpmn": {
+      "success": true,
+      "valid": true,
+      "message": "BPMN is valid and sound",
+      "elapsed_time": 0.09163117408752441
+    },
+    "analyze_threats": {
+      "success": true,
+      "element_ids_count": 5,
+      "elapsed_time": 54.00219178199768
+    },
+    "generate_mitigated_bpmn": {
+      "success": true,
+      "element_count": 0,
+      "elapsed_time": 60.15231966972351,
+      "message": "Mitigated BPMN generated successfully (LLM: 1 iterations, Petri Net: 0 iterations)",
+      "dual_llm_info": {
+        "iterations_count": 1,
+        "iterations_history": [
+          {
+            "iteration": 1,
+            "phase": "complete",
+            "status": "valid",
+            "generated_bpmn": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bpmn:definitions xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" id=\"Definitions_1\" targetNamespace=\"http://bpmn.io/schema/bpmn\" exporter=\"Camunda Modeler\" exporterVersion=\"4.6.0\">\n  <bpmn:collaboration id=\"Collaboration_1\">\n    <bpmn:participant id=\"Participant_Venditore\" name=\"Seller\" processRef=\"Process_EvasioneOrdine\" />\n  </bpmn:collaboration>\n  <bpmn:process id=\"Process_EvasioneOrdine\" isExecutable=\"false\">\n    <bpmn:laneSet id=\"LaneSet_1\">\n      <bpmn:lane id=\"Lane_Magazzino\" name=\"Warehouse\">\n        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_VerificaDisponibilita</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Activity_s7h3j1k</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_Disponibilita</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_Imballaggio</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_Spedisci</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>EndEvent_Completato</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_Join</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Activity_d4f6g9h</bpmn:flowNodeRef>\n      </bpmn:lane>\n      <bpmn:lane id=\"Lane_Amministrazione\" name=\"Administration\">\n        <bpmn:flowNodeRef>Task_NotificaAnnullamento</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>EndEvent_Annullato</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_AddebitaCarta</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Gateway_Split</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Task_Fattura</bpmn:flowNodeRef>\n        <bpmn:flowNodeRef>Activity_a2z9x6c</bpmn:flowNodeRef>\n      </bpmn:lane>\n    </bpmn:laneSet>\n    \n    <bpmn:startEvent id=\"StartEvent_1\" name=\"Order Received\">\n      <bpmn:outgoing>Flow_1</bpmn:outgoing>\n    </bpmn:startEvent>\n    \n    <bpmn:task id=\"Task_VerificaDisponibilita\" name=\"Check Item Availability\">\n      <bpmn:incoming>Flow_1</bpmn:incoming>\n      <bpmn:outgoing>Flow_v9x2m4p</bpmn:outgoing>\n    </bpmn:task>\n    \n    <bpmn:task id=\"Activity_s7h3j1k\" name=\"Conduct Stock Audit\">\n      <bpmn:incoming>Flow_v9x2m4p</bpmn:incoming>\n      <bpmn:outgoing>Flow_q1w8e5r</bpmn:outgoing>\n    </bpmn:task>\n\n    <bpmn:exclusiveGateway id=\"Gateway_Disponibilita\" name=\"Item in stock?\">\n      <bpmn:incoming>Flow_q1w8e5r</bpmn:incoming>\n      <bpmn:outgoing>Flow_No</bpmn:outgoing>\n      <bpmn:outgoing>Flow_Si</bpmn:outgoing>\n    </bpmn:exclusiveGateway>\n    \n    <bpmn:task id=\"Task_NotificaAnnullamento\" name=\"Send Cancellation Notice\">\n      <bpmn:incoming>Flow_No</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_EndAnnulled</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:endEvent id=\"EndEvent_Annullato\" name=\"Order Cancelled\">\n      <bpmn:incoming>Flow_To_EndAnnulled</bpmn:incoming>\n    </bpmn:endEvent>\n    \n    <bpmn:task id=\"Task_AddebitaCarta\" name=\"Charge Credit Card\">\n      <bpmn:incoming>Flow_Si</bpmn:incoming>\n      <bpmn:outgoing>Flow_b3n7m0l</bpmn:outgoing>\n    </bpmn:task>\n    \n    <bpmn:task id=\"Activity_a2z9x6c\" name=\"Verify Payment Details\">\n      <bpmn:incoming>Flow_b3n7m0l</bpmn:incoming>\n      <bpmn:outgoing>Flow_p5o1i8u</bpmn:outgoing>\n    </bpmn:task>\n\n    <bpmn:parallelGateway id=\"Gateway_Split\">\n      <bpmn:incoming>Flow_p5o1i8u</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_Imballaggio</bpmn:outgoing>\n      <bpmn:outgoing>Flow_To_Fattura</bpmn:outgoing>\n    </bpmn:parallelGateway>\n    \n    <bpmn:task id=\"Task_Imballaggio\" name=\"Pack Item\">\n      <bpmn:incoming>Flow_To_Imballaggio</bpmn:incoming>\n      <bpmn:outgoing>Flow_From_Imballaggio</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:task id=\"Task_Fattura\" name=\"Issue Invoice\">\n      <bpmn:incoming>Flow_To_Fattura</bpmn:incoming>\n      <bpmn:outgoing>Flow_From_Fattura</bpmn:outgoing>\n    </bpmn:task>\n    \n    <bpmn:parallelGateway id=\"Gateway_Join\">\n      <bpmn:incoming>Flow_From_Imballaggio</bpmn:incoming>\n      <bpmn:incoming>Flow_From_Fattura</bpmn:incoming>\n      <bpmn:outgoing>Flow_j0k2l5m</bpmn:outgoing>\n    </bpmn:parallelGateway>\n    \n    <bpmn:task id=\"Activity_d4f6g9h\" name=\"Verify Shipment Contents\">\n      <bpmn:incoming>Flow_j0k2l5m</bpmn:incoming>\n      <bpmn:outgoing>Flow_c8v1b3n</bpmn:outgoing>\n    </bpmn:task>\n\n    <bpmn:task id=\"Task_Spedisci\" name=\"Ship Order\">\n      <bpmn:incoming>Flow_c8v1b3n</bpmn:incoming>\n      <bpmn:outgoing>Flow_To_EndCompleted</bpmn:outgoing>\n    </bpmn:task>\n    <bpmn:endEvent id=\"EndEvent_Completato\" name=\"Order Completed\">\n      <bpmn:incoming>Flow_To_EndCompleted</bpmn:incoming>\n    </bpmn:endEvent>\n\n    <bpmn:sequenceFlow id=\"Flow_1\" sourceRef=\"StartEvent_1\" targetRef=\"Task_VerificaDisponibilita\" />\n    <bpmn:sequenceFlow id=\"Flow_v9x2m4p\" sourceRef=\"Task_VerificaDisponibilita\" targetRef=\"Activity_s7h3j1k\" />\n    <bpmn:sequenceFlow id=\"Flow_q1w8e5r\" sourceRef=\"Activity_s7h3j1k\" targetRef=\"Gateway_Disponibilita\" />\n    <bpmn:sequenceFlow id=\"Flow_No\" name=\"No\" sourceRef=\"Gateway_Disponibilita\" targetRef=\"Task_NotificaAnnullamento\" />\n    <bpmn:sequenceFlow id=\"Flow_To_EndAnnulled\" sourceRef=\"Task_NotificaAnnullamento\" targetRef=\"EndEvent_Annullato\" />\n    <bpmn:sequenceFlow id=\"Flow_Si\" name=\"Yes\" sourceRef=\"Gateway_Disponibilita\" targetRef=\"Task_AddebitaCarta\" />\n    <bpmn:sequenceFlow id=\"Flow_b3n7m0l\" sourceRef=\"Task_AddebitaCarta\" targetRef=\"Activity_a2z9x6c\" />\n    <bpmn:sequenceFlow id=\"Flow_p5o1i8u\" sourceRef=\"Activity_a2z9x6c\" targetRef=\"Gateway_Split\" />\n    <bpmn:sequenceFlow id=\"Flow_To_Imballaggio\" sourceRef=\"Gateway_Split\" targetRef=\"Task_Imballaggio\" />\n    <bpmn:sequenceFlow id=\"Flow_To_Fattura\" sourceRef=\"Gateway_Split\" targetRef=\"Task_Fattura\" />\n    <bpmn:sequenceFlow id=\"Flow_From_Imballaggio\" sourceRef=\"Task_Imballaggio\" targetRef=\"Gateway_Join\" />\n    <bpmn:sequenceFlow id=\"Flow_From_Fattura\" sourceRef=\"Task_Fattura\" targetRef=\"Gateway_Join\" />\n    <bpmn:sequenceFlow id=\"Flow_j0k2l5m\" sourceRef=\"Gateway_Join\" targetRef=\"Activity_d4f6g9h\" />\n    <bpmn:sequenceFlow id=\"Flow_c8v1b3n\" sourceRef=\"Activity_d4f6g9h\" targetRef=\"Task_Spedisci\" />\n    <bpmn:sequenceFlow id=\"Flow_To_EndCompleted\" sourceRef=\"Task_Spedisci\" targetRef=\"EndEvent_Completato\" />\n    \n  </bpmn:process>\n\n  \n</bpmn:definitions>",
+            "validation_feedback": "**VALIDATION_RESULT: PASS**\n\n**ISSUES_FOUND:**\nNone - BPMN is valid\n\n**SECURITY_IMPLEMENTATION:**\nThe security mitigations have been successfully implemented and integrated into the workflow without breaking the original business logic. Specifically:\n1.  **Stock Integrity:** `Activity_s7h3j1k` (\"Conduct Stock Audit\") was added to verify physical inventory against digital records before proceeding with the order.\n2.  **Financial Security:** `Activity_a2z9x6c` (\"Verify Payment Details\") was added after the credit card charge to ensure transaction legitimacy and prevent fraud before fulfillment.\n3.  **Fulfillment Verification:** `Activity_d4f6g9h` (\"Verify Shipment Contents\") was added after the parallel join of packaging and invoicing, ensuring that the physical shipment matches the administrative documentation before final dispatch.\n\n**RECOMMENDATIONS:**\n1.  **Descriptive IDs:** While the XML is valid, the new security activities use generic IDs (e.g., `Activity_s7h3j1k`). For better maintainability, consider using more descriptive IDs such as `Task_StockAudit`, `Task_VerifyPayment`, and `Task_VerifyShipment`.\n2.  **Diagram Interchange (BPMNDI):** The provided XML contains the model logic but lacks the `bpmndi` section for visual rendering. If this file is to be used in visual modeling tools like Camunda Modeler, the coordinates for the new elements will need to be generated.\n3.  **Error Handling:** Consider adding an Error Boundary Event to `Activity_a2z9x6c` (Verify Payment Details) to handle cases where payment verification fails after the card has been charged (e.g., triggering a refund process).",
+            "issues_count": 0,
+            "issues": []
+          }
+        ],
+        "warning": null
+      }
+    },
+    "download_bpmn": {
+      "success": true,
+      "file_size": 6172,
+      "elapsed_time": 0.012712478637695312
+    }
+  },
+  "timings": {
+    "validate_bpmn": 0.09163117408752441,
+    "analyze_threats": 54.00219178199768,
+    "generate_mitigated_bpmn": 60.15231966972351,
+    "download_bpmn": 0.012712478637695312
+  },
+  "analysis": {
+    "structure_comparison": {
+      "original": {
+        "tasks": 6,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 1,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 2,
+        "sequence_flows": 12,
+        "data_objects": 0,
+        "data_stores": 0
+      },
+      "mitigated": {
+        "tasks": 9,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 1,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 2,
+        "sequence_flows": 15,
+        "data_objects": 0,
+        "data_stores": 0
+      },
+      "differences": {
+        "tasks": {
+          "original": 6,
+          "mitigated": 9,
+          "delta": 3,
+          "delta_percent": 50.0
+        },
+        "user_tasks": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "service_tasks": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "gateways": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "exclusive_gateways": {
+          "original": 1,
+          "mitigated": 1,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "parallel_gateways": {
+          "original": 2,
+          "mitigated": 2,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "events": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "start_events": {
+          "original": 1,
+          "mitigated": 1,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "end_events": {
+          "original": 2,
+          "mitigated": 2,
+          "delta": 0,
+          "delta_percent": 0.0
+        },
+        "sequence_flows": {
+          "original": 12,
+          "mitigated": 15,
+          "delta": 3,
+          "delta_percent": 25.0
+        },
+        "data_objects": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        },
+        "data_stores": {
+          "original": 0,
+          "mitigated": 0,
+          "delta": 0,
+          "delta_percent": 0
+        }
+      }
+    },
+    "original_complexity": {
+      "total_elements": 24,
+      "control_flow_complexity": 0,
+      "task_complexity": 6,
+      "data_complexity": 0,
+      "cyclomatic_complexity_estimate": 1,
+      "structure_metrics": {
+        "tasks": 6,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 1,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 2,
+        "sequence_flows": 12,
+        "data_objects": 0,
+        "data_stores": 0
+      }
+    },
+    "mitigated_complexity": {
+      "total_elements": 30,
+      "control_flow_complexity": 0,
+      "task_complexity": 9,
+      "data_complexity": 0,
+      "cyclomatic_complexity_estimate": 1,
+      "structure_metrics": {
+        "tasks": 9,
+        "user_tasks": 0,
+        "service_tasks": 0,
+        "gateways": 0,
+        "exclusive_gateways": 1,
+        "parallel_gateways": 2,
+        "events": 0,
+        "start_events": 1,
+        "end_events": 2,
+        "sequence_flows": 15,
+        "data_objects": 0,
+        "data_stores": 0
+      }
+    },
+    "ged_metrics": {
+      "ged": 8.0,
+      "normalized_ged": 0.26666666666666666,
+      "similarity": 0.7333333333333334,
+      "graph1_size": 24,
+      "graph2_size": 30,
+      "graph1_nodes": 12,
+      "graph1_edges": 12,
+      "graph2_nodes": 15,
+      "graph2_edges": 15
+    },
+    "structural_similarity_advanced": {
+      "structural_similarity": 0.6346153846153846,
+      "node_similarity": 0.7692307692307693,
+      "flow_similarity": 0.5,
+      "nodes_bpmn1": 10,
+      "nodes_bpmn2": 13,
+      "nodes_common": 10,
+      "flows_bpmn1": 6,
+      "flows_bpmn2": 9,
+      "flows_common": 5
+    },
+    "behavioral_similarity": {
+      "behavioral_similarity": 0.7473333333333332,
+      "fitness_bpmn2_on_log1": {
+        "perc_fit_traces": 0.0,
+        "average_trace_fitness": 0.49466666666666625,
+        "log_fitness": 0.4397537379067722,
+        "percentage_of_fitting_traces": 0.0
+      },
+      "fitness_bpmn1_on_log2": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "fitness_bpmn1_self": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "fitness_bpmn2_self": {
+        "perc_fit_traces": 100.0,
+        "average_trace_fitness": 1.0,
+        "log_fitness": 1.0,
+        "percentage_of_fitting_traces": 100.0
+      },
+      "num_traces": 100
+    }
+  },
+  "total_evaluation_time": 145.91504883766174
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" targetNamespace="http://bpmn.io/schema/bpmn" id="Def_ee3eca9ce5614b99b8bddd7a41867a90">
+  <bpmn:process id="Process_ee3eca9ce5614b99b8bddd7a41867a90" name="Carregamento SR Humidificação" isExecutable="false">
+    <bpmn:startEvent id="sid-790222F1-C5E6-4824-BB83-B5C54B377C71" name="Verificação dos Lotes que estão para ser Humidificados">
+      <bpmn:outgoing>sid-9387F380-4C05-4806-8018-0FCCD27683AF</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="sid-3098A7D0-126E-4FCA-9BA1-CA0CE57ED703" name="Registo Manual dos Lotes a Humidificar">
+      <bpmn:incoming>sid-9387F380-4C05-4806-8018-0FCCD27683AF</bpmn:incoming>
+      <bpmn:outgoing>sid-1875FD24-0ED2-4A9F-82BB-238BB2F7C71B</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="sid-XYZ-1234-5678-90AB-CDEF12345678" name="Update Customer Records">
+      <bpmn:incoming>sid-1875FD24-0ED2-4A9F-82BB-238BB2F7C71B</bpmn:incoming>
+      <bpmn:outgoing>sid-XYZ-SEQ-1</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="sid-A05020F6-7B6D-4729-A8F9-C45487D363EA" name="Retirar Placas dos Contentores ">
+      <bpmn:incoming>sid-XYZ-SEQ-1</bpmn:incoming>
+      <bpmn:outgoing>sid-DC48B373-D33C-423A-92B1-6D25525F50BB</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="sid-18E91D2C-390D-4420-A030-18FB14629F3F" name="Carregamento c/empilhador SR Humidificação ">
+      <bpmn:incoming>sid-DC48B373-D33C-423A-92B1-6D25525F50BB</bpmn:incoming>
+      <bpmn:outgoing>sid-0BD9141C-101A-440D-A9D3-7BF09664F56E</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="sid-1DFA4116-8CB4-4707-A313-D70C3CEC83A5" name="Iniciar Programa PLC">
+      <bpmn:incoming>sid-0BD9141C-101A-440D-A9D3-7BF09664F56E</bpmn:incoming>
+      <bpmn:outgoing>sid-F8BFBC2B-958B-4EA8-A6A5-72D85BB6E866</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="sid-1EDF2B3B-4B77-4F8A-B026-CE4BEE5A109C" name="Movimentações MES Entrada SR - SR Humidificação">
+      <bpmn:incoming>sid-F8BFBC2B-958B-4EA8-A6A5-72D85BB6E866</bpmn:incoming>
+      <bpmn:outgoing>sid-90332927-E96C-4B2A-98AC-4C82C592BB17</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="sid-1399AA03-6679-44C2-B09E-74507E3A7968" name="Fim do carregamento">
+      <bpmn:incoming>sid-90332927-E96C-4B2A-98AC-4C82C592BB17</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="sid-9387F380-4C05-4806-8018-0FCCD27683AF" sourceRef="sid-790222F1-C5E6-4824-BB83-B5C54B377C71" targetRef="sid-3098A7D0-126E-4FCA-9BA1-CA0CE57ED703"/>
+    <bpmn:sequenceFlow id="sid-1875FD24-0ED2-4A9F-82BB-238BB2F7C71B" sourceRef="sid-3098A7D0-126E-4FCA-9BA1-CA0CE57ED703" targetRef="sid-XYZ-1234-5678-90AB-CDEF12345678"/>
+    <bpmn:sequenceFlow id="sid-XYZ-SEQ-1" sourceRef="sid-XYZ-1234-5678-90AB-CDEF12345678" targetRef="sid-A05020F6-7B6D-4729-A8F9-C45487D363EA"/>
+    <bpmn:sequenceFlow id="sid-DC48B373-D33C-423A-92B1-6D25525F50BB" sourceRef="sid-A05020F6-7B6D-4729-A8F9-C45487D363EA" targetRef="sid-18E91D2C-390D-4420-A030-18FB14629F3F"/>
+    <bpmn:sequenceFlow id="sid-0BD9141C-101A-440D-A9D3-7BF09664F56E" sourceRef="sid-18E91D2C-390D-4420-A030-18FB14629F3F" targetRef="sid-1DFA4116-8CB4-4707-A313-D70C3CEC83A5"/>
+    <bpmn:sequenceFlow id="sid-F8BFBC2B-958B-4EA8-A6A5-72D85BB6E866" sourceRef="sid-1DFA4116-8CB4-4707-A313-D70C3CEC83A5" targetRef="sid-1EDF2B3B-4B77-4F8A-B026-CE4BEE5A109C"/>
+    <bpmn:sequenceFlow id="sid-90332927-E96C-4B2A-98AC-4C82C592BB17" sourceRef="sid-1EDF2B3B-4B77-4F8A-B026-CE4BEE5A109C" targetRef="sid-1399AA03-6679-44C2-B09E-74507E3A7968"/>
+  </bpmn:process>
+</bpmn:definitions>
